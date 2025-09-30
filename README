@@ -1,0 +1,215 @@
+# GestyBrok 2.0 - Sistema Gestione Trading
+
+Riscrittura completa dell'applicazione di gestione ordini trading con architettura moderna separata tra Backend e Frontend.
+
+## 🏗️ Architettura
+
+### Backend (FastAPI + SQLAlchemy)
+- **API REST** con FastAPI
+- **ORM** con SQLAlchemy per gestione database
+- **Validazione** con Pydantic schemas
+- **Database** SQLite (facilmente sostituibile con PostgreSQL/MySQL)
+
+### Frontend (Tkinter)
+- **GUI** moderna con ttkthemes
+- **Pattern MVC** con separazione logica/presentazione
+- **API Client** per comunicazione con backend
+- **Interfaccia responsive** con master-detail views
+
+## 📁 Struttura Progetto
+
+```
+gestybrok2/
+├── backend/
+│   ├── main.py                 # FastAPI application
+│   ├── database.py             # Database configuration
+│   ├── models.py               # SQLAlchemy models
+│   ├── schemas.py              # Pydantic schemas
+│   └── gestybrok.db            # Database SQLite
+│
+├── frontend/
+│   ├── gui_main.py             # Applicazione principale
+│   ├── api_client.py           # Client HTTP
+│   └── views/
+│       ├── articoli_view.py    # Vista articoli
+│       ├── venditori_view.py   # Vista venditori
+│       ├── compratori_view.py  # Vista compratori
+│       ├── conferme_view.py    # Vista conferme ordine
+│       ├── fatture_view.py     # Vista fatture
+│       └── report_view.py      # Vista report
+│
+├── requirements.txt            # Dipendenze Python
+└── README.md                   # Questa documentazione
+```
+
+## 🚀 Installazione
+
+### 1. Crea ambiente virtuale
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
+```
+
+### 2. Installa dipendenze
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Inizializza database
+
+Il database viene creato automaticamente al primo avvio del backend.
+
+## ▶️ Avvio Applicazione
+
+### Avvia Backend (Terminale 1)
+
+```bash
+cd backend
+python main.py
+```
+
+Il server sarà disponibile su `http://127.0.0.1:8000`
+
+Documentazione API interattiva: `http://127.0.0.1:8000/docs`
+
+### Avvia Frontend (Terminale 2)
+
+```bash
+cd frontend
+python gui_main.py
+```
+
+## 📚 Funzionalità
+
+### ✅ Implementate
+
+- **Anagrafiche**
+  - Articoli (CRUD completo con form e tabella)
+  - Venditori (CRUD completo)
+  - Compratori (base implementata)
+
+- **Operazioni**
+  - Conferme Ordine (vista master-detail)
+  - Fatture (visualizzazione e generazione automatica)
+
+- **Report**
+  - Framework per generazione report
+  - Filtri per date
+  - Esportazione dati
+
+### 🔄 Da Completare
+
+- Gestione IVA, Pagamenti, Banche
+- Offerte venditori / Richieste compratori
+- Date consegna associate a conferme
+- Generazione PDF fatture e report
+- Sistema di ricerca avanzata
+- Dashboard con grafici
+
+## 🛠️ API Endpoints Principali
+
+### Articoli
+- `GET /api/articoli` - Lista articoli
+- `POST /api/articoli` - Crea articolo
+- `PUT /api/articoli/{id}` - Aggiorna articolo
+- `DELETE /api/articoli/{id}` - Elimina articolo
+
+### Venditori
+- `GET /api/venditori` - Lista venditori
+- `POST /api/venditori` - Crea venditore
+
+### Compratori
+- `GET /api/compratori` - Lista compratori
+- `POST /api/compratori` - Crea compratore
+
+### Conferme Ordine
+- `GET /api/conferme-ordine` - Lista conferme
+- `POST /api/conferme-ordine` - Crea conferma
+
+### Fatture
+- `GET /api/fatture` - Lista fatture (con filtri)
+- `POST /api/fatture/genera` - Genera fatture automaticamente
+
+## 🔒 Miglioramenti Sicurezza
+
+### Implementati
+- SQL injection protection (parametri query)
+- Validazione input con Pydantic
+- Gestione errori centralizzata
+
+### Da Implementare
+- Autenticazione JWT
+- Rate limiting
+- HTTPS in produzione
+- Backup automatici database
+
+## 📝 Note di Sviluppo
+
+### Differenze dalla Versione Precedente
+
+1. **Separazione Backend/Frontend**: comunicazione via API REST
+2. **ORM invece di SQL raw**: più sicuro e manutenibile
+3. **Validazione automatica**: Pydantic schemas
+4. **Struttura modulare**: ogni vista è indipendente
+5. **Gestione errori**: try/except e feedback utente
+6. **Codice pulito**: nomi in inglese, commenti, docstring
+
+### Best Practices Applicate
+
+- Pattern MVC nel frontend
+- Repository pattern nel backend
+- Dependency injection (FastAPI)
+- Type hints ovunque
+- Separazione logica/presentazione
+- Gestione transazioni database
+
+## 🐛 Troubleshooting
+
+### Backend non si avvia
+- Verifica che la porta 8000 sia libera
+- Controlla i log per errori di import
+
+### Frontend non si connette
+- Assicurati che il backend sia in esecuzione
+- Verifica l'URL in `api_client.py` (default: http://127.0.0.1:8000)
+
+### Errori database
+- Elimina `gestybrok.db` e riavvia il backend per ricreare lo schema
+- Verifica permessi scrittura nella cartella
+
+## 📖 Prossimi Passi
+
+1. **Completa implementazione CRUD** per tutte le entità
+2. **Aggiungi autenticazione** utenti
+3. **Implementa generazione PDF** per fatture e report
+4. **Aggiungi grafici e dashboard** nella home
+5. **Migliora UX** con autocompletamento e validazione real-time
+6. **Test unitari** per backend e frontend
+7. **Deploy** su server di produzione
+
+## 👨‍💻 Sviluppo
+
+Per contribuire:
+
+1. Segui la struttura esistente (una view per entità)
+2. Usa type hints
+3. Gestisci sempre le eccezioni
+4. Documenta con docstring
+5. Testa prima di committare
+
+## 📄 Licenza
+
+Proprietario - Uso interno aziendale
+
+---
+
+**Versione**: 2.0.0  
+**Data**: 2024  
+**Autore**: Riscrittura completa da versione legacy

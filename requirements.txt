@@ -1,0 +1,24 @@
+# Backend Dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+sqlalchemy==2.0.25
+pydantic==2.5.3
+python-multipart==0.0.6
+
+# Frontend Dependencies
+ttkthemes==3.2.2
+requests==2.31.0
+
+# Development Dependencies (optional)
+pytest==7.4.4
+black==23.12.1
+flake8==7.0.0
+
+# Database (SQLite è built-in in Python)
+# Per PostgreSQL: psycopg2-binary==2.9.9
+# Per MySQL: pymysql==1.1.0
+
+# Report Generation (opzionale)
+reportlab==4.0.9
+pandas==2.1.4
+openpyxl==3.1.2
