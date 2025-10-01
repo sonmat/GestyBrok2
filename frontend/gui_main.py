@@ -15,7 +15,7 @@ from views.venditori_view import VenditoriView
 from views.compratori_view import CompratorView
 from views.conferme_view import ConfermeOrdineView
 from views.fatture_view import FattureView
-from views.fatture_studio_view import FattureStudioView
+from views.fatture_studio_view_new import FattureStudioView
 from views.report_view import ReportView
 
 

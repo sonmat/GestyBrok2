@@ -13,7 +13,7 @@ from database import get_db, init_db
 from models import (
     TArticolo, TVenditore, TCompratore, TConferma,
     TFatturaStudio, TFatturaStudioDet, TDataConsegna, TFattura,
-    TDatiVenditore, TDatiCompratore
+    TDatiVenditore, TDatiCompratore, TIva, TPagamento, TBanca
 )
 
 # Connetti al database
@@ -1096,22 +1096,56 @@ def debug_articoli_raw(db: Session = Depends(get_db)):
 # ==================== FATTURE STUDIO ====================
 @app.get("/api/fatture-studio")
 def get_fatture_studio(db: Session = Depends(get_db)):
-    """Lista fatture studio"""
+    """Lista fatture studio con nomi delle relazioni"""
     fatture = db.query(TFatturaStudio).order_by(TFatturaStudio.id_fatt_studio.desc()).all()
-    return [
-        {
+
+    result = []
+    for f in fatture:
+        # Ottieni nome venditore (cliente)
+        cliente_nome = ""
+        if f.cliente:
+            venditore = db.query(TVenditore).filter(TVenditore.id_venditore == f.cliente).first()
+            if venditore:
+                cliente_nome = venditore.azienda or ""
+
+        # Ottieni descrizione IVA
+        iva_desc = ""
+        if f.t_iva:
+            iva = db.query(TIva).filter(TIva.id_iva == f.t_iva).first()
+            if iva:
+                iva_desc = iva.descrizione or ""
+
+        # Ottieni tipo pagamento
+        pagamento_tipo = ""
+        if f.t_pagamento:
+            pagamento = db.query(TPagamento).filter(TPagamento.id_pagamento == f.t_pagamento).first()
+            if pagamento:
+                pagamento_tipo = pagamento.tipo_pagamento or ""
+
+        # Ottieni nome banca
+        banca_nome = ""
+        if f.id_banca:
+            banca = db.query(TBanca).filter(TBanca.id_banca == f.id_banca).first()
+            if banca:
+                banca_nome = banca.nome_banca or ""
+
+        result.append({
             "id_fatt_studio": f.id_fatt_studio,
             "n_fat": f.n_fat,
             "data_fat": f.data_fat,
             "nota_acr": f.nota_acr,
             "cliente": f.cliente,
+            "cliente_nome": cliente_nome,
             "t_iva": f.t_iva,
+            "iva_desc": iva_desc,
             "t_pagamento": f.t_pagamento,
+            "pagamento_tipo": pagamento_tipo,
             "note": f.note,
-            "id_banca": f.id_banca
-        }
-        for f in fatture
-    ]
+            "id_banca": f.id_banca,
+            "banca_nome": banca_nome
+        })
+
+    return result
 
 
 @app.get("/api/fatture-studio/{id_fattura}")
@@ -1153,26 +1187,67 @@ def create_fattura_studio(data: dict, db: Session = Depends(get_db)):
     return {"id": fattura.id_fatt_studio, "message": "Fattura studio creata"}
 
 
+@app.put("/api/fatture-studio/{id_fattura}")
+def update_fattura_studio(id_fattura: int, data: dict, db: Session = Depends(get_db)):
+    """Aggiorna fattura studio"""
+    fattura = db.query(TFatturaStudio).filter(TFatturaStudio.id_fatt_studio == id_fattura).first()
+    if not fattura:
+        raise HTTPException(status_code=404, detail="Fattura non trovata")
+
+    fattura.n_fat = data.get("n_fat", fattura.n_fat)
+    fattura.data_fat = data.get("data_fat", fattura.data_fat)
+    fattura.nota_acr = data.get("nota_acr", fattura.nota_acr)
+    fattura.cliente = data.get("cliente", fattura.cliente)
+    fattura.t_iva = data.get("t_iva", fattura.t_iva)
+    fattura.t_pagamento = data.get("t_pagamento", fattura.t_pagamento)
+    fattura.note = data.get("note", fattura.note)
+    fattura.id_banca = data.get("id_banca", fattura.id_banca)
+
+    db.commit()
+    return {"message": "Fattura studio aggiornata"}
+
+
+@app.delete("/api/fatture-studio/{id_fattura}")
+def delete_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
+    """Elimina fattura studio"""
+    fattura = db.query(TFatturaStudio).filter(TFatturaStudio.id_fatt_studio == id_fattura).first()
+    if not fattura:
+        raise HTTPException(status_code=404, detail="Fattura non trovata")
+
+    db.delete(fattura)
+    db.commit()
+    return {"message": "Fattura studio eliminata"}
+
+
 @app.get("/api/fatture-studio/{id_fattura}/dettagli")
 def get_dettagli_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
-    """Lista dettagli di una fattura studio"""
+    """Lista dettagli di una fattura studio con nomi delle relazioni"""
     dettagli = db.query(TFatturaStudioDet).filter(
         TFatturaStudioDet.id_fat_studio == id_fattura
     ).all()
 
-    return [
-        {
+    result = []
+    for d in dettagli:
+        # Ottieni nome compratore
+        compratore_nome = ""
+        if d.compratore:
+            compratore = db.query(TCompratore).filter(TCompratore.id_compratore == d.compratore).first()
+            if compratore:
+                compratore_nome = compratore.azienda or ""
+
+        result.append({
             "id_fat_studio_det": d.id_fat_studio_det,
             "id_fat_studio": d.id_fat_studio,
             "compratore": d.compratore,
+            "compratore_nome": compratore_nome,
             "qta": d.qta,
             "prezzo": d.prezzo,
             "provvigione": d.provvigione,
             "tipologia": d.tipologia,
             "data_consegna": d.data_consegna
-        }
-        for d in dettagli
-    ]
+        })
+
+    return result
 
 
 @app.post("/api/fatture-studio/dettagli")
@@ -1191,6 +1266,27 @@ def create_dettaglio_fattura_studio(data: dict, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(dettaglio)
     return {"id": dettaglio.id_fat_studio_det, "message": "Dettaglio creato"}
+
+
+@app.put("/api/fatture-studio/dettagli/{id_dettaglio}")
+def update_dettaglio_fattura_studio(id_dettaglio: int, data: dict, db: Session = Depends(get_db)):
+    """Aggiorna dettaglio fattura studio"""
+    dettaglio = db.query(TFatturaStudioDet).filter(
+        TFatturaStudioDet.id_fat_studio_det == id_dettaglio
+    ).first()
+
+    if not dettaglio:
+        raise HTTPException(status_code=404, detail="Dettaglio non trovato")
+
+    dettaglio.compratore = data.get("compratore", dettaglio.compratore)
+    dettaglio.qta = data.get("qta", dettaglio.qta)
+    dettaglio.prezzo = data.get("prezzo", dettaglio.prezzo)
+    dettaglio.provvigione = data.get("provvigione", dettaglio.provvigione)
+    dettaglio.tipologia = data.get("tipologia", dettaglio.tipologia)
+    dettaglio.data_consegna = data.get("data_consegna", dettaglio.data_consegna)
+
+    db.commit()
+    return {"message": "Dettaglio aggiornato"}
 
 
 @app.delete("/api/fatture-studio/dettagli/{id_dettaglio}")
