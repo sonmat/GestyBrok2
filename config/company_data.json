@@ -1,0 +1,60 @@
+{
+  "ragione_sociale": "SONCINI S.R.L.",
+  "indirizzo": "Strada Val Nure 30",
+  "cap": "29121",
+  "citta": "Piacenza",
+  "provincia": "PC",
+  "paese": "Italia",
+  "partita_iva": "IT00000000000",
+  "codice_fiscale": "00000000000",
+  "telefono": "+39 0000 000000",
+  "fax": "+39 0000 000000",
+  "email_principale": "info@soncini.it",
+  "email_commerciale": "commerciale@soncini.it",
+  "email_amministrazione": "amministrazione@soncini.it",
+  "pec": "soncini@pec.it",
+  "sito_web": "www.soncini.it",
+  "rea": {
+    "numero": "PC-000000",
+    "capitale_sociale": "10.000,00 €",
+    "capitale_sociale_versato": "10.000,00 €"
+  },
+  "banca": {
+    "nome": "Banca Esempio",
+    "iban": "IT00X0000000000000000000000",
+    "swift_bic": "XXXXXXXX"
+  },
+  "referenti": {
+    "amministratore_delegato": "Nome Cognome",
+    "responsabile_commerciale": "Nome Cognome",
+    "responsabile_amministrativo": "Nome Cognome"
+  },
+  "logo_path": "assets/logo.png",
+  "firma_digitale_path": "assets/firma.png",
+  "note_legali": {
+    "italiano": "Ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR), i dati personali comunicati saranno trattati esclusivamente per l'esecuzione del contratto e per finalità connesse e strumentali.",
+    "inglese": "Pursuant to Legislative Decree 196/2003 and EU Regulation 2016/679 (GDPR), personal data will be processed exclusively for contract execution and related purposes."
+  },
+  "condizioni_generali": {
+    "termini_pagamento_standard": "Pagamento a 30 giorni data fattura",
+    "spese_trasporto": "Franco destino",
+    "garanzia": "Secondo condizioni di vendita standard",
+    "foro_competente": "Piacenza"
+  },
+  "documenti": {
+    "conferma_ordine_venditore": {
+      "titolo": "CONFERMA D'ORDINE - VENDITORE",
+      "footer": "Documento generato automaticamente da GestyBrok"
+    },
+    "conferma_ordine_compratore": {
+      "titolo": "CONFERMA D'ORDINE - COMPRATORE",
+      "footer": "Documento generato automaticamente da GestyBrok"
+    }
+  },
+  "formati": {
+    "data": "DD/MM/YYYY",
+    "valuta": "EUR",
+    "separatore_decimale": ",",
+    "separatore_migliaia": "."
+  }
+}

@@ -1,0 +1,439 @@
+CREATE TABLE IF NOT EXISTS "t_banche" (
+	"id_banca"	INTEGER,
+	"nome_banca"	TEXT,
+	"bic"	TEXT,
+	"iban"	TEXT,
+	"n_account"	TEXT,
+	PRIMARY KEY("id_banca")
+);
+CREATE TABLE IF NOT EXISTS "t_iva" (
+	"id_iva"	INTEGER,
+	"descrizione"	TEXT,
+	"iva"	TEXT,
+	PRIMARY KEY("id_iva")
+);
+CREATE TABLE IF NOT EXISTS "t_pagamenti" (
+	"id_pagamento"	INTEGER,
+	"tipo_pagamento"	TEXT,
+	PRIMARY KEY("id_pagamento")
+);
+CREATE TABLE IF NOT EXISTS "t_venditori" (
+	"id_venditore"	INTEGER,
+	"azienda"	TEXT,
+	"indirizzo"	TEXT,
+	"cap"	TEXT,
+	"citta"	TEXT,
+	"stato"	TEXT,
+	"fax"	TEXT,
+	"telefono"	TEXT,
+	"piva"	TEXT,
+	"italiano"	TEXT,
+	"tipo_pagamento"	TEXT,
+	"iva"	TEXT,
+	PRIMARY KEY("id_venditore")
+);
+CREATE TABLE IF NOT EXISTS "t_famiglie_articoli" (
+	"famiglia"	TEXT,
+	PRIMARY KEY("famiglia")
+);
+CREATE TABLE IF NOT EXISTS "t_venditore_offre" (
+	"id_offre"	INTEGER,
+	"venditore"	INTEGER,
+	"articolo"	INTEGER,
+	"prezzo"	TEXT,
+	"provvigione"	TEXT,
+	"tipologia"	TEXT,
+	PRIMARY KEY("id_offre"),
+	FOREIGN KEY("articolo") REFERENCES "t_articoli"("id_articolo"),
+	FOREIGN KEY("venditore") REFERENCES "t_venditori"("id_venditore")
+);
+CREATE TABLE IF NOT EXISTS "t_dati_compratori" (
+	"id_dati_compratore"	INTEGER,
+	"id_compratore"	INTEGER,
+	"mail"	TEXT,
+	"fax"	TEXT,
+	"telefono"	TEXT,
+	"ntel_tipologia"	TEXT,
+	"contatto"	TEXT,
+	PRIMARY KEY("id_dati_compratore"),
+	FOREIGN KEY("id_compratore") REFERENCES "t_compratori"("id_compratore")
+);
+CREATE TABLE IF NOT EXISTS "t_dati_venditori" (
+	"id_dati_venditore"	INTEGER,
+	"id_venditore"	INTEGER,
+	"mail"	TEXT,
+	"fax"	TEXT,
+	"telefono"	TEXT,
+	"ntel_tipologia"	TEXT,
+	"contatto"	TEXT,
+	PRIMARY KEY("id_dati_venditore"),
+	FOREIGN KEY("id_venditore") REFERENCES "t_venditori"("id_venditore")
+);
+CREATE TABLE IF NOT EXISTS "t_compratore_cerca" (
+	"id_cerca"	INTEGER,
+	"compratore"	INTEGER,
+	"articolo"	INTEGER,
+	"note"	TEXT,
+	PRIMARY KEY("id_cerca"),
+	FOREIGN KEY("compratore") REFERENCES "t_compratori"("id_compratore"),
+	FOREIGN KEY("articolo") REFERENCES "t_articoli"("id_articolo")
+);
+CREATE TABLE IF NOT EXISTS "t_tipo_articoli" (
+	"tipologia"	TEXT,
+	PRIMARY KEY("tipologia")
+);
+CREATE TABLE IF NOT EXISTS "t_articoli" (
+	"id_articolo"	INTEGER,
+	"nome_articolo"	TEXT,
+	"unita_misura"	TEXT,
+	"famiglia"	TEXT,
+	"tipologia"	TEXT,
+	PRIMARY KEY("id_articolo"),
+	FOREIGN KEY("famiglia") REFERENCES "t_famiglie_articoli"("famiglia"),
+	FOREIGN KEY("tipologia") REFERENCES "t_tipo_articoli"("tipologia")
+);
+CREATE TABLE IF NOT EXISTS "t_conferme_trading" (
+	"id_conferma"	INTEGER,
+	"compratore"	INTEGER,
+	"venditore"	INTEGER,
+	"qta"	TEXT,
+	"prezzo"	TEXT,
+	"articolo"	INTEGER,
+	"n_conf"	TEXT,
+	"data_conf"	TEXT,
+	"provvigione"	TEXT,
+	"tipologia"	TEXT,
+	"luogo_consegna"	TEXT,
+	"condizioni_pag"	TEXT,
+	"note"	TEXT,
+	"carico"	TEXT,
+	"arrivo"	TEXT,
+	"emailv"	TEXT,
+	"emailc"	TEXT,
+	PRIMARY KEY("id_conferma"),
+	FOREIGN KEY("compratore") REFERENCES "t_compratori"("id_compratore"),
+	FOREIGN KEY("venditore") REFERENCES "t_venditori"("id_venditore"),
+	FOREIGN KEY("articolo") REFERENCES "t_articoli"("id_articolo")
+);
+CREATE TABLE IF NOT EXISTS "t_conferme" (
+	"id_conferma"	INTEGER,
+	"compratore"	INTEGER,
+	"venditore"	INTEGER,
+	"qta"	TEXT,
+	"prezzo"	TEXT,
+	"articolo"	INTEGER,
+	"n_conf"	TEXT,
+	"data_conf"	TEXT,
+	"provvigione"	TEXT,
+	"tipologia"	TEXT,
+	"luogo_consegna"	TEXT,
+	"condizioni_pag"	TEXT,
+	"note"	TEXT,
+	"carico"	TEXT,
+	"arrivo"	TEXT,
+	"emailv"	TEXT,
+	"emailc"	TEXT,
+	PRIMARY KEY("id_conferma"),
+	FOREIGN KEY("compratore") REFERENCES "t_compratori"("id_compratore"),
+	FOREIGN KEY("venditore") REFERENCES "t_venditori"("id_venditore"),
+	FOREIGN KEY("articolo") REFERENCES "t_articoli"("id_articolo")
+);
+CREATE TABLE IF NOT EXISTS "t_date_consegna" (
+	"id_data_consegna"	INTEGER,
+	"id_conferma"	INTEGER,
+	"data_consegna"	TEXT,
+	"qta_consegna"	TEXT,
+	PRIMARY KEY("id_data_consegna"),
+	FOREIGN KEY("id_conferma") REFERENCES "t_conferme"("id_conferma")
+);
+CREATE TABLE IF NOT EXISTS "t_fatture" (
+	"id_fattura"	INTEGER,
+	"confermaordine"	INTEGER,
+	"n_fat"	INTEGER,
+	"data_fat"	INTEGER,
+	"nota_acr"	INTEGER,
+	"articolo"	INTEGER,
+	"qta"	INTEGER,
+	"prezzo"	INTEGER,
+	"iva_perc"	INTEGER,
+	"data_consegna"	INTEGER,
+	"compilato"	INTEGER,
+	"fatturata"	INTEGER,
+	PRIMARY KEY("id_fattura"),
+	FOREIGN KEY("confermaordine") REFERENCES "t_conferme"("id_conferma")
+);
+CREATE TABLE IF NOT EXISTS "t_date_consegna_trading" (
+	"id_data_consegna"	INTEGER,
+	"id_conferma"	INTEGER,
+	"data_consegna"	TEXT,
+	"qta_consegna"	TEXT,
+	"fatturata"	INTEGER,
+	"data_pagamento_uscita"	TEXT,
+	"data_pagamento_entrata"	TEXT,
+	PRIMARY KEY("id_data_consegna"),
+	FOREIGN KEY("id_conferma") REFERENCES "t_conferme_trading"("id_conferma")
+);
+CREATE TABLE IF NOT EXISTS "t_fatture_trading" (
+	"id_fattura"	INTEGER,
+	"confermaordine"	INTEGER,
+	"n_fat"	INTEGER,
+	"data_fat"	INTEGER,
+	"nota_acr"	INTEGER,
+	"articolo"	INTEGER,
+	"qta"	INTEGER,
+	"prezzo"	INTEGER,
+	"iva_perc"	INTEGER,
+	"data_consegna"	INTEGER,
+	"compilato"	INTEGER,
+	"fatturata"	INTEGER,
+	PRIMARY KEY("id_fattura"),
+	FOREIGN KEY("confermaordine") REFERENCES "t_conferme_trading"("id_conferma")
+);
+CREATE TABLE IF NOT EXISTS "t_fat_studio_det_trading" (
+	"id_fat_studio_det"	INTEGER,
+	"id_fat_studio"	INTEGER,
+	"articolo"	INTEGER,
+	"qta"	INTEGER,
+	"prezzo"	INTEGER,
+	"data_consegna"	INTEGER,
+	PRIMARY KEY("id_fat_studio_det"),
+	FOREIGN KEY("id_fat_studio") REFERENCES "t_fatture_studio_trading"("id_fatt_studio"),
+	FOREIGN KEY("articolo") REFERENCES "t_articoli"("id_articolo")
+);
+CREATE TABLE IF NOT EXISTS "t_fatture_studio" (
+	"id_fatt_studio"	INTEGER,
+	"n_fat"	INTEGER,
+	"data_fat"	INTEGER,
+	"nota_acr"	INTEGER,
+	"cliente"	INTEGER,
+	"t_iva"	INTEGER,
+	"t_pagamento"	INTEGER,
+	"note"	INTEGER,
+	"id_banca"	INTEGER,
+	PRIMARY KEY("id_fatt_studio"),
+	FOREIGN KEY("cliente") REFERENCES "t_venditori"("id_venditore"),
+	FOREIGN KEY("t_iva") REFERENCES "t_iva"("id_iva"),
+	FOREIGN KEY("t_pagamento") REFERENCES "t_pagamenti"("id_pagamento"),
+	FOREIGN KEY("id_banca") REFERENCES "t_banche"("id_banca")
+);
+CREATE TABLE IF NOT EXISTS "t_fatture_studio_trading" (
+	"id_fatt_studio"	INTEGER,
+	"n_fat"	INTEGER,
+	"data_fat"	INTEGER,
+	"nota_acr"	INTEGER,
+	"cliente"	INTEGER,
+	"t_iva"	INTEGER,
+	"t_pagamento"	INTEGER,
+	"note"	INTEGER,
+	"id_banca"	INTEGER,
+	"n_conf"	INTEGER,
+	PRIMARY KEY("id_fatt_studio"),
+	FOREIGN KEY("cliente") REFERENCES "t_compratori"("id_compratore"),
+	FOREIGN KEY("t_iva") REFERENCES "t_iva"("id_iva"),
+	FOREIGN KEY("t_pagamento") REFERENCES "t_pagamenti"("id_pagamento")
+);
+CREATE TABLE IF NOT EXISTS "t_compratori" (
+	"id_compratore"	INTEGER,
+	"azienda"	TEXT,
+	"indirizzo"	TEXT,
+	"cap"	TEXT,
+	"citta"	TEXT,
+	"stato"	TEXT,
+	"fax"	TEXT,
+	"telefono"	TEXT,
+	"piva"	TEXT,
+	"italiano"	TEXT,
+	"tipo_pagamento"	TEXT,
+	"iva"	TEXT,
+	PRIMARY KEY("id_compratore")
+);
+CREATE TABLE IF NOT EXISTS "t_fat_studio_det" (
+	"id_fat_studio_det"	INTEGER,
+	"id_fat_studio"	INTEGER,
+	"compratore"	INTEGER,
+	"qta"	INTEGER,
+	"prezzo"	INTEGER,
+	"provvigione"	INTEGER,
+	"tipologia"	INTEGER,
+	"data_consegna"	INTEGER,
+	PRIMARY KEY("id_fat_studio_det"),
+	FOREIGN KEY("id_fat_studio") REFERENCES "t_fatture_studio"("id_fatt_studio"),
+	FOREIGN KEY("compratore") REFERENCES "t_compratori"("id_compratore")
+);
+CREATE TABLE tipi_articolo (
+	id INTEGER NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	descrizione TEXT, 
+	PRIMARY KEY (id), 
+	UNIQUE (nome)
+);
+CREATE INDEX ix_tipi_articolo_id ON tipi_articolo (id);
+CREATE TABLE famiglie_articolo (
+	id INTEGER NOT NULL, 
+	nome VARCHAR(100) NOT NULL, 
+	descrizione TEXT, 
+	PRIMARY KEY (id), 
+	UNIQUE (nome)
+);
+CREATE INDEX ix_famiglie_articolo_id ON famiglie_articolo (id);
+CREATE TABLE compratori (
+	id INTEGER NOT NULL, 
+	codice VARCHAR(50), 
+	azienda VARCHAR(200) NOT NULL, 
+	partita_iva VARCHAR(20), 
+	indirizzo VARCHAR(200), 
+	cap VARCHAR(10), 
+	citta VARCHAR(100), 
+	telefono VARCHAR(30), 
+	email VARCHAR(100), 
+	attivo BOOLEAN, 
+	created_at DATETIME, 
+	PRIMARY KEY (id), 
+	UNIQUE (codice)
+);
+CREATE INDEX ix_compratori_azienda ON compratori (azienda);
+CREATE INDEX ix_compratori_id ON compratori (id);
+CREATE TABLE iva (
+	id INTEGER NOT NULL, 
+	percentuale FLOAT NOT NULL, 
+	descrizione VARCHAR(100), 
+	PRIMARY KEY (id)
+);
+CREATE INDEX ix_iva_id ON iva (id);
+CREATE TABLE pagamenti (
+	id INTEGER NOT NULL, 
+	tipo VARCHAR(100) NOT NULL, 
+	giorni INTEGER, 
+	descrizione TEXT, 
+	PRIMARY KEY (id)
+);
+CREATE INDEX ix_pagamenti_id ON pagamenti (id);
+CREATE TABLE banche (
+	id INTEGER NOT NULL, 
+	nome VARCHAR(200) NOT NULL, 
+	iban VARCHAR(50), 
+	swift VARCHAR(20), 
+	indirizzo VARCHAR(200), 
+	PRIMARY KEY (id)
+);
+CREATE INDEX ix_banche_id ON banche (id);
+CREATE TABLE articoli (
+	id INTEGER NOT NULL, 
+	nome VARCHAR(200) NOT NULL, 
+	codice VARCHAR(50), 
+	unita_misura VARCHAR(20), 
+	tipo_id INTEGER, 
+	famiglia_id INTEGER, 
+	descrizione TEXT, 
+	attivo BOOLEAN, 
+	created_at DATETIME, 
+	updated_at DATETIME, 
+	PRIMARY KEY (id), 
+	UNIQUE (codice), 
+	FOREIGN KEY(tipo_id) REFERENCES tipi_articolo (id), 
+	FOREIGN KEY(famiglia_id) REFERENCES famiglie_articolo (id)
+);
+CREATE INDEX ix_articoli_id ON articoli (id);
+CREATE INDEX ix_articoli_nome ON articoli (nome);
+CREATE TABLE venditori (
+	id INTEGER NOT NULL, 
+	codice VARCHAR(50), 
+	azienda VARCHAR(200) NOT NULL, 
+	partita_iva VARCHAR(20), 
+	indirizzo VARCHAR(200), 
+	cap VARCHAR(10), 
+	citta VARCHAR(100), 
+	telefono VARCHAR(30), 
+	fax VARCHAR(30), 
+	email VARCHAR(100), 
+	italiano BOOLEAN, 
+	iva_id INTEGER, 
+	pagamento_id INTEGER, 
+	banca_id INTEGER, 
+	attivo BOOLEAN, 
+	created_at DATETIME, 
+	PRIMARY KEY (id), 
+	UNIQUE (codice), 
+	FOREIGN KEY(iva_id) REFERENCES iva (id), 
+	FOREIGN KEY(pagamento_id) REFERENCES pagamenti (id), 
+	FOREIGN KEY(banca_id) REFERENCES banche (id)
+);
+CREATE INDEX ix_venditori_id ON venditori (id);
+CREATE INDEX ix_venditori_azienda ON venditori (azienda);
+CREATE TABLE venditore_offre (
+	id INTEGER NOT NULL, 
+	venditore_id INTEGER NOT NULL, 
+	articolo_id INTEGER NOT NULL, 
+	prezzo FLOAT NOT NULL, 
+	provvigione FLOAT, 
+	tipologia VARCHAR(100), 
+	note TEXT, 
+	valido_da DATE, 
+	valido_a DATE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(venditore_id) REFERENCES venditori (id), 
+	FOREIGN KEY(articolo_id) REFERENCES articoli (id)
+);
+CREATE INDEX ix_venditore_offre_id ON venditore_offre (id);
+CREATE TABLE compratore_cerca (
+	id INTEGER NOT NULL, 
+	compratore_id INTEGER NOT NULL, 
+	articolo_id INTEGER NOT NULL, 
+	quantita_richiesta FLOAT, 
+	note TEXT, 
+	data_richiesta DATE, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(compratore_id) REFERENCES compratori (id), 
+	FOREIGN KEY(articolo_id) REFERENCES articoli (id)
+);
+CREATE INDEX ix_compratore_cerca_id ON compratore_cerca (id);
+CREATE TABLE conferme_ordine (
+	id INTEGER NOT NULL, 
+	numero_conferma VARCHAR(50), 
+	data_conferma DATE NOT NULL, 
+	venditore_id INTEGER NOT NULL, 
+	compratore_id INTEGER NOT NULL, 
+	articolo_id INTEGER NOT NULL, 
+	quantita FLOAT NOT NULL, 
+	prezzo FLOAT NOT NULL, 
+	provvigione FLOAT, 
+	tipologia VARCHAR(100), 
+	note TEXT, 
+	created_at DATETIME, 
+	PRIMARY KEY (id), 
+	UNIQUE (numero_conferma), 
+	FOREIGN KEY(venditore_id) REFERENCES venditori (id), 
+	FOREIGN KEY(compratore_id) REFERENCES compratori (id), 
+	FOREIGN KEY(articolo_id) REFERENCES articoli (id)
+);
+CREATE INDEX ix_conferme_ordine_id ON conferme_ordine (id);
+CREATE TABLE date_consegna (
+	id INTEGER NOT NULL, 
+	conferma_ordine_id INTEGER NOT NULL, 
+	data_consegna DATE NOT NULL, 
+	quantita_consegnata FLOAT, 
+	note TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(conferma_ordine_id) REFERENCES conferme_ordine (id)
+);
+CREATE INDEX ix_date_consegna_id ON date_consegna (id);
+CREATE TABLE fatture (
+	id INTEGER NOT NULL, 
+	numero_fattura VARCHAR(50) NOT NULL, 
+	data_fattura DATE NOT NULL, 
+	cliente_id INTEGER NOT NULL, 
+	conferma_ordine_id INTEGER, 
+	importo_netto FLOAT, 
+	importo_iva FLOAT, 
+	importo_totale FLOAT, 
+	pagata BOOLEAN, 
+	data_pagamento DATE, 
+	note TEXT, 
+	created_at DATETIME, 
+	PRIMARY KEY (id), 
+	UNIQUE (numero_fattura), 
+	FOREIGN KEY(cliente_id) REFERENCES venditori (id), 
+	FOREIGN KEY(conferma_ordine_id) REFERENCES conferme_ordine (id)
+);
+CREATE INDEX ix_fatture_id ON fatture (id);
+CREATE INDEX ix_fatture_data_fattura ON fatture (data_fattura);

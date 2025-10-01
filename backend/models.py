@@ -1,206 +1,293 @@
 """
-SQLAlchemy Models per GestyBrok
+SQLAlchemy Models mappati sul database esistente
 """
-from sqlalchemy import (
-    Column, Integer, String, Float, Boolean, Date, ForeignKey, Text, DateTime
-)
+from sqlalchemy import Column, Integer, String, Float, Boolean, Date, ForeignKey, Text, DateTime
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from database import Base
 
 
-class TipoArticolo(Base):
-    __tablename__ = "tipi_articolo"
+# ==================== TABELLE LEGACY ====================
+
+class TBanca(Base):
+    __tablename__ = "t_banche"
     
-    id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String(100), unique=True, nullable=False)
+    id_banca = Column(Integer, primary_key=True)
+    nome_banca = Column(Text)
+    bic = Column(Text)
+    iban = Column(Text)
+    n_account = Column(Text)
+
+
+class TIva(Base):
+    __tablename__ = "t_iva"
+    
+    id_iva = Column(Integer, primary_key=True)
     descrizione = Column(Text)
-    
-    articoli = relationship("Articolo", back_populates="tipo")
+    iva = Column(Text)
 
 
-class FamigliaArticolo(Base):
-    __tablename__ = "famiglie_articolo"
+class TPagamento(Base):
+    __tablename__ = "t_pagamenti"
     
-    id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String(100), unique=True, nullable=False)
-    descrizione = Column(Text)
-    
-    articoli = relationship("Articolo", back_populates="famiglia")
+    id_pagamento = Column(Integer, primary_key=True)
+    tipo_pagamento = Column(Text)
 
 
-class Articolo(Base):
-    __tablename__ = "articoli"
+class TFamigliaArticolo(Base):
+    __tablename__ = "t_famiglie_articoli"
     
-    id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String(200), nullable=False, index=True)
-    codice = Column(String(50), unique=True)
-    unita_misura = Column(String(20))
-    tipo_id = Column(Integer, ForeignKey("tipi_articolo.id"))
-    famiglia_id = Column(Integer, ForeignKey("famiglie_articolo.id"))
-    descrizione = Column(Text)
-    attivo = Column(Boolean, default=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    
-    tipo = relationship("TipoArticolo", back_populates="articoli")
-    famiglia = relationship("FamigliaArticolo", back_populates="articoli")
-    offerte = relationship("VenditoreOffre", back_populates="articolo")
-    richieste = relationship("CompratoreCerca", back_populates="articolo")
+    famiglia = Column(Text, primary_key=True)
 
 
-class Venditore(Base):
-    __tablename__ = "venditori"
+class TTipoArticolo(Base):
+    __tablename__ = "t_tipo_articoli"
     
-    id = Column(Integer, primary_key=True, index=True)
-    codice = Column(String(50), unique=True)
-    azienda = Column(String(200), nullable=False, index=True)
-    partita_iva = Column(String(20))
-    indirizzo = Column(String(200))
-    cap = Column(String(10))
-    citta = Column(String(100))
-    telefono = Column(String(30))
-    fax = Column(String(30))
-    email = Column(String(100))
-    italiano = Column(Boolean, default=True)
-    iva_id = Column(Integer, ForeignKey("iva.id"))
-    pagamento_id = Column(Integer, ForeignKey("pagamenti.id"))
-    banca_id = Column(Integer, ForeignKey("banche.id"))
-    attivo = Column(Boolean, default=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    offerte = relationship("VenditoreOffre", back_populates="venditore")
-    conferme_ordine = relationship("ConfermaOrdine", back_populates="venditore")
-    iva = relationship("Iva")
-    pagamento = relationship("Pagamento")
-    banca = relationship("Banca")
+    tipologia = Column(Text, primary_key=True)
 
 
-class Compratore(Base):
-    __tablename__ = "compratori"
+class TArticolo(Base):
+    __tablename__ = "t_articoli"
     
-    id = Column(Integer, primary_key=True, index=True)
-    codice = Column(String(50), unique=True)
-    azienda = Column(String(200), nullable=False, index=True)
-    partita_iva = Column(String(20))
-    indirizzo = Column(String(200))
-    cap = Column(String(10))
-    citta = Column(String(100))
-    telefono = Column(String(30))
-    email = Column(String(100))
-    attivo = Column(Boolean, default=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    richieste = relationship("CompratoreCerca", back_populates="compratore")
-    conferme_ordine = relationship("ConfermaOrdine", back_populates="compratore")
+    id_articolo = Column(Integer, primary_key=True)
+    nome_articolo = Column(Text)
+    unita_misura = Column(Text)
+    famiglia = Column(Text, ForeignKey("t_famiglie_articoli.famiglia"))
+    tipologia = Column(Text, ForeignKey("t_tipo_articoli.tipologia"))
 
 
-class VenditoreOffre(Base):
-    __tablename__ = "venditore_offre"
+class TVenditore(Base):
+    __tablename__ = "t_venditori"
     
-    id = Column(Integer, primary_key=True, index=True)
-    venditore_id = Column(Integer, ForeignKey("venditori.id"), nullable=False)
-    articolo_id = Column(Integer, ForeignKey("articoli.id"), nullable=False)
-    prezzo = Column(Float, nullable=False)
-    provvigione = Column(Float)
-    tipologia = Column(String(100))
+    id_venditore = Column(Integer, primary_key=True)
+    azienda = Column(Text)
+    indirizzo = Column(Text)
+    cap = Column(Text)
+    citta = Column(Text)
+    stato = Column(Text)
+    fax = Column(Text)
+    telefono = Column(Text)
+    piva = Column(Text)
+    italiano = Column(Text)
+    tipo_pagamento = Column(Text)
+    iva = Column(Text)
+
+
+class TCompratore(Base):
+    __tablename__ = "t_compratori"
+    
+    id_compratore = Column(Integer, primary_key=True)
+    azienda = Column(Text)
+    indirizzo = Column(Text)
+    cap = Column(Text)
+    citta = Column(Text)
+    stato = Column(Text)
+    fax = Column(Text)
+    telefono = Column(Text)
+    piva = Column(Text)
+    italiano = Column(Text)
+    tipo_pagamento = Column(Text)
+    iva = Column(Text)
+
+
+class TVenditoreOffre(Base):
+    __tablename__ = "t_venditore_offre"
+    
+    id_offre = Column(Integer, primary_key=True)
+    venditore = Column(Integer, ForeignKey("t_venditori.id_venditore"))
+    articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
+    prezzo = Column(Text)
+    provvigione = Column(Text)
+    tipologia = Column(Text)
+
+
+class TCompratoreCerca(Base):
+    __tablename__ = "t_compratore_cerca"
+    
+    id_cerca = Column(Integer, primary_key=True)
+    compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
     note = Column(Text)
-    valido_da = Column(Date)
-    valido_a = Column(Date)
-    
-    venditore = relationship("Venditore", back_populates="offerte")
-    articolo = relationship("Articolo", back_populates="offerte")
 
 
-class CompratoreCerca(Base):
-    __tablename__ = "compratore_cerca"
+class TDatiVenditore(Base):
+    __tablename__ = "t_dati_venditori"
     
-    id = Column(Integer, primary_key=True, index=True)
-    compratore_id = Column(Integer, ForeignKey("compratori.id"), nullable=False)
-    articolo_id = Column(Integer, ForeignKey("articoli.id"), nullable=False)
-    quantita_richiesta = Column(Float)
+    id_dati_venditore = Column(Integer, primary_key=True)
+    id_venditore = Column(Integer, ForeignKey("t_venditori.id_venditore"))
+    mail = Column(Text)
+    fax = Column(Text)
+    telefono = Column(Text)
+    ntel_tipologia = Column(Text)
+    contatto = Column(Text)
+
+
+class TDatiCompratore(Base):
+    __tablename__ = "t_dati_compratori"
+    
+    id_dati_compratore = Column(Integer, primary_key=True)
+    id_compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    mail = Column(Text)
+    fax = Column(Text)
+    telefono = Column(Text)
+    ntel_tipologia = Column(Text)
+    contatto = Column(Text)
+
+
+class TConferma(Base):
+    __tablename__ = "t_conferme"
+    
+    id_conferma = Column(Integer, primary_key=True)
+    compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    venditore = Column(Integer, ForeignKey("t_venditori.id_venditore"))
+    qta = Column(Text)
+    prezzo = Column(Text)
+    articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
+    n_conf = Column(Text)
+    data_conf = Column(Text)
+    provvigione = Column(Text)
+    tipologia = Column(Text)
+    luogo_consegna = Column(Text)
+    condizioni_pag = Column(Text)
     note = Column(Text)
-    data_richiesta = Column(Date, default=datetime.utcnow)
-    
-    compratore = relationship("Compratore", back_populates="richieste")
-    articolo = relationship("Articolo", back_populates="richieste")
+    carico = Column(Text)
+    arrivo = Column(Text)
+    emailv = Column(Text)
+    emailc = Column(Text)
 
 
-class ConfermaOrdine(Base):
-    __tablename__ = "conferme_ordine"
+class TDataConsegna(Base):
+    __tablename__ = "t_date_consegna"
     
-    id = Column(Integer, primary_key=True, index=True)
-    numero_conferma = Column(String(50), unique=True)
-    data_conferma = Column(Date, nullable=False)
-    venditore_id = Column(Integer, ForeignKey("venditori.id"), nullable=False)
-    compratore_id = Column(Integer, ForeignKey("compratori.id"), nullable=False)
-    articolo_id = Column(Integer, ForeignKey("articoli.id"), nullable=False)
-    quantita = Column(Float, nullable=False)
-    prezzo = Column(Float, nullable=False)
-    provvigione = Column(Float)
-    tipologia = Column(String(100))
+    id_data_consegna = Column(Integer, primary_key=True)
+    id_conferma = Column(Integer, ForeignKey("t_conferme.id_conferma"))
+    data_consegna = Column(Text)
+    qta_consegna = Column(Text)
+
+
+class TFattura(Base):
+    __tablename__ = "t_fatture"
+    
+    id_fattura = Column(Integer, primary_key=True)
+    confermaordine = Column(Integer, ForeignKey("t_conferme.id_conferma"))
+    n_fat = Column(Integer)
+    data_fat = Column(Integer)
+    nota_acr = Column(Integer)
+    articolo = Column(Integer)
+    qta = Column(Integer)
+    prezzo = Column(Integer)
+    iva_perc = Column(Integer)
+    data_consegna = Column(Integer)
+    compilato = Column(Integer)
+    fatturata = Column(Integer)
+
+
+class TFatturaStudio(Base):
+    __tablename__ = "t_fatture_studio"
+    
+    id_fatt_studio = Column(Integer, primary_key=True)
+    n_fat = Column(Integer)
+    data_fat = Column(Integer)
+    nota_acr = Column(Integer)
+    cliente = Column(Integer, ForeignKey("t_venditori.id_venditore"))
+    t_iva = Column(Integer, ForeignKey("t_iva.id_iva"))
+    t_pagamento = Column(Integer, ForeignKey("t_pagamenti.id_pagamento"))
+    note = Column(Integer)
+    id_banca = Column(Integer, ForeignKey("t_banche.id_banca"))
+
+
+class TFatturaStudioDet(Base):
+    __tablename__ = "t_fat_studio_det"
+    
+    id_fat_studio_det = Column(Integer, primary_key=True)
+    id_fat_studio = Column(Integer, ForeignKey("t_fatture_studio.id_fatt_studio"))
+    compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    qta = Column(Integer)
+    prezzo = Column(Integer)
+    provvigione = Column(Integer)
+    tipologia = Column(Integer)
+    data_consegna = Column(Integer)
+
+
+# ==================== TABELLE TRADING ====================
+
+class TConfermaTrading(Base):
+    __tablename__ = "t_conferme_trading"
+    
+    id_conferma = Column(Integer, primary_key=True)
+    compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    venditore = Column(Integer, ForeignKey("t_venditori.id_venditore"))
+    qta = Column(Text)
+    prezzo = Column(Text)
+    articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
+    n_conf = Column(Text)
+    data_conf = Column(Text)
+    provvigione = Column(Text)
+    tipologia = Column(Text)
+    luogo_consegna = Column(Text)
+    condizioni_pag = Column(Text)
     note = Column(Text)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    carico = Column(Text)
+    arrivo = Column(Text)
+    emailv = Column(Text)
+    emailc = Column(Text)
+
+
+class TDataConsegnaTrading(Base):
+    __tablename__ = "t_date_consegna_trading"
     
-    venditore = relationship("Venditore", back_populates="conferme_ordine")
-    compratore = relationship("Compratore", back_populates="conferme_ordine")
-    date_consegna = relationship("DataConsegna", back_populates="conferma_ordine", cascade="all, delete-orphan")
-    fatture = relationship("Fattura", back_populates="conferma_ordine")
+    id_data_consegna = Column(Integer, primary_key=True)
+    id_conferma = Column(Integer, ForeignKey("t_conferme_trading.id_conferma"))
+    data_consegna = Column(Text)
+    qta_consegna = Column(Text)
+    fatturata = Column(Integer)
+    data_pagamento_uscita = Column(Text)
+    data_pagamento_entrata = Column(Text)
 
 
-class DataConsegna(Base):
-    __tablename__ = "date_consegna"
+class TFatturaTrading(Base):
+    __tablename__ = "t_fatture_trading"
     
-    id = Column(Integer, primary_key=True, index=True)
-    conferma_ordine_id = Column(Integer, ForeignKey("conferme_ordine.id"), nullable=False)
-    data_consegna = Column(Date, nullable=False)
-    quantita_consegnata = Column(Float)
-    note = Column(Text)
+    id_fattura = Column(Integer, primary_key=True)
+    confermaordine = Column(Integer, ForeignKey("t_conferme_trading.id_conferma"))
+    n_fat = Column(Integer)
+    data_fat = Column(Integer)
+    nota_acr = Column(Integer)
+    articolo = Column(Integer)
+    qta = Column(Integer)
+    prezzo = Column(Integer)
+    iva_perc = Column(Integer)
+    data_consegna = Column(Integer)
+    compilato = Column(Integer)
+    fatturata = Column(Integer)
+
+
+class TFatturaStudioTrading(Base):
+    __tablename__ = "t_fatture_studio_trading"
     
-    conferma_ordine = relationship("ConfermaOrdine", back_populates="date_consegna")
+    id_fatt_studio = Column(Integer, primary_key=True)
+    n_fat = Column(Integer)
+    data_fat = Column(Integer)
+    nota_acr = Column(Integer)
+    cliente = Column(Integer, ForeignKey("t_compratori.id_compratore"))
+    t_iva = Column(Integer, ForeignKey("t_iva.id_iva"))
+    t_pagamento = Column(Integer, ForeignKey("t_pagamenti.id_pagamento"))
+    note = Column(Integer)
+    id_banca = Column(Integer)
+    n_conf = Column(Integer)
 
 
-class Fattura(Base):
-    __tablename__ = "fatture"
+class TFatturaStudioDetTrading(Base):
+    __tablename__ = "t_fat_studio_det_trading"
     
-    id = Column(Integer, primary_key=True, index=True)
-    numero_fattura = Column(String(50), unique=True, nullable=False)
-    data_fattura = Column(Date, nullable=False, index=True)
-    cliente_id = Column(Integer, ForeignKey("venditori.id"), nullable=False)
-    conferma_ordine_id = Column(Integer, ForeignKey("conferme_ordine.id"))
-    importo_netto = Column(Float)
-    importo_iva = Column(Float)
-    importo_totale = Column(Float)
-    pagata = Column(Boolean, default=False)
-    data_pagamento = Column(Date)
-    note = Column(Text)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    conferma_ordine = relationship("ConfermaOrdine", back_populates="fatture")
+    id_fat_studio_det = Column(Integer, primary_key=True)
+    id_fat_studio = Column(Integer, ForeignKey("t_fatture_studio_trading.id_fatt_studio"))
+    articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
+    qta = Column(Integer)
+    prezzo = Column(Integer)
+    data_consegna = Column(Integer)
 
 
-class Iva(Base):
-    __tablename__ = "iva"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    percentuale = Column(Float, nullable=False)
-    descrizione = Column(String(100))
-
-
-class Pagamento(Base):
-    __tablename__ = "pagamenti"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    tipo = Column(String(100), nullable=False)
-    giorni = Column(Integer)
-    descrizione = Column(Text)
-
-
-class Banca(Base):
-    __tablename__ = "banche"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    nome = Column(String(200), nullable=False)
-    iban = Column(String(50))
-    swift = Column(String(20))
-    indirizzo = Column(String(200))
+# NOTA: Le tabelle nuove (articoli, venditori, compratori, etc. senza prefisso t_)
+# sono state create da SQLAlchemy ma non le usiamo per ora.
+# Per usare solo le tabelle legacy, commenta le nuove nel main.py

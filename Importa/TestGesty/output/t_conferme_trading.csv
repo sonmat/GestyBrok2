@@ -1,0 +1,1076 @@
+id_conferma,compratore,venditore,qta,prezzo_acq,articolo,n_conf,data_conf,prezzo_vend,luogo_consegna,condizioni_pag,note,carico,arrivo,emailv,emailc,condizioni_pag_venditore
+10,66,236,300,8.9000,145,"5","01/23/15 00:00:00",10.5000,"LAVEZZOLA",1,,0,1,0,0,
+290,71,251,95700,4.0500,45,"209","01/31/17 00:00:00",4.1700,"ALBAREDO, VR- ITALY",1,"Organic SMP  ''ARLA''  -   with possibility to split the JULY  + AUGUST deliveries from Bag  -->  to Big Bag.",0,1,0,0,
+311,534,251,350,4.8000,45,"227","04/14/17 00:00:00",5.0500,"Flößergasse 2, Flößergasse 2
+81369 München",3,"DELIVERY ADDRESS : 
+Del Fiore Gelato Manufaktur
+Flößergasse 2
+81369 München",0,1,0,0,
+11,263,26,500,6.6000,70,"6","01/27/15 00:00:00",7.6000,"via FENESTRELLE 32, 10064 PINEROLO (TO), ITALY",3,,0,0,0,0,
+13,39,26,2000,5.3800,33,"8","02/03/15 00:00:00",5.6500,"VARESE",1,,0,1,0,0,
+15,66,236,800,9.3000,145,"9","02/11/15 00:00:00",10.6000,"LAVEZZOLA",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG",0,1,0,0,
+18,263,26,500,6.6000,70,"11","02/18/15 00:00:00",7.6000,"PINEROLO, ITALY",3,,0,1,0,0,
+352,513,14,100,4.8000,46,"259","09/06/17 00:00:00",5.1000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+17,51,188,1000,4.8900,59,"10","02/16/15 00:00:00",6.8500,"LISCATE , Italy",2,"Pagamento RIBA 30 gg. netto",0,1,0,0,
+436,1,284,75000,0.3350,38,"335","03/28/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+19,1,77,15000,0.5400,37,"12","02/27/15 00:00:00",0.6000,"LOCALITA' CA' VERDE - 37015 - S.Ambrogio di Valpolicella (VR)",1,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04.",1,0,0,0,
+22,39,26,2000,5.2800,33,"13","03/09/15 00:00:00",5.6400,"VARESE, Italy",1,,0,0,0,0,
+549,577,26,0,7.7800,70,"437","09/14/18 00:00:00",7.9300,"VEROLENGO - TO, ITALY",14,,0,1,0,0,
+23,66,236,708,9.8000,145,"14","03/11/15 00:00:00",10.8000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG",0,1,0,0,
+12,450,26,1000,5.3800,33,"7","01/29/15 00:00:00",5.7000,"forlì cesena",2,"PAGAMENTO 30 GIORNI RIBA NETTO DATA FATTURA",0,1,0,0,
+131,53,236,1500,8.2500,139,"82","02/11/16 00:00:00",9.1000,"VAGO DI LAVAGNO 37030, VR- Italy",1,"FROZEN Goods.",0,1,0,0,
+714,1,81,25000,0.4400,200,"586","06/12/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+132,439,12,25000,0.5000,37,"83","02/17/16 00:00:00",0.5550,"Via Filadelfia, 220, 10137 Torino",14,"ORGANIC RAW MILK FROM HUNGARY, DELIVERY ABSOLUTELY WITHIN
+11 O'CLOCK.",0,1,0,0,
+158,1,267,25000,0.4850,8,"102","04/21/16 00:00:00",0.5100,"PORCARI",1,"ORGANIC MILK FROM GERMANY - LATTE BIO TEDESCO.",0,1,0,0,
+786,564,325,3000,0.8500,21,"652","10/14/19 00:00:00",0.9000,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+126,482,221,1000,3.9200,45,"79","01/28/16 00:00:00",4.2000,"SETTIMO TORINESE (TO), ITALIE",1,"Pagamento 30 Gg.netto data Fattura , valuta fissa.",0,1,0,0,
+136,53,236,3777,8.2500,139,"86","02/19/16 00:00:00",9.1000,"VAGO DI LAVAGNO 37030, VR- Italy",1,"FROZEN GOODS, PAYMENT 30 DAYS BUT WE MADE A PREPAYMENT FOR THE INVOICE OF THE AMOUNT OF 6,162 €.",0,1,0,0,
+127,15,62,5000,4.8500,33,"80","02/03/16 00:00:00",4.9000,"ENGLAND, UK",3,"LOADING DATE IS ONLY INDICATIVE.",1,0,0,0,
+995,564,325,10000,0.8300,21,"834","08/26/20 00:00:00",0.9300,"SanVittore Olona",13,"latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI
+TRASPORTO 150 €URO, orario di scarico 8,00 -8,30,",0,1,0,0,14
+129,451,26,300,6.9000,70,"81","02/08/16 00:00:00",7.6000,"ZENSON DI PIAVE - TV, ITALY",2,"PAGAMENTO RIBA 30 GG.netto data fattura.",0,1,0,0,
+133,36,33,25000,0.5100,37,"84","02/18/16 00:00:00",0.5300,"BAGNOLO SAN VITO (MN)",1,"LATTE CRUDO BIOLOGICO NAZIONALE.",0,1,0,0,
+138,263,26,280,7.5000,70,"88","02/23/16 00:00:00",8.7000,"pinerolo",1,,0,1,0,0,
+1165,,,,0.0000,,"973",,,,0,,0,1,0,0,0
+139,343,260,100000,0.2100,38,"89","02/24/16 00:00:00",0.2700,"Via Provinciale, 17 - 12050 Bosia (CN)",1,"FR ORIGIN RAW MILK.",0,1,0,0,
+140,36,33,22000,0.5050,37,"90","03/02/16 00:00:00",0.5250,"BAGNOLO SAN VITO (MN)",1,"LATTE CRUDO BIOLOGICO NAZIONALE.",0,1,0,0,
+169,450,26,1000,5.3200,33,"112","05/13/16 00:00:00",5.5700,"CHEF SERVICE - FORLI'",2,"Pagamento 30 GG.RIBA netto data fattura.",0,0,0,0,
+279,450,26,1000,5.4000,33,"200","01/09/17 00:00:00",5.8000,"CHEF  SERVICE IN FORLI' , Italy",1,,0,1,0,0,
+280,149,19,1200,5.8000,59,"201","01/13/17 00:00:00",6.1000,"PONTE SAN MARCO, BS-  ITALY",2,"Delivery  ADDRESS : '' A. Gandola & C. SpA''- Strada Statale 11, 312 - 25010 Ponte San Marco BS, Italy
+Pagamento, 30 GG.Riba netto data fattura.",0,1,0,0,
+281,93,250,2000,11.9500,150,"202","01/13/17 00:00:00",12.7000,"RIPALTA CREMASCA",1,"2000 KG OF ORGANIC TURKEY BREAST - FROZEN -DELIVERY DATE TO BE FINALLY AGREED - DELIVERY PERIOD MARCH 2017",0,1,0,0,
+282,71,251,23925,4.1000,45,"203","01/20/17 00:00:00",4.1700,"ALBAREDO D'ADIGE , VR- ITALY",1,"GOODS IN 25 KG BAGS,  KOSHER.
+Pagamento : Bonifico Bancario 30 GG.netto data fattura valuta fissa.",0,1,0,0,
+284,80,250,2000,11.9000,150,"205","01/24/17 00:00:00",12.5000,"SAN GIOVANNI DEL DOSSO",1,"AROUND 2,000 KG OF ORGANIC TURKEY BREAST FROZEN - SAME QUALITY - DELIVERY DATE AFTER 07/02",0,1,0,0,
+293,513,14,100,4.1000,46,"212","02/02/17 00:00:00",4.4000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+285,320,136,75000,0.4150,38,"206","01/26/17 00:00:00",0.4350,"Località San Martino - 58025 Monterotondo Marittimo (GR)",3,"LATTE CRUDO CECO, FATTURAZIONE CON LA MEDIA DELLE PESATE.
+Cz origin raw milk, invoicing with the average value.",0,1,0,0,
+291,450,26,1000,5.4000,33,"210","02/01/17 00:00:00",5.8000,"CHEF SERVICE - FORLì, ITALY",2,"Pagamento, Riba 30 GG. netto data fattura.",0,1,0,0,
+287,93,250,4000,11.9000,150,"208","01/26/17 00:00:00",12.7000,"RIPALTA CREMASCA",1,"2000 kg if frozen organic turket breast - delivery date of July to be finally confimed.",0,1,0,0,
+295,526,288,22500,1.2500,159,"214","02/10/17 00:00:00",1.2800,"SPAIN",3,,1,0,0,0,
+292,37,246,2000,4.2000,45,"211","02/01/17 00:00:00",4.5000,"PADOVA, ITALIE",2,"Pagamento: 30 GG.Riba netto data fattura.",0,1,0,0,
+294,1,77,25000,0.5500,37,"213","02/08/17 00:00:00",0.5800,"VIA DELLE FOSSE NR 10 - 37050 VALLESE DI OPPEANO (VR)",2,"Latte Crudo Biologico. Carico tarda mattinata. Fatturazione con la media della pesate.",1,0,0,0,
+296,513,14,120,4.1000,46,"215","02/20/17 00:00:00",4.4000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+297,263,26,1000,6.5500,70,"216","02/22/17 00:00:00",7.5400,"PINEROLO, ITALY",1,,0,0,0,0,
+299,1,297,2000,0.5300,37,"217","03/02/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Carico dopo le ore 09,00.",1,0,0,0,
+401,39,26,4000,5.9200,33,"303","01/04/18 00:00:00",6.0000,"VARESE, ITALY",1,"ORGANIC BUTTER 82% IN 25 KG BLOCS.",0,1,0,0,
+199,1,265,100000,0.4000,8,"135","06/28/16 00:00:00",0.4400,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",2,"LATTE PASTORIZZATO BIOLOGICO AUSTRIACO, PAGAMENTO 30 GIORNI NETTI DATA CARICO. FATTURAZIONE CON LA MEDIA DEI VALORI.",1,0,0,0,
+24,62,77,12000,0.5600,37,"15","03/13/15 00:00:00",0.5850,"Sant'Ambrogio di Valpolicella VR - località Cà Verde",1,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg
+CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04. Il fornitore non è equipaggiato di cisterne per il prelevamento del latte con pompa a spinta.",1,0,0,0,
+29,463,238,800,8.0190,139,"16","03/17/15 00:00:00",9.1000,"GORDONA, Sondrio - Italy",14,"800 kg fese Bovine BIO PAD, CONGELATE .",0,1,0,0,
+30,450,26,1000,5.3500,33,"17","03/24/15 00:00:00",5.6500,"CHEF  SERVICE - 47121 FORLI'  (FC), Italy",1,,0,0,0,0,
+38,450,26,1000,5.7200,33,"23","04/29/15 00:00:00",6.0000,"CHEF SERVICE IN FORLI'  - Italy",2,"1O  kg blocs. Pagamento 3O GG RIBA netto data fattura.",0,0,0,0,
+33,66,236,393,9.8000,145,"19","03/31/15 00:00:00",10.8000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG",0,1,0,0,
+34,66,236,1227,9.8000,145,"20","03/31/15 00:00:00",10.8000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG, if the weight range won't be respected the goods will be rejected",0,1,0,0,
+35,66,236,1196,9.8000,145,"21","04/15/15 00:00:00",10.8000,"LAVEZZOLA",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG, if the weight range won't be respected the goods will be rejected",0,1,0,0,
+37,80,238,500,8.2000,139,"22","04/20/15 00:00:00",9.2000,"SAN GIOVANNI DEL DOSSO, MANTOVA",3,"500 KG DI FESE BOVINE CONGELATE, IL PREZZO DI 8,20 €KG E' SCONTATO DELL'1% VISTO IL PAGAMENTO ANTICIPATO",0,1,0,0,
+137,15,62,17000,4.8500,33,"87","02/19/16 00:00:00",4.9000,"GROCONTINENTAL , UK",1,,0,0,0,0,
+146,439,12,25000,0.4850,37,"95","03/22/16 00:00:00",0.5300,"Via Filadelfia, 220, 10137 Torino",14,"ORGANIC RAW MILK FROM HUNGARY, DELIVERY ABSOLUTELY WITHIN 11 AM.
+Bacterial charges should be within the Italian legal limit.",0,1,0,0,
+141,36,33,15000,0.5150,37,"91","03/09/16 00:00:00",0.5300,"BAGNOLO SAN VITO (MN)",1,"LATTE CRUDO BIOLOGICO NAZIONALE.",0,1,0,0,
+163,444,248,25000,0.2300,38,"106","05/05/16 00:00:00",0.2700,"VIA DI BICCIANO 29/A - 52010 TALLA (AR)",3,"HU ORIGIN FRESH RAW MILK, INVOICING WITH  AVERAGE OF THE WEIGHBRIDGES.",0,1,0,0,
+144,149,221,1000,3.8900,45,"93","03/14/16 00:00:00",4.1500,"PONTE SAN MARCO, BS - ITALIE",2,"Pagamento 30 GG.Riba netto data fattura.",0,0,0,0,
+145,37,188,1000,5.5500,59,"94","03/15/16 00:00:00",5.8800,"PADOVA , Italie",2,"Pagamento Riba 30 GG.netto data fattura.",0,1,0,0,
+147,343,16,100000,0.2150,38,"96","03/24/16 00:00:00",0.2700,"Via Provinciale 17 -12050 Bosia (CN)",3,"LATTE CRUDO TEDESCO - GERMAN ORIGIN RAW MILK.",0,1,0,0,
+151,149,264,825,5.6500,59,"97","04/08/16 00:00:00",5.9000,"PONTE SAN MARCO, Brescia - Italy",2,,0,0,0,0,
+39,71,198,24000,3.4600,45,"24","05/11/15 00:00:00",3.5200,"37041 ALBAREDO D'ADIGE (VR), ITALY",1,,0,1,0,0,
+32,66,236,701,9.8000,145,"18","03/24/15 00:00:00",10.8000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG",0,1,0,0,
+40,149,198,1000,3.9800,45,"25","05/12/15 00:00:00",4.2500,"25011 PONTE SAN MARCO, Brescia - Italy",14,,0,1,0,0,
+41,39,26,2000,5.4000,33,"26","05/13/15 00:00:00",5.7500,"VARESE, Italy",1,,0,1,0,0,
+43,62,77,10000,0.5600,37,"27","05/19/15 00:00:00",0.5900,"Sant'Ambrogio di Valpolicella VR - località Cà Verde",1,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04. Il fornitore non è equipaggiato di cisterne per il prelevamento del latte con pompa a spinta.",1,0,0,0,
+48,2,12,21000,0.5200,37,"29","06/01/15 00:00:00",0.5800,"	Via Ippolito Nievo, 23, Ramuscello PN",12,"Hungarian origin Organic raw milk, delivery absolutely within 6 o'clock in the morning. - Latte BIO Ungherese, consegna tassativamente entro le ore 6 di mattina.",0,1,0,0,
+44,80,236,832,8.8000,139,"28","05/26/15 00:00:00",10.0000,"SAN GIOVANNI DEL DOSSO - MANTOVA",1,"AROUND 500 KG OF FRESH ORGANIC BEEF TOPSIDE, WEIGHT RANGE 4-8 KG,
+THE DELIVERY DATE IS JUST AN INDICATION",0,1,0,0,
+49,364,245,500,7.6200,14,"30","06/04/15 00:00:00",7.9000,"TAVERNERIO, Italy",2,"frozen legs as from Spec / Prosciutti BIO congelati come da Scheda T.trasmessa.
+PAGAMENTO 30 GG.RIBA Netto dalla data di carico.",0,0,0,0,
+332,534,251,750,4.2000,45,"242","06/07/17 00:00:00",4.7000,"81369 München",15,"DELIVERY ADDRESS : 
+Del Fiore Gelato Manufaktur
+Flößergasse 2
+81369 München",0,1,0,0,
+315,1,265,25000,0.4200,8,"230","04/27/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+316,186,221,1000,4.4500,45,"231","05/02/17 00:00:00",4.6500,"TRUCAZZANO, Milano - Italie",2,"Pagamento, RIBA  3O  GG.netto data fattura.",0,1,0,0,
+317,1,265,100000,0.4200,8,"232","05/04/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+324,66,250,1000,11.9000,150,"235","05/10/17 00:00:00",12.7000,"lavezzola",1,"1000 KG OF FROZEN TURKEY BREAST - ORGANIC",0,1,0,0,
+323,37,26,1000,5.7800,33,"234","05/09/17 00:00:00",5.9800,"PADOVA, Italy",2,"Pagamento, 30 GG Riba netto data fattura.",0,0,0,0,
+626,80,13,750,11.2300,188,"503","01/02/19 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",13,"FESA BOVINA BIO PAD CONGELATA - BOVINO ADULTO >24 MESI",0,1,0,0,
+325,1,265,25000,0.4200,8,"236","05/11/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+328,1,265,100000,0.4200,8,"239","05/22/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+152,118,77,6300,0.5000,37,"98","04/11/16 00:00:00",0.5800,"VIA DELLE FOSSE, 10 - 37050  VALLESE DI OPPEANO (VR)",1,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg
+CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04. Il fornitore non è equipaggiato di
+cisterne per il prelevamento del latte con pompa a spinta.",1,0,0,0,
+153,465,259,50000,0.1700,38,"99","04/19/16 00:00:00",0.2000,"Rustigazzo 29018 - Lugagnano Val d’Arda, Piacenza",1,"latte crudo Tedesco - German origin raw milk.",0,1,0,0,
+156,354,265,26000,0.4200,37,"100","04/21/16 00:00:00",0.5100,"Monguzzo(CO)",2,"latte BIO Austriaco, pagamento 30 giorni data carico Ri.Ba, scadenza il 31/05.",0,1,0,0,
+142,487,77,3000,0.5600,37,"92","03/10/16 00:00:00",0.6400,"VIA DELLE FOSSE NR 10 - 37050 VALLESE DI OPPEANO (VR)",3,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04. Il fornitore non è equipaggiato di cisterne per il prelevamento del latte con pompa a spinta.",1,0,0,0,
+159,37,246,1000,3.9800,45,"103","04/26/16 00:00:00",4.2000,"PADOVA",2,"Pagamento RIBA 30 GG.netto data fattura.",0,1,0,0,
+162,93,268,1200,10.2000,14,"105","05/04/16 00:00:00",10.8500,"MALMEDY",3,"1200 KG OF FRESH ORGANIC PORK LEGS, DEBONED, RIND OFF, CLOSE CUT AS REQUIRED BY THE CUSTOMER - LOADING 11/05 FROM H. 15,00 UP TO 17,00",1,0,0,0,
+171,93,268,1500,9.6100,14,"114","05/20/16 00:00:00",10.8500,"MALMEDY",12,"1500 KG OF FRESH ORGANIC PORK LEGS, DEBONED, RIND OFF BUT WITH THE FAT ON, CLOSE CUT AS REQUIRED BY THE CUSTOMER",0,1,0,0,
+175,93,250,2000,12.7000,150,"118","05/27/16 00:00:00",13.5000,"ripalta cremasca",1,"2000 kg  OF FROZEN TURKEY BREAST - DELIVERY DATE IS JUST AN INDIACTION FOR OUR PROGRAM, LOADING DATE 01/06/2016",0,1,0,0,
+6,37,198,1000,3.9900,45,"2","11/07/14 00:00:00",4.3000,"PADOVA",1,,0,1,0,0,
+304,37,26,1000,5.7000,33,"222","03/15/17 00:00:00",5.8700,"PADOVA,  ITALY",2,"BURRO BIO 82% CONGELATO - ORGANIC BUTTER FROZEN.
+25 KG BLOCS. 
+Pagamento Riba 30 GG Netto data fattura.",0,0,0,0,
+303,93,250,2000,11.9000,150,"221","03/14/17 00:00:00",12.7000,"RIPALTA CREMASCA",1,"2000 KG FROZEN ORGANIC TURKEY BREAST - DELIVERY DATES TO BE FINALLY CONFIRMED",0,1,0,0,
+306,450,26,1000,5.6500,33,"224","03/30/17 00:00:00",6.0000,"CHEF SERVICE, FORLI - ITALY",2,"ORGANIC  BUTTER, 25 KG BLOCS.
+Pagamento RIBA 30 gg.Netto data fattura.",0,0,0,0,
+305,1,297,5000,0.5300,37,"223","03/16/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Carico dopo le ore 09.30",1,0,0,0,
+307,1,297,30000,0.5300,37,"225","04/03/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+308,66,250,1400,11.9000,150,"226","04/05/17 00:00:00",12.7000,"Via Dell'Industria 6/8 - 48011 Lavezzola, Ravenna - ITALY",1,"1400 kg if ORGANIC TURKEY BREAST FROZEN - delivered on PLASTI PALLETS",0,1,0,0,
+313,535,301,100,470.0000,179,"229","04/27/17 00:00:00",490.0000,"20091 BRESSO",3,"DELIVERY DATE TO BE FINALLY CONFIRMED - AROUND BEGINNING OF WEEK 20",0,1,0,0,
+312,1,297,45000,0.5300,37,"228","04/20/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+441,1,265,25000,0.3300,8,"340","04/05/18 00:00:00",0.3600,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+157,343,16,125000,0.2150,38,"101","04/21/16 00:00:00",0.2700,"Via Provinciale 17 - 12050 Bosia (CN)",3,"LATTE CRUDO TEDESCO - GERMAN ORIGIN RAW MILK.",0,1,0,0,
+160,439,12,25000,0.4450,37,"104","04/26/16 00:00:00",0.5050,"Via filadelfia, 220 - 10137 TORINO",14,"HU ORGANIC RAW MILK, delivery absolutely within 10 o' clock in the morning. Bacterial charge must be within the Italian legal limit - latte crudo Bio Ungherese, consegna entro le ore 10.00 di mattina. Carica Batterica entro il limite legale Italiano.",0,1,0,0,
+165,354,265,26000,0.4150,37,"108","05/10/16 00:00:00",0.5100,"ASPACH, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC RAW MILK.",1,0,0,0,
+166,11,271,25000,0.3000,37,"109","05/10/16 00:00:00",0.4000,"Via delle Fosse n. 10  - 37050 VALLESE DI OPPEANO VR",2,"latte crudo BIO SLOVACCO - pagamento 30 giorni netti Ri.Ba. data carico. Fatturazione con la media delle pesate.",0,1,0,0,
+164,11,271,25000,0.3000,37,"107","05/05/16 00:00:00",0.4000,"Via delle Fosse n. 10  - 37050 VALLESE DI OPPEANO VR",3,"ORGANIC FRESH RAW MILK SLOVAKIAN ORIGIN - INVOICING WITH  AVERAGE OF THE WEIGHBRIDGES.",0,1,0,0,
+170,354,265,25000,0.4600,37,"113","05/19/16 00:00:00",0.5100,"MONGUZZO (CO)",2,"LATTE CRUDO BIO AUSTRIACO, pagamento a 30 gg netti data carico Ri.Ba. Scarico alle ore 22,00.",0,1,0,0,
+172,496,41,0,0.0000,119,"115","05/26/16 00:00:00",0.0000,"PORTUGAL",1,"EDAM OFFCUTS  from Portugal.",1,0,0,0,
+179,364,245,2000,9.5000,14,"120","06/03/16 00:00:00",10.5000,"via BRIANTEA 18, 22038 TAVERNERIO COMO",1,"AROUND 250 FROZEN ORGANIC PORK LEGS - DEBONED - DELIVERY DATE IS JUST AN INDICATION FOR OUR PROGRAM, DELIVERY PLANNED FOR THE END OF JUNE",0,1,0,0,
+629,80,13,750,9.2800,189,"506","01/02/19 00:00:00",10.0800,"SAN GIOVANNI DEL DOSSO",13,"SOTTOFESA BOVINA BIO CONGELATA - VITELLONE <24 MESI",0,1,0,0,
+632,1,284,75000,0.3500,193,"508","01/10/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+631,1,284,75000,0.3500,193,"507","01/03/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+633,1,284,75000,0.3500,193,"509","01/17/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+634,1,284,75000,0.3500,193,"510","01/24/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+635,160,314,4000,2.7500,45,"511","01/28/19 00:00:00",2.9200,"ZENSON DI PIAVE, ITALIE",1,,0,1,0,0,
+637,534,251,1000,2.9800,45,"513","01/30/19 00:00:00",3.1000,"Floßergasse,  2 - MUNICH - BAVIERA",15,,0,1,0,0,
+636,586,314,750,3.2400,195,"512","01/29/19 00:00:00",3.8400,"WIESBADEN",1,"ORGANIC MILKPROTEINS 60%, SICAPRO 60% .",0,1,0,0,
+379,66,250,6000,11.8700,150,"285","11/21/17 00:00:00",12.7000,"Lavezzola",1,"2,000 kg of organic turkey breast frozen, delivered on Plastic Pallet - delivery dates to be finally agreed",0,1,0,0,
+1161,80,375,3500,13.5000,150,"971","03/17/21 00:00:00",14.2000,"SALUMIFICIO PEDRAZZOLI",1,"Organic Turkey Breast, frozen, 2kg V.C. in 15 kg carton box, delivered on Plastic Pallet
+delivery dates must be finally agreed,
+delivery address:  Via S. Giovanni, 16/A, 46020 San Giovanni del Dosso MN",0,1,0,0,1
+245,93,250,1600,12.7000,150,"173","10/19/16 00:00:00",13.6000,"RIPALTA CREMASCA",1,"1600 KG FROZEN ORGANIC TURKEY BREAST",0,1,0,0,
+478,564,325,5000,0.7200,21,"375","05/21/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+84,11,12,50000,0.5100,37,"48","09/11/15 00:00:00",0.5600,"Loc. Cà Verde - 37015 - S.Ambrogio di Valpolicella (VR)",3,"HUNGARIAN ORIGIN, ORGANIC RAW MILK - LATTE CRUDO BIO UNGHERESE",0,1,0,0,
+7,37,198,2000,3.7000,45,"3","12/10/14 00:00:00",4.1500,"PADOVA",2,,0,1,0,0,
+70,364,245,1300,7.6200,14,"40","07/16/15 00:00:00",8.1000,"TAVERNERIO, Italy",2,"13O  frozen Legs, as per details exchanged in the e.mails . Pagamento 30 gg Riba netto data fattura /",0,1,0,0,
+53,39,26,2000,5.5200,33,"34","06/18/15 00:00:00",5.7500,"VARESE ITALY",1,,0,1,0,0,
+51,80,236,1000,8.8000,139,"32","06/15/15 00:00:00",10.0000,"SAN GIOVANNI DEL DOSSO - MANTOVA",1,"WEIGHT RANGE --> 4-8 KG",0,1,0,0,
+52,66,236,300,9.7000,145,"33","06/17/15 00:00:00",10.5000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG, if the weight range won't be respected the goods will be rejected",0,1,0,0,
+66,66,236,500,9.7000,145,"36","06/29/15 00:00:00",10.5000,"lavezzola",1,"SAME QUALITY AND SAME TYPE OF THE SAMPLE, VERY IMPORTANT: WEIGHT RANGE OF EVERY PIECE : 4,0-5,0 KG, if the weight range won't be respected the goods will be rejected",0,1,0,0,
+67,450,26,2000,5.4800,33,"37","07/03/15 00:00:00",5.7500,"CHEF SERVICE, Forlì",2,"Pagamento 3O GG.Riba netto data fattura.",0,1,0,0,
+68,66,236,500,9.7000,145,"38","07/10/15 00:00:00",10.5000,"Lavezzola",2,"same type and same quality of the Sample,   weight range of every piece 4,0 - 6,0 kg, if the weight range will not be respected the goods will be rejected.",0,1,0,0,
+69,66,236,500,9.7000,145,"39","07/10/15 00:00:00",10.5000,"LAVEZZOLA",2,"same type and same quality of the sample, weight range of every piece 4,0 - 6,0 kg, in case the weight range will not be respecte the goods will be rejected.",0,1,0,0,
+8,71,198,24000,3.1500,45,"4","12/22/14 00:00:00",3.3000,"Rigoni di Asiago srl, v.dell' Agricoltura 21, 37041 Albaredo d'Adige (VR)",1,"RIGONI  always reserves 8 days to check eventuel hidden defaults of the goods. Within this time it will be in their right to claim or send back the Supply.",0,0,0,0,
+512,450,273,2000,6.1800,33,"405","07/12/18 00:00:00",6.4300,"CHEF SERVICE - FORLì  ITALY",2,,0,1,0,0,
+173,343,16,100000,0.2700,38,"116","05/26/16 00:00:00",0.2850,"Via Provinciale 17 - 12050 Bosia (CN)",3,"GERMAN ORIGIN RAW MILK - INVOICING WITH THE AVERAGE VALUE.",0,1,0,0,
+167,149,246,1000,4.0300,45,"110","05/12/16 00:00:00",4.2500,"PONTE SAN MARCO , BS-ITALY",2,"Pagamento 30 Gg. Riba netto data fattura.",0,1,0,0,
+178,1,265,25000,0.3700,8,"119","06/01/16 00:00:00",0.4050,"A-5252 Aspach Wildenauerstraße 11",2,"LATTE PASTORIZZATO BIOLOGICO AUSTRIACO, PAGAMENTO 30 GIORNI NETTI DATA CARICO. FATTURAZIONE CON LA MEDIA DEI VALORI.",1,0,0,0,
+168,482,246,1000,4.0300,45,"111","05/12/16 00:00:00",4.2800,"100 36 SETTIMO  T.SE, ITALY",1,"Bonifico 30 gg. netto data fattura VALUTA fissa.",0,1,0,0,
+180,487,192,3000,0.5600,37,"121","06/07/16 00:00:00",0.6100,"ZONA NOVARA",1,"latte crudo BIO Nazionale. Il prezzo è da considerare in €.litro. Fatturazione con la media dei valori.",1,0,0,0,
+181,1,267,25000,0.3180,8,"122","06/07/16 00:00:00",0.3500,"ANDECHS",3,"GERMAN ORIGIN ORGANIC PASTEURIZED MILK - LATTE PASTORIZZATO BIO TEDESCO.",1,0,0,0,
+186,500,188,0,0.0000,59,"125","06/13/16 00:00:00",0.0000,"via SGHINOLFI,27 - 40011 Anzola Emilia (BO), Italie",13,,0,0,0,0,
+182,1,267,25000,0.3180,8,"123","06/08/16 00:00:00",0.3500,"ANDECHS",3,"GERMAN ORIGIN ORGANIC PASTEURIZED MILK - LATTE PASTORIZZATO BIO TEDESCO.",1,0,0,0,
+262,11,12,75000,0.5150,37,"185","11/23/16 00:00:00",0.5500,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK, INVOICING WITH THE AVERAGE VALUE.",0,1,0,0,
+354,32,8,0,6.7000,33,"261","09/14/17 00:00:00",6.8000,"TASSULLO, Trento - Italia",2,"Burro fresca produzione da panne di affioramento da latte italiano. Pagamento 30 gg.Riba netto data fattura.",0,1,0,0,
+326,512,26,1000,5.8900,33,"237","05/15/17 00:00:00",6.0900,"31020  VIDOR - TV- ITALY",3,,0,1,0,0,
+341,546,26,100,7.7000,70,"248","07/10/17 00:00:00",10.9000,"CITTADELLA - PV, ITALY",3,"8,70 E/KG + 220 €URO TRASPORTO.",0,1,0,0,
+329,1,297,45000,0.5300,37,"240","05/22/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+331,37,251,750,5.2000,59,"241","06/06/17 00:00:00",5.6000,"PADOVA, Italie",2,"Pagamento, RIBA 30 GG.netto .",0,1,0,0,
+333,51,251,750,5.2000,59,"243","06/12/17 00:00:00",5.6000,"20060 LISCATE (MI), ITALIE",2,"delivery address : LAMERI SPA - Via Martiri della Libertà, 19- 20060 – LISCATE ( MI ), Italia.
+Pagamento : Riba 3O gg. Netto data fattura.",0,1,0,0,
+335,1,265,100000,0.4200,8,"244","06/23/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+338,513,14,200,4.8000,46,"247","07/07/17 00:00:00",5.1000,"27018 VIDIGULFO, PV",2,"Pagamento 30 GG. Riba netto data fattura.",0,1,0,0,
+768,601,27,1500,4.5500,203,"635","09/11/19 00:00:00",4.8800,"4761 PJ  Zevenbergen",11,,0,1,0,0,
+769,564,325,3000,0.8000,21,"636","09/16/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+187,501,188,0,0.0000,55,"126","06/13/16 00:00:00",0.0000,"via SGHINOLFI,27 - 40011 Anzola Emilia (BO), ItALIE",13,,0,0,0,0,
+174,37,246,1000,4.0700,45,"117","05/26/16 00:00:00",4.3000,"PADOVA",16,,0,1,0,0,
+190,1,75,90000,0.2950,38,"129","06/16/16 00:00:00",0.3050,"25017 LONATO DEL GARDA (BS)",3,"latte crudo Nazionale.",1,0,0,0,
+189,80,250,1300,12.7000,150,"128","06/15/16 00:00:00",13.7000,"SAN GIOVANNI DEL DOSSO",1,"1300 kg  OF FROZEN TURKEY BREAST - 2 PALLETS",0,1,0,0,
+192,1,265,25000,0.3900,8,"131","06/21/16 00:00:00",0.4200,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC PASTEURIZED MILK, INVOICING WITH THE AVERAGE VALUE.",1,0,0,0,
+191,37,251,800,4.0700,45,"130","06/16/16 00:00:00",4.3700,"PADOVA",2,"Pagamento 30 GG.Riba netto data fattura.",0,0,0,0,
+415,557,294,500,2.9000,183,"314","02/08/18 00:00:00",3.0000,"SAN PIETRO IN GU, ITALIA",14,,0,1,0,0,
+418,557,294,500,2.9000,183,"317","02/16/18 00:00:00",3.0000,"S.PIETRO IN GU-",13,,0,1,0,0,
+414,557,294,500,2.9000,183,"313","02/01/18 00:00:00",3.0000,"San Pietro in GU-PD, Italia",13,,0,1,0,0,
+416,97,265,25000,0.3600,37,"315","02/12/18 00:00:00",0.3900,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Raw milk - invoicing with average kg value. Latte crudo bio - fatturazione con media valori kg riscontrati.",1,0,0,0,
+417,1,284,25000,0.4780,184,"316","02/15/18 00:00:00",0.4880,"Freiburg",1,"Organic past milk 4 - 4,2% - invoicing with average value. Latte bio pastorizzato 4 - 4,2% - fatturazione con media valori.",1,0,0,0,
+419,1,284,25000,0.4830,37,"318","02/20/18 00:00:00",0.4930,"Freiburg",1,"Organic raw milk  - invoicing with average value. Latte bio crudo - fatturazione con media valori.",1,0,0,0,
+420,450,26,2000,5.9800,33,"319","02/20/18 00:00:00",6.1000,"CHEF SERVICE, FORLì- ITALY",2,,0,1,0,0,
+421,557,294,500,2.9000,183,"320","02/23/18 00:00:00",3.0000,"SAN PIETRO IN GU-",13,,0,1,0,0,
+638,586,314,1000,2.8000,45,"514","01/30/19 00:00:00",3.0000,"WIESBADEN - GERMANY",1,,0,1,0,0,
+639,1,284,75000,0.3500,193,"515","01/30/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+643,1,284,75000,0.3500,193,"519","02/07/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+640,564,289,3000,0.8450,21,"516","01/30/19 00:00:00",0.8900,"Scarnafigi (CN)",1,"Latte di capra fresco nazionale. Prezzo fco partenza + trasporto da aggiungere pari a 350 €. Consegna a Casalino (NO). Orario di consegna 08,30.",1,0,0,0,
+641,76,314,750,3.2400,195,"517","02/01/19 00:00:00",3.9400,"DAVERIO, VARESE - ITALIE",1,"SICAPRO 60% ORGANIC.",0,1,0,0,
+642,37,314,2000,2.8000,45,"518","02/01/19 00:00:00",2.9900,"PADOVA, ITALIE",2,,0,1,0,0,
+644,1,284,75000,0.3500,193,"520","02/12/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+645,576,325,3500,0.7500,21,"521","02/18/19 00:00:00",0.8000,"San Vittore Olona",14,"Latte di capra nazionale - 3000/4000 litri - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+532,93,330,3500,11.5500,150,"423","08/09/18 00:00:00",12.7000,"Via V.Veneto 1M - 26010 RIPALTA CREMASCA - CR",1,"organic turkey breast frozen - packaging: in bags and boxes E2
+Delivery dates must be finally agreed",0,1,0,0,
+193,37,246,3000,4.1000,45,"132","06/27/16 00:00:00",4.3700,"PADOVA",2,,0,1,0,0,
+188,186,246,1000,4.1000,45,"127","06/13/16 00:00:00",4.3500,"TRUCCAZZANO, MILANO - ITALIE",16,,0,1,0,0,
+183,482,246,1000,4.1000,45,"124","06/08/16 00:00:00",4.3700,"SETTIMO TORINESE, ITALIE",1,"Pagamento 30 GG.data fattura.",0,0,0,0,
+200,1,265,100000,0.4000,8,"136","06/29/16 00:00:00",0.4400,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC PASTEURIZED MILK, INVOICING WITH THE AVERAGE VALUE.",1,0,0,0,
+201,93,250,3000,12.7000,150,"137","07/06/16 00:00:00",13.6000,"RIPALTA CREMASCA",14,"3000 KG DOF FROZEN TURKEY BREAST - DELIVERY DATE IS JUST AN INDICATION FOR OUR PROGRAM, DELIVERY DATE WILL BE COMMUNICATED LATER BY THE CUSTOMER",0,1,0,0,
+202,88,268,1500,8.4300,14,"138","07/13/16 00:00:00",9.3000,"MALMEDY",12,"around 1500 kg of fresh organic legs type Parma cut - packaging in pallet H1 and plastic crates",0,1,0,0,
+205,88,268,500,8.9900,105,"139","07/15/16 00:00:00",9.7000,"MALMEDY",12,"FRESH ORGANIC PORK NECKS, VACUUM PACKED - PACKAGING IN PALLET H1 AND PLASTIC CRATES",0,1,0,0,
+207,439,12,25000,0.4400,37,"140","07/19/16 00:00:00",0.5050,"Via Filadelfia, 220  -  10137 TORINO.",14,"HU origin Organic raw milk, delviery absolutely within 10 o clock in the morning; Bacterial charge within the Italian legal limit.",0,1,0,0,
+422,160,27,1500,3.7100,45,"321","02/23/18 00:00:00",3.9000,"ZENSON DI PIAVE, ITALY",2,,0,1,0,0,
+423,512,26,1000,6.1000,33,"322","02/27/18 00:00:00",6.3000,"VIDOR, TV- ITALY",3,,0,1,0,0,
+424,557,294,500,2.9000,183,"323","03/01/18 00:00:00",3.0000,"SAN PIETRO IN GU-",13,,0,1,0,0,
+425,513,14,100,4.8000,46,"324","03/01/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+426,66,250,0,11.8700,150,"325","03/06/18 00:00:00",12.7000,"Lavezzola",1,"2,000 kg of irganic turkey breast frozen, delivered on Plastic Pallet - delivery dates to be finally agreeed",0,1,0,0,
+427,557,294,500,2.9000,183,"326","03/09/18 00:00:00",3.0000,"SAN PIETRO IN GU- ITALIA",13,,0,1,0,0,
+428,557,294,500,2.9000,183,"327","03/15/18 00:00:00",3.0000,"SAN PIETRO IN GU -",14,,0,1,0,0,
+429,563,323,750,4.7500,59,"328","03/16/18 00:00:00",5.0700,"VALSAMOGGIA BOLOGNA ITALY",13,,0,1,0,0,
+65,149,246,1000,3.9900,45,"35","06/19/15 00:00:00",4.2800,"PONTE SAN MARCO",16,,0,1,0,0,
+50,263,26,700,6.9000,70,"31","06/05/15 00:00:00",7.9000,"PINEROLO, Italy",3,"delivery end of AUGUST / EARLY SEPTEMBER.",0,1,0,0,
+71,364,245,2055,7.2000,14,"41","07/16/15 00:00:00",8.0000,"TAVERNERIO, ITALY",2," 3 PALLETTS  frozen Legs short shelf life, as per e.mails 'Details.Pagamento 30 GG Riba netto data fattura,",0,1,0,0,
+75,364,245,4400,7.3500,14,"43","08/03/15 00:00:00",8.0000,"TAVERNERIO, Italy",1,"DELIVERY DATE IS JUST AN INDICATION- 18/19/20 AUGUST
+LOTS COMPOSED BY : 847 KG TO USE BY 17/09, 1545 KG BY 18/09, 2055 KG BY  25/09",0,1,0,0,
+73,66,236,1500,9.7000,145,"42","07/28/15 00:00:00",10.5000,"lavezzola",1,"same type and same quality of the Sample,   weight range of every piece 4,0 - 6,0 kg, if the weight range will not be respected the goods will be rejected.
+NOTE: the delivery date is just an indication - delivery weeks: 33+34+35",0,1,0,0,
+76,93,245,3000,6.9700,14,"44","08/07/15 00:00:00",7.7500,"RIPALTA CREMASCA",1,"649 kgs use by date 03/09/15 - 1023 kgs use by date 04/09/15 - 603 kgs use by date 10/09/15 - 725kgs use by date 11/09/15
+weight range 6,5/8,5 kg",0,1,0,0,
+78,80,250,700,14.6000,150,"45","09/01/15 00:00:00",15.6000,"SAN GIOVANNI DEL DOSSO MANTOVA, ITALY",3,"FROZEN GOODS
+DALIVERY DATE IS JUST AN INDICATION FOR OUR PROGRAM",0,1,0,0,
+82,11,12,25000,0.5200,37,"47","09/04/15 00:00:00",0.5600,"Loc. Cà Verde - 37015 - S.Ambrogio di Valpolicella (VR)",15,"HUNGARIAN ORIGIN RAW MILK, DELIVERY ON 10/09 - POSSIBLY IN THE MORNING.",0,1,0,0,
+194,439,12,25000,0.4500,37,"133","06/27/16 00:00:00",0.4900,"Via filadelfia, 220 - 10137 TORINO",14,"HU ORGANIC RAW MILK, delivery absolutely within the morning. Bacterial charge must be within the Italian legal limit - latte crudo Bio Ungherese, consegna entro la mattina. Carica Batterica entro il limite legale Italiano.",0,1,0,0,
+208,1,265,50000,0.4450,8,"141","07/27/16 00:00:00",0.4650,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC PASTEURIZED MILK, INVOICING WITH THE AVERAGE VALUE.",1,0,0,0,
+214,88,268,1500,8.4300,14,"146","08/08/16 00:00:00",9.3000,"MALMEDY",12,"1500 FRESH ORGANIC LEGS TYPE PARMA - THE CUT MUST BE AS THE DESCRIPTION MADE BY OUR CUSTOMER - PACKAGING PALLET H1 AND PLASTIC CRATES",0,1,0,0,
+219,436,236,700,9.0000,139,"151","09/08/16 00:00:00",10.4000,"POSTALESIO",2,"700/800 kg of FROZEN ORGANIC BEEF TOPSIDE",0,1,0,0,
+215,11,12,150000,0.4200,37,"147","08/09/16 00:00:00",0.4600,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK - INVOICING WITH THE AVERAGE VALUES.",0,1,0,0,
+216,364,245,857,9.2500,14,"148","08/24/16 00:00:00",10.5000,"TAVERNERIO (CO), ITALY",1,,0,1,0,0,
+217,1,265,75000,0.4800,8,"149","08/25/16 00:00:00",0.5000,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC PASTEURIZED MILK 3,5%. INVOICING WITH THE AVERAGE VALUE.",1,0,0,0,
+218,71,188,3950,6.7000,58,"150","09/07/16 00:00:00",7.0500,"ALBAREDO D'ADIGE  37041,   ITALIE",1,"Pagamento :  BONIFICO 30 gg. netto Data Fattura.",0,1,0,0,
+850,160,314,3000,2.9500,45,"711","02/03/20 00:00:00",3.1000,"ZENSON DI PIAVE,  ITALY",1,,0,1,0,0,
+916,604,296,2250,0.4200,169,"765","04/09/20 00:00:00",0.6000,"42011 BAGNOLO IN PIANO - REGGIO EMILIA ITALY",14,"UNLOADING HOURS ! =  08 - 12 AM",0,1,0,0,1
+856,616,360,300,7.2000,93,"715","02/10/20 00:00:00",7.8000,"Via Omobono Cenini,19 - 23030 Chiuro (SO)",1,"ORGANIC BEEF TOPSIDE PAD, FRESH",0,1,0,0,
+852,595,251,1000,3.3200,45,"713","02/06/20 00:00:00",3.5900,"CAVENAGO DI BRIANZA , MB- ITALY",2,"GOODS IN 25 KG BAGS.",0,1,0,0,
+917,1,284,125000,0.3670,193,"766","04/09/20 00:00:00",0.3720,"friburgo",2,,1,0,0,0,1
+858,617,359,6000,2.7500,45,"716","02/10/20 00:00:00",2.8000,"ZWOLLE, NL",1,,1,0,0,0,
+918,1,284,125000,0.3670,193,"767","04/16/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+919,620,67,30000,0.2800,38,"768","04/16/20 00:00:00",0.3000,"BRIGNANO GER D'ADDA",2,,1,0,0,0,1
+920,564,325,5000,0.8300,21,"769","04/16/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, - prezzo espresso €/Litro fco partenza + COSTO DI TRASPORTO 150 €uro",0,1,0,0,14
+863,37,251,2000,4.7000,59,"721","02/21/20 00:00:00",5.0000,"PADOVA, ITALY",2,,0,1,0,0,
+922,1,284,125000,0.3670,38,"771","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+927,1,284,550000,0.3670,38,"776","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+865,604,296,2500,0.7000,169,"723","02/20/20 00:00:00",0.8300,"42011 Bagnolo in Piano (RE), Italy",14,,0,1,0,0,
+866,149,251,1000,4.7500,59,"724","02/20/20 00:00:00",5.1700,"PONTE SAN MARCO, BS- ITALY",2,,0,1,0,0,
+867,37,27,,6.9000,203,"725","02/20/20 00:00:00",8.0000,"PADOVA, ITALY",2,,0,1,0,0,
+868,601,27,1500,4.8500,203,"726","02/21/20 00:00:00",5.1700,"4761 PJ  Zevenbergen, NL",11,,0,1,0,0,
+646,37,27,750,0.0000,59,"522","02/18/19 00:00:00",4.8600,"PADOVA, ITALIEN",1,,0,1,0,0,
+648,37,314,8000,2.8000,45,"524","02/20/19 00:00:00",2.8900,"PADOVA, ITALIE",2,,0,1,0,0,
+647,564,325,3000,0.7500,21,"523","02/19/19 00:00:00",0.8000,"San Vittore olona",14,"Latte di capra nazionale - 3000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+649,1,284,75000,0.3500,193,"525","02/21/19 00:00:00",0.3600,"FREIBURG",1,,1,0,0,0,
+650,586,314,750,3.2400,195,"526","02/25/19 00:00:00",3.8400,"WIESBADEN, ALLEMAGNE",1,,0,1,0,0,
+651,586,314,1000,0.0000,45,"527","02/25/19 00:00:00",3.0000,"WIESBADEN, ALLEMAGNE",1,,0,1,0,0,
+653,1,284,75000,0.3500,193,"528","02/28/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+654,513,14,550,4.8000,46,"529","03/01/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+346,513,14,350,4.8000,46,"253","08/02/17 00:00:00",5.1000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+327,1,265,25000,0.4200,8,"238","05/18/17 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+336,1,297,45000,0.5300,37,"245","06/23/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+342,450,26,1000,6.9000,33,"249","07/13/17 00:00:00",7.2800,"CHEF SERVICE, FORLI'",2,"Pagamento 30 Gg riba netto data fattura.",0,1,0,0,
+343,1,297,45000,0.5300,37,"250","07/24/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+322,66,250,14000,11.8700,150,"233","05/04/17 00:00:00",12.7000,"Via Dell'Industria 6/8 - 48011 Lavezzola, Ravenna - IT",2,"2,000 kgpetto di tacchino bio congelato, consegne su pallet di plastica",0,1,0,0,
+347,66,250,3000,11.8700,150,"254","08/03/17 00:00:00",12.7000,"lavezzola",1,"3000 KG OF ORGANIC TURKEY BREAST FROZEN - DELIVERED ON PLASTIC PALLETS",0,1,0,0,
+348,549,118,300,7.4200,33,"255","08/17/17 00:00:00",7.9200,"26036 RIVAROLO DEL RE, CR- Italia",2,"Pagamento 30 GG Riba netto data fattura.",0,1,0,0,
+195,88,268,1200,8.5000,14,"134","06/28/16 00:00:00",9.6000,"MALMEDY",12,"around 1100-1200 kg of fresh organic legs type Parma cuts, packaging in pallet H1 and plastic crates",0,1,0,0,
+209,11,12,25000,0.4300,37,"142","07/27/16 00:00:00",0.4600,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK - INVOICING WITH THE AVERAGE VALUES.",0,1,0,0,
+221,450,26,1000,4.9900,33,"153","09/19/16 00:00:00",5.4000,"CHEF Service, via del Braldo 21/B- loc.Villagrappa 47121 FORLI (FC), Italy",2,,0,1,0,0,
+220,37,286,2400,3.8000,45,"152","09/15/16 00:00:00",4.0000,"PADOVA, ITALY",2,"Pagamento 30 GG.Riba netto data fattura.",0,1,0,0,
+222,11,12,75000,0.4800,37,"154","09/21/16 00:00:00",0.5100,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK - INVOICING WITH THE AVERAGE VALUES.",0,1,0,0,
+223,509,283,700,7.4000,15,"155","09/22/16 00:00:00",8.1500,"VIA CASTELLETTO,11 - 27057 VARZI, PAVIA ITALIA",1,"AROUND 700 KG OF ORGANIC PORK SHOULDERS DEBONED",0,1,0,0,
+224,509,283,650,6.9000,16,"156","09/22/16 00:00:00",7.6000,"VIA CASTELLETTO,11 - 27057 VARZI, PAVIA ITALIA",1,,0,1,0,0,
+225,509,283,90,6.8000,163,"157","09/22/16 00:00:00",7.5000,"VIA CASTELLETTO,11 - 27057 VARZI, PAVIA ITALIA",14,"PANCETTONI SCOTENNATI",0,1,0,0,
+869,601,251,1000,4.6300,59,"727","02/21/20 00:00:00",4.9600,"4761 PJ  Zevenbergen, NL",11,,0,1,0,0,
+921,586,314,5000,2.9400,45,"770","04/17/20 00:00:00",3.0300,"WIESBADEN, GERMANY",1,,0,1,0,0,1
+923,1,284,500000,0.3670,38,"772","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+924,1,284,550000,0.3670,38,"773","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+874,37,314,5000,2.9650,45,"731","03/04/20 00:00:00",3.1000,"PADOVA, ITALY",2,,0,0,0,0,
+925,1,284,575000,0.3670,38,"774","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+926,1,284,525000,0.3670,38,"775","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+877,595,251,1000,4.3000,192,"734","03/04/20 00:00:00",4.8000,"CAVENAGO DI BRIANZA , ITALY",2,"CONTRACT '' SUBJECT SAMPLE APPROVAL.''
+CONTRATTO '' PREVIA APPROVAZIONE CAMPIONE. ''",0,1,0,0,
+928,1,284,550000,0.3670,38,"777","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+879,37,27,1500,4.7800,203,"736","03/04/20 00:00:00",5.3600,"OFFENBURG, DE",2,,1,0,0,0,
+929,1,284,525000,0.3670,38,"778","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+881,37,27,75,5.6000,203,"738","03/09/20 00:00:00",6.8200,"OFFENBURG , DE",2,,1,0,0,0,
+930,1,284,600000,0.3670,38,"779","04/17/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+931,66,360,300,7.2000,187,"780","04/22/20 00:00:00",7.8000,"VIA DELL'INDUSTRIA 6/8 - 48017 LAVEZZOLA - RA - ITALY",2,"THE SPECIFICATION OF THE CUT MUST BE RESPECTED, SO HEART OF THE TOPSIDE PAD, COMPLETELY CLEANED, WEIGHT RANGE -- 3,00 - 3,50 KG EACH, NOT LESS THAN 3 KGS",0,1,0,0,1
+884,617,4,21450,2.4800,45,"741","03/13/20 00:00:00",2.6500,"SAINT DIZIER, 52100 - FRANCIA",1,"EUROSERUM  SMP  IN 25 KG.BAGS.",1,0,0,0,
+885,149,314,2000,2.9900,45,"742","03/13/20 00:00:00",3.3300,"PONTE SAN MARCO, BS- ITALIE",6,,0,1,0,0,
+430,564,325,5000,0.7200,21,"329","03/16/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+431,1,284,75000,0.3350,38,"330","03/21/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+432,534,251,1000,3.7500,45,"331","03/22/18 00:00:00",4.0300,"MUNICH , GERMANY",15,,0,1,0,0,
+433,557,294,500,2.9000,183,"332","03/22/18 00:00:00",3.0000,"san pietro in GU-",13,,0,1,0,0,
+434,80,327,500,11.0000,150,"333","03/23/18 00:00:00",13.5000,"SAN GIOVANNI DEL DOSSO",14,"CONSEGNA SETT.15 - PETTO DI TACCHINO BIO CONGELATO - SCADENZA MINIMA 6 MESI",0,1,0,0,
+435,71,188,3000,7.3300,58,"334","03/27/18 00:00:00",7.6000,"ALBAREDO D'ADIGE, VR- ITALIE",1,,0,1,0,0,
+437,557,294,250,2.9000,183,"336","03/29/18 00:00:00",3.0000,"SAN PIETRO IN GU- PD",13,,0,1,0,0,
+438,526,319,24000,2.0100,103,"337","03/29/18 00:00:00",2.0400,"BOLOGNA ITALY",3,,1,0,0,0,
+1108,37,314,2500,3.0200,45,"925","01/07/21 00:00:00",3.3300,"PADOVA, ITALIE",2,,0,1,0,0,1
+1109,604,296,2500,0.8000,169,"926","01/08/21 00:00:00",0.8900,"BAGNOLO IN PIANO",13,,0,1,0,0,1
+1111,492,296,22500,0.4700,169,"928","01/08/21 00:00:00",0.5000,"HRINOVA, SK",11,,1,0,0,0,11
+1110,77,373,8000,2.8500,29,"927","01/08/21 00:00:00",2.9000,"ZANE' - VI, ITALIA",2,"BURRO DI CREMA ZANGOLATO.",0,1,0,0,12
+1112,624,251,1500,4.3400,192,"929","01/11/21 00:00:00",4.9000,"VILLASTANZA DI PARABIAGO, MI-ITALY",2,,0,1,0,0,1
+1113,564,374,6000,1.0500,21,"930","01/11/21 00:00:00",1.1500,"MARIO COSTA SRL, 28060 Orfengo Casalino - NO",13,"prezzo espresso €uro / Litro",0,1,0,0,1
+1114,451,318,19000,1.8500,182,"931","01/12/21 00:00:00",1.8700,"NOGAROLE ROCCA, VR. ITALY",3,,0,1,0,0,3
+1117,590,251,1000,4.3400,192,"933","01/12/21 00:00:00",4.9900,"FIZZONASCO DI PIEVE EMANUELE, MI- ITALY",2,,0,1,0,0,1
+655,80,13,750,11.2300,188,"530","03/04/19 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",13,"FESA BOVINA BIO PAD - BOVINO ADULTO >24 MESI",0,1,0,0,
+656,80,13,750,8.0800,189,"531","03/04/19 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO",13,"SOTTOFESA BOVINA BIO PAD - BOVINO ADULTO >24 MESI",0,1,0,0,
+657,80,13,750,11.8800,188,"532","03/04/19 00:00:00",12.9800,"SAN GIOVANNI DEL DOSSO",13,"FESA BOVINA BIO PAD - VITELLONE <24 MESI",0,1,0,0,
+658,80,13,750,9.2800,189,"533","03/04/19 00:00:00",10.0800,"SAN GIOVANNI DEL DOSSO",13,"SOTTOFESA BOVINA BIO PAD - VITELLONE <24 MESI",0,1,0,0,
+659,564,325,3000,0.7500,21,"534","03/05/19 00:00:00",0.8000,"San Vittore Olona",14,"Latte di capra nazionale - 3000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+661,32,26,22000,4.9500,33,"535","03/05/19 00:00:00",4.9900,"TASSULLO, TN-ITALY",2,"Burro BIOLOGICO CONGELATO ORIGINE DANIMARCA NON - SALATO, LACTIC,  produzione da Giugno 2018 in poi- max.3 Lotti.",0,1,0,0,
+662,513,294,200,2.9000,183,"536","03/05/19 00:00:00",3.5000,"VIDIGULFO, PV",2,,0,1,0,0,
+663,1,284,75000,0.3500,193,"537","03/07/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+211,504,283,300,6.5000,15,"143","07/27/16 00:00:00",7.2000,"Via Giuseppe Mazzini, 105, 24018 Villa d'Almè Bergamo, Italia",1,"300 OG OF FRESH ORGANIC PORK SHOULDERS, WEIGHT RANGE AROUND 6,00 KG, DEBONED, RIND OFF - DELIVERY 08/08 OR 09/08",0,1,0,0,
+212,504,283,400,6.4000,105,"144","07/27/16 00:00:00",7.0500,"Via Giuseppe Mazzini, 105, 24018 Villa d'Almè Bergamo, Italia",1,"400 KG OF ORGANIC FRESH PORK NECKS, DEBONED, DEFATTED, RIND OFF, WEIGHT AROUND 2,0-2,5 KG, DELIVERY 08/08 OR 09/08",0,1,0,0,
+213,504,283,60,4.3000,97,"145","07/27/16 00:00:00",4.7000,"Via Giuseppe Mazzini, 105, 24018 Villa d'Almè Bergamo, Italia",1,"AROUND 60 KG OF FRESH ORGANIC PORK JAWLS, RIND OFF - WEIGHT AROUND 2,0 KG - DELIVERY 08/08 OR 09/08",0,1,0,0,
+226,509,283,25,4.8000,97,"158","09/22/16 00:00:00",5.3000,"VIA CASTELLETTO,11 - 27057 VARZI, PAVIA ITALIA",1,"GOLE SCOTENNATE",0,1,0,0,
+231,80,254,100,12.0000,150,"161","09/30/16 00:00:00",13.0000,"SAN GIOVANNI DEL DOSSO - MN",3,"AROUND 100 KG OF ORGANIC TURKEY BREAST - DELIVERY PLACE: SALUMIFICIO PEDRAZZOLI, Via S.Giovanni, 16 - 46020 San Giovanni del Dosso - MN - ITALY",0,1,0,0,
+230,149,246,1000,4.2000,45,"160","09/27/16 00:00:00",4.4500,"PONTE S.MARCO  (BS), ITALIE",2,"Pagamento 30 Gg.Riba netto data fattura,",0,1,0,0,
+232,488,288,1125,1.2400,159,"162","10/03/16 00:00:00",1.2700,"CASTROGONZALO,  Zamora - Spain",3,,1,0,0,0,
+233,97,77,15000,0.5500,37,"163","10/06/16 00:00:00",0.5700,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"LATTE CRUDO BIOLOGICO NAZIONALE, FATTURAZIONE CON LA MEDIA DELLE PESATE.",1,0,0,0,
+1125,563,323,750,4.8000,59,"938","01/14/21 00:00:00",5.4000,"VALSAMOGGIA, BO - ITALY",13,,0,1,0,0,1
+1126,616,360,6000,7.2000,93,"939","01/14/21 00:00:00",7.8000,"via Omobono Cenini 19 - 230330 Chiuro - SO",2,"ORGANIC BEEF TOPSIDE PAD, quantity between 800-1000 kg - completely cleaned, weight range 5,0 kg +  a weight below 5,00 kg won't be accepted and then rejected.",0,1,0,0,1
+1128,77,373,8000,2.8800,29,"941","01/20/21 00:00:00",2.9500,"ZANE', VI",2,"BURRO ZANGOLATO.",0,1,0,0,11
+1129,601,27,3000,4.9400,203,"942","01/21/21 00:00:00",5.1300,"NL-4761 PJ Zevenbergen",11,,0,1,0,0,1
+1131,32,19,22000,5.6500,33,"944","01/26/21 00:00:00",5.7000,"FOSSANO, CN - ITALY",2,,0,1,0,0,1
+1130,76,367,1500,4.5000,107,"943","01/25/21 00:00:00",5.1200,"DAVERIO. MI",1,"MOZZARELLA  senza  Lattosio",1,0,0,0,14
+1133,77,342,22000,3.5500,54,"946","01/27/21 00:00:00",3.5700,"ZANE', VI - ITALY",2,"lUMIKO  sweet cream fresh butter 82%",0,1,0,0,1
+1132,77,284,22000,3.4900,28,"945","01/26/21 00:00:00",3.5500,"ZANE, VI - ITALY",2,"POLMLEK  sweet cream butter 25 kg blocs.",0,1,0,0,1
+665,591,273,1000,5.8000,33,"539","03/08/19 00:00:00",5.9500,"88367 Hohentengen, GERMANY",1,,0,1,0,0,
+664,590,251,1000,4.3500,192,"538","03/08/19 00:00:00",4.6500,"20090 Fizzonasco di Pieve Emanuele (MI) - Italy",2,"PAGAMENTO 30 GG.RIBA NETTO DATA FATTURA.",0,1,0,0,
+666,1,284,75000,0.3500,193,"540","03/14/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+668,37,27,1500,4.6500,59,"542","03/19/19 00:00:00",4.9400,"PADOVA , ITALIEN",2,,0,1,0,0,
+667,576,325,3250,0.7500,21,"541","03/18/19 00:00:00",0.8000,"San Vittore Olona",14,"Latte di capra nazionale - 3000/3500 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+669,563,323,750,4.7000,59,"543","03/20/19 00:00:00",5.1000,"VALSAMOGGIA,  BO - ITALIEN",13,,0,1,0,0,
+670,1,284,75000,0.3500,193,"544","03/22/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+671,452,26,16000,5.4500,33,"545","03/26/19 00:00:00",5.6000,"CASTELFRANCO VENETO, TV - ITALY",13,,0,1,0,0,
+440,1,284,75000,0.3350,38,"339","04/04/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+439,564,325,12000,0.7200,21,"338","04/03/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",13,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+444,513,294,300,2.9000,183,"343","04/12/18 00:00:00",3.2000,"VIDIGULFO",14,,0,1,0,0,
+442,1,284,25000,0.4400,184,"341","04/11/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+443,1,284,75000,0.3350,38,"342","04/11/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+446,149,323,750,4.7500,59,"345","04/13/18 00:00:00",5.0800,"PONTE SAN MARCO, BS- ITALY",2,,0,1,0,0,
+445,1,265,25000,0.3350,8,"344","04/12/18 00:00:00",0.3650,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+452,80,13,750,11.8800,188,"350","04/19/18 00:00:00",12.9800,"SAN GIOVANNI DEL DOSSO - MN",1,"VITELLONE < 24 MESI, 
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+337,263,26,1600,7.8000,70,"246","06/27/17 00:00:00",8.4000,"10060  NONE- Torino, Italy",3,,0,0,0,0,
+349,1,297,44000,0.5300,37,"256","08/25/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",2,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+344,1,265,125000,0.4350,8,"251","07/25/17 00:00:00",0.4650,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+350,513,14,100,4.8000,46,"257","08/25/17 00:00:00",5.1000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+351,128,118,12500,0.5500,37,"258","09/01/17 00:00:00",0.5800,"Viale della Favorita - 46100 Mantova",1,"Latte Crudo Biologico - carico ore 13,00 del 06/09. Fatturazione con media delle pesate tra cliente e fornitore.",1,0,0,0,
+353,72,26,2000,7.1500,33,"260","09/13/17 00:00:00",7.3000,"37030 Colognola ai Colli / VR - Italy",2,"PAGAMENTO 30 GIORNI RIBA Netto data fattura. 
+2.000 kg Burro BIO Estero, congelato.",0,1,0,0,
+359,513,14,300,4.8000,46,"266","09/29/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+355,450,26,1000,7.3200,33,"262","09/14/17 00:00:00",7.5700,"CHEF SERVICE - FORLì, ITALY",2,"Pagamento RIBA 30 GG netto data fattura,",0,1,0,0,
+976,1,12,25000,0.4800,37,"820","07/27/20 00:00:00",0.5000,"ALIVAL SPA - Via Barsotto, 3, 55016 Porcari LU",2,"hu origin organic milk, invoicing with AVERAGE WEIGHT",0,1,0,0,1
+80,51,188,1000,5.2300,59,"46","09/02/15 00:00:00",6.8500,"LISCATE, Italy",2,"pagamento 30 gg.Riba Netto.",0,0,0,0,
+85,436,236,1000,9.0000,139,"49","09/11/15 00:00:00",10.0000,"BUSSETO (PR), ITALY",2,,0,0,0,0,
+86,355,8,10000,0.7000,37,"50","09/17/15 00:00:00",0.7500,"Via - Molza, 1906 --  41018 San Cesario sul Panaro (MO)",3,"LATTE BIO NAZIONALE",1,0,0,0,
+87,63,8,22000,0.6900,37,"51","09/21/15 00:00:00",0.7200,"San Cesario sul Panaro + Anzola Emilia",3,"LATTE CRUDO BIOLOGICO NAZIONALE - ritiro a partire dalle h 9,00.",1,0,0,0,
+88,79,14,50,5.6500,33,"52","09/22/15 00:00:00",7.0500,"90013 CASTELBUONO, Palermo",3," 50 kg di Burro BIO. FRESCO. Prezzo €.kg  inlcude trasporto di 20 €uro",0,1,0,0,
+89,63,8,22000,0.6900,37,"53","09/24/16 00:00:00",0.7200,"SAN CESARIO SUL PANARO + ANZOLA EMILIA",15,"latte crudo Biologico Nazionale - pagamento a ricevimento pesata.",1,0,0,0,
+90,149,246,1000,3.8000,45,"54","09/30/15 00:00:00",4.1500,"25011 PONTE SAN MARCO, Bs- Italy",2,,0,0,0,0,
+92,62,8,16000,0.6900,37,"56","10/02/15 00:00:00",0.7600,"Casalmaggiore (CR)",15,"LATTE CRUDO BIOLOGICO NAZIONALE  -  trasporto 450 €, da aggiungere al prezzo. Consegna verso mezzogiorno.",0,1,0,0,
+586,563,323,750,4.6000,59,"469","11/02/18 00:00:00",5.0000,"VALSAMOGGIA, BOLOGNA - ITALIEN",13,,0,1,0,0,
+886,32,273,22000,4.1550,33,"743","03/16/20 00:00:00",4.2300,"TASSULLO, TN- ITALY",15,"BAYERNLAND  organic  Butter.",0,0,0,0,
+932,465,11,25000,0.2400,38,"781","04/22/20 00:00:00",0.3000,"TETTNANG",3,"TRANSPORT COMPANY: ADAMI AUTOTRASPORTI SPA",1,0,0,0,1
+888,590,251,1000,4.3000,192,"745","03/18/20 00:00:00",4.8500,"20090 Fizzonasco di Pieve Emanuele (MI) - Italy",2,,0,1,0,0,
+933,465,9,25000,0.2700,38,"782","04/30/20 00:00:00",0.2900,"TAGLIATA D'ANTOGNANO 4 - RUSTIGAZZO 29018 LUGAGNANO VAL D'ARDA PC - ITALY",3,"SK ORIGIN",0,1,0,0,1
+935,71,314,48000,2.9000,45,"784","05/06/20 00:00:00",3.0400,"ALBAREDO D'ADIGE - VR, ITALIE",13,"GOODS IN THE USUAL BIG BAG AGREED FOR RIGONI (BB1B) .",0,0,0,0,1
+936,465,9,25000,0.2900,38,"785","05/06/20 00:00:00",0.3100,"TAGLIATA D'ANTOGNANO 4 - RUSTIGAZZO 29018 LUGAGNANO VAL D'ARDA PC - ITALY",3,"SK ORIGIN RAW MILK",0,1,0,0,1
+938,109,9,50000,0.2900,38,"787","05/12/20 00:00:00",0.3100," Via Cassinone, 32, 24068 Seriate BG",2,"LATTE CRUDO SLOVACCO, RAW MILK SK ORIGIN",0,1,0,0,1
+894,450,26,2700,7.3800,70,"751","03/24/20 00:00:00",7.6000,"CHEF SERVICE FORLì - ITALY",2,"Organic LIQUID AMF .",0,1,0,0,
+1134,513,14,100,4.8000,46,"947","01/27/21 00:00:00",5.1000,"Via Madonnina   32 - 27018 Vidigulfo (PV)",2,"panna biologica al 36% + certificato di analisi",0,1,0,0,2
+1127,632,318,44000,1.7200,121,"940","01/14/21 00:00:00",1.7600,"GHEDI, Brescia",2,"wpc 35% ACID in Big Bags.",0,1,0,0,3
+1135,623,251,300,11.6000,205,"948","02/01/21 00:00:00",12.6000,"FIRENZUOLA, ITALY",2,,0,1,0,0,1
+1136,564,325,8000,0.8300,21,"949","02/02/21 00:00:00",0.9300,"SAN VITTORE OLONA",13,"Latte di capra nazionale, prezzo espresso €/Lt. + costo di trasporto 150 €, orario di scarico 8,30 - 9,00",1,0,0,0,14
+1137,77,373,8000,2.9400,29,"950","02/08/21 00:00:00",2.9900,"ZANE'",2,,0,1,0,0,11
+1140,513,14,100,4.8000,46,"952","02/10/21 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna bio al 36% + certificato di analisi",0,1,0,0,2
+614,71,314,48000,2.6500,45,"495","12/13/18 00:00:00",2.7000,"Via dell' Agricoltura, 21, 37041 Albaredo D'adige VR, Italie",1,"GOODS IN BIG BAGS LIKE THE LAST DELIVERIES.",0,1,0,0,
+447,1,284,25000,0.4400,184,"346","04/18/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+448,1,284,75000,0.3350,38,"347","04/18/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+449,1,265,25000,0.3350,8,"348","04/19/18 00:00:00",0.3650,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Loading late afternoon - Latte bio pastorizzato 3,5% - fatturazione con media valori. Carico tardo pomeriggio.",1,0,0,0,
+453,80,13,750,11.2300,188,"351","04/19/18 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",1,"BOVINO ADULTO > 24 MESI
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+458,557,294,250,2.9000,183,"356","04/19/18 00:00:00",3.0000,"SAN PIETRO IN GU -",13,,0,1,0,0,
+454,80,13,750,9.2800,189,"352","04/19/18 00:00:00",10.0800,"SAN GIOVANNI DEL DOSSO",1,"VITELLONE < 24 MESI, 
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+459,450,26,2000,6.4900,33,"357","04/23/18 00:00:00",6.7900,"CHEF SERVICE, ITALY",2,,0,1,0,0,
+455,80,13,750,8.0800,189,"353","04/19/18 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO",1,"BOVINO ADULTO > 24 MESI
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+451,80,328,3000,11.0000,150,"349","04/19/18 00:00:00",12.3000,"San Giovanni del Dosso",14,"Le date di consegna sono indicative, verranno comunicate dal fornirore - da evitare come giorni di consegna il Lunedì ed il Venerdì.
+Perro di tacchino bio congelato con scadenza minima richiesta di 6 mesi.",0,1,0,0,
+460,526,319,0,2.0100,103,"358","04/24/18 00:00:00",2.0400,"BOLOGNA, NORTH ITALY",3,,1,0,0,0,
+456,80,13,330,9.0800,190,"354","04/19/18 00:00:00",9.9800,"SAN GIOVANNI DEL DOSSO",1,"VITELLONE < 24 MESI, 
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+470,1,284,25000,0.4400,184,"367","05/09/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+457,80,13,330,8.0800,190,"355","04/19/18 00:00:00",8.7800,"SAN GIOVANNI DEL DOSSO",1,"BOVINO ADULTO > 24 MESI
+DATE DI CONSEGNA INDICATIVE,
+MERCE CONGELATA",0,1,0,0,
+462,1,284,75000,0.3350,38,"360","04/24/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+461,1,284,25000,0.4400,184,"359","04/24/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+464,1,265,25000,0.3200,8,"362","05/03/18 00:00:00",0.3450,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+603,71,314,24000,2.4500,45,"485","11/28/18 00:00:00",2.5000,"ALBAREDO D'ADIGE - VR, ITALIE",1,"GOODS IN BIG BAG LIKE LAST DELIVERIES.",0,1,0,0,
+934,88,360,300,7.2000,185,"783","04/30/20 00:00:00",7.8000,"SALUMIFICIO MOTTOLINI, via Lozzoni 5 - 23030 Poggiridenti (SO)",2,"quantità da definirsi prossima settimana, packaging sottovuot da definire
+quantity to be finally confirmed next week, packaging to be finally agreed with the customer about the vacumm package",0,1,0,0,1
+937,450,26,2700,7.3800,70,"786","05/06/20 00:00:00",7.6000,"CHEF SERVICE FORLI, ITALY",2,"ORGANIC LIQUID BUTTEROIL.",0,1,0,0,1
+939,564,325,3000,0.8300,21,"788","05/13/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30",0,1,0,0,14
+898,37,314,5000,2.9050,45,"755","03/30/20 00:00:00",3.1000,"PADOVA, ITALIE",2,,0,1,0,0,
+897,76,4,22000,3.0700,17,"754","03/30/20 00:00:00",3.1000,"DAVERIO, MI- ITALY",1,"CANDIA  French whey butter.",0,1,0,0,
+899,32,273,44000,4.1750,33,"756","03/30/20 00:00:00",4.2500,"TASSULLO, NORTH ITALY",15,"BAYERNLAND -ORGANIC BUTTER.",0,1,0,0,
+900,149,251,1500,4.7500,59,"757","04/01/20 00:00:00",5.1700,"PONTE SAN MARCO, BS- ITALY",2,,0,1,0,0,
+942,1,13,20000,0.5500,37,"790","05/13/20 00:00:00",0.5700,"Spino D'Adda",2,,1,0,0,0,13
+469,6,265,25000,0.3300,8,"366","05/08/18 00:00:00",0.4200,"A-5252 Aspach Wildenauerstraße 11",14,"ORGANIC PAST. MILK 3,5% - driver DI SIMO TRASPORTI. Loading 13,00. Invoicing with average kgs value supplier-customer.",1,0,0,0,
+463,1,265,25000,0.3200,8,"361","04/24/18 00:00:00",0.3450,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+465,1,284,25000,0.4400,184,"363","05/03/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+471,1,284,75000,0.3350,38,"368","05/09/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+472,37,314,2000,2.8000,45,"369","05/15/18 00:00:00",3.0200,"PADOVA",2,,0,1,0,0,
+476,1,81,25000,0.3300,37,"373","05/17/18 00:00:00",0.3700,"Biomilchstraße 1 - 82346 Andechs",11,"Organic raw milk - loading at 10,00.",1,0,0,0,
+473,1,284,25000,0.4400,184,"370","05/16/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+474,1,284,75000,0.3350,38,"371","05/16/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+91,80,236,1400,8.8000,139,"55","09/30/15 00:00:00",10.0000,"SAN GIOVANNI DEL DOSSO - MANTOVA",1,"weight range 4-8 kg - usual quality - delivery date is just an indication for our program
+pezzatura 4-8 kg - solità qualità - la data di consegna è solamente indicativa",0,1,0,0,
+94,436,236,900,9.0000,139,"58","10/07/15 00:00:00",10.0000,"BUSSETO (PR)",1,"FROZEN GOODS - 1 PALLET OF 900 KG",0,1,0,0,
+93,63,8,22000,0.6900,37,"57","10/06/15 00:00:00",0.7200,"SAN CESARIO SUL PANARO + ANZOLA EMILIA",15,"latte crudo Biologico Nazionale - pagamento a ricevimento pesata.",1,0,0,0,
+96,80,250,2800,14.5000,150,"60","10/08/15 00:00:00",15.6000,"SAN GIOVANNI DEL DOSSO MANTOVA, ITALY",1,"per ciascuna consegna due 2 palletts di petto di tacchino bio, ciascun pallet del peso c.a. 600-700 kg
+pagamento bonifico bancario 30 giorni netto data fattura",0,1,0,0,
+99,63,8,22000,0.7000,37,"62","10/16/15 00:00:00",0.7300,"SAN CESARIO SUL PANARO+ ANZOLA EMILIA",15,"Latte crudo Biologico Nazionale - pagamento a ricevimento pesata.",1,0,0,0,
+98,66,253,600,7.8000,79,"61","10/13/15 00:00:00",8.4500,"lavezzola",12,,0,1,0,0,
+102,62,8,15000,0.7300,37,"65","10/22/15 00:00:00",0.7800,"CASLMAGGIORE (CR)",15,"Latte crudo Biologico Nazionale - prezzo: 0,70 €.kg fco partenza + 450 € di trasporto, già compreso nel prezzo.",0,1,0,0,
+108,66,254,300,12.2600,154,"68","12/02/15 00:00:00",13.4800,"lavezzola",3,"FROZEN CHICKEN BREAST- THE PRICE INCLUDED ALREADY THE TRANSPORT COST, THE NET PRICE IS 12,00 €/KG - DELIVERY DATE IS JUST AN INDICATION FOR OUR PROGRAM",0,1,0,0,
+1024,76,367,300,4.6500,107,"857","09/24/20 00:00:00",5.3000,"DAVERIO, MI- ITALIA",1,"3OO KG TEST MOZZARELLA CUBETTATA SENZA LATTOSIO.",0,1,0,0,3
+95,62,8,30000,0.6900,37,"59","10/07/15 00:00:00",0.7500,"CASALMAGGIORE (CR)",15,"LATTE CRUDO BIOLOGICO NAZIONALE - trasporto 450€ per cisterna, da aggiungere al prezzo.",0,1,0,0,
+100,450,26,1000,5.3200,33,"63","10/16/15 00:00:00",5.6500,"CHEF  SERVICE  in Forlì",1,,0,0,0,0,
+101,49,26,400,6.8000,70,"64","10/19/15 00:00:00",7.5000,"23900 ZENSON  DI  PIAVE",1,,0,0,0,0,
+104,149,221,1000,3.8500,45,"66","10/26/15 00:00:00",4.2000,"Ponte San Marco, Brescia - Italie",16,,0,0,0,0,
+109,66,254,300,14.7600,150,"69","12/02/15 00:00:00",16.2300,"LAVEZZOLA",3,"FROZEN TURKEY BREAST- THE PRICE INCLUDED ALREADY THE TRANSPORT COST, THE NET PRICE IS 14,50 €/KG - DELIVERY DATE IS JUST AN INDICATION FOR OUR PROGRAM",0,1,0,0,
+115,11,12,20000,0.4400,37,"71","12/17/15 00:00:00",0.4700,"Loc. Cà Verde - 37015 - S.Ambrogio di Valpolicella (VR)",1," HUNGARIAN ORIGIN ORGANIC RAW MILK, DELIVERY IN THE MORNING.",0,1,0,0,
+114,149,221,1000,3.8500,45,"70","12/15/15 00:00:00",4.1000,"PONTE SAN MARCO, BS- ITALIE",2,"Pagamento 30 GG. RIBA Netto  data fattura.",0,1,0,0,
+116,263,26,450,6.9800,70,"72","12/30/15 00:00:00",7.9800,"via FENESTRELLE 32, 10064 PINEROLO (TO), ITALY",14,"delivery in WEEK 2",0,1,0,0,
+673,1,284,75000,0.3500,193,"547","03/28/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+672,1,265,325000,0.3970,8,"546","03/26/19 00:00:00",0.4300,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+676,37,27,1500,4.6800,59,"550","04/03/19 00:00:00",4.9500,"PADOVA, ITALIEN",2,,0,1,0,0,
+674,591,273,800,5.5000,33,"548","03/29/19 00:00:00",5.6500,"D-88367 Hohentengen",1,"If this pallett goes good, it is confirmed 1 FULLTRUCK of organic Butter at 5,06 €/kg Delivered Finck . Differently, Fulltruck is cancelled.",0,1,0,0,
+679,71,251,24000,2.7500,45,"551","04/05/19 00:00:00",2.8200,"ALBAREDO, VR- ITALY",13,,0,1,0,0,
+680,71,314,72000,2.7700,45,"552","04/05/19 00:00:00",2.8200,"ALBAREDO - VR, ITALY",13,,0,1,0,0,
+681,71,188,4000,7.2100,58,"553","04/05/19 00:00:00",7.5000,"ALBAREDO, VR- ITALIE",1,,0,1,0,0,
+685,1,284,75000,0.3500,193,"557","04/11/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+1063,78,36,22000,3.1100,17,"890","11/02/20 00:00:00",3.1400,"CASTELFRANCO  EMILIA,  MO - ITALY",15,"ARLA  UK   UNSALTED  WHEY  BUTTER.",0,1,0,0,1
+467,1,284,75000,0.3350,38,"364","05/03/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+475,186,27,750,3.1500,45,"372","05/16/18 00:00:00",3.5500,"TRUCCAZZANO-MI,ITALIA",13,,0,1,0,0,
+479,512,26,1000,6.8000,33,"376","05/21/18 00:00:00",7.0500,"VIDOR, TV- ITALY",3,,0,1,0,0,
+477,162,26,8000,6.4800,33,"374","05/18/18 00:00:00",6.5300,"DOSSOBUONO, VR - ITALY",2,"PAGAMENTO RIBA 30 GG NETTO d.fattura.",0,1,0,0,
+482,1,81,25000,0.3500,37,"379","05/24/18 00:00:00",0.3800,"Biomilchstraße 1 - 82346 Andechs",11,,1,0,0,0,
+481,1,284,75000,0.3350,38,"378","05/24/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+480,1,284,25000,0.4400,184,"377","05/24/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+484,93,250,2000,11.3500,150,"380","05/30/18 00:00:00",12.1000,"Ripalta Cremasca",1,"Organic Turkey Breast Frozen - better quality than the last deliveries
+delivery date must be finally confirmed, the delivery asked is between 11/06 - 18/06",0,1,0,0,
+468,557,294,500,2.9000,183,"365","05/03/18 00:00:00",3.0000,"SAN PIETRO IN GU-",13,,0,1,0,0,
+485,80,330,500,11.4000,150,"381","05/30/18 00:00:00",12.7000,"Via s.Giovanni 16/A - 46020 San Giovanni del Dosso - Mantova",1,"500 kg as sample of Organic Turkey Breast Frozen - quality as the technical sheet agreeddelivery date 07/06 or 08/06",0,1,0,0,
+486,80,330,3000,11.5500,150,"382","05/30/18 00:00:00",12.8500,"Via s.Giovanni 16/A - 46020 San Giovanni del Dosso - Mantova",1,"organic turkey breast frozen - packaging: in bags and boxes E2n as sample delivered",0,1,0,0,
+489,37,27,750,4.6500,59,"385","05/31/18 00:00:00",4.9300,"PADOVA, ITALY",2,,0,1,0,0,
+495,93,331,2000,11.8000,150,"389","06/08/18 00:00:00",12.7000,"Via Vittorio Veneto,1  - 26010 Ripalta Cremasca (CR) ITALY",29,"organic turkey breast frozen, the breast must be without skin, without fat, divided into 2 parts and without bones",0,1,0,0,
+487,1,284,25000,0.4400,184,"383","05/30/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+488,1,284,75000,0.3350,38,"384","05/30/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+490,513,294,140,2.9000,183,"386","06/05/18 00:00:00",3.2000,"VIDIGULFO, PAVIA",2,,0,1,0,0,
+682,1,284,75000,0.3500,193,"554","04/05/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+683,564,325,3000,0.8000,21,"555","04/08/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - 3000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+675,591,273,0,4.9900,33,"549","03/29/19 00:00:00",5.0600,"D-88367 Hohentengen",1,"25% PAYMENT in advance, 25% the day of the delivery, 50% at 3O Days net.",0,1,0,0,
+684,77,170,22000,3.8250,17,"556","04/10/19 00:00:00",3.8600,"ZANE' - VI , ITALY",2,"BURRO DI SIERO FRANCESE - FRENCH WHEY BUTTER.",0,1,0,0,
+687,1,284,75000,0.3500,193,"559","04/17/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+686,576,325,4000,0.8000,21,"558","04/12/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - 3000/4000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+688,1,284,75000,0.3500,193,"560","04/24/19 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+689,1,284,125000,0.3600,193,"561","04/30/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+345,450,26,1000,6.9900,33,"252","07/28/17 00:00:00",7.2800,"CHEF SERVICE  IN FORLI' , ITALY",2,"DELIVERY BINDING WITHIN 09.08.2017 --- Pagamento 30 GG Riba Netto data fattura.",0,1,0,0,
+356,450,26,1000,7.1500,33,"263","09/27/17 00:00:00",7.4500,"CHEF SERVICE, FORLì -  ITALY",2,"PAGAMENTO 30 GG.RIBA netto data fattura.",0,1,0,0,
+358,1,297,16500,0.5300,37,"265","09/28/17 00:00:00",0.5700,"Km. 16 Strada Provinciale Rivoltana, 20060 Truccazzano (MI)",1,"Latte Crudo Biologico. Fatturazione con pesata cliente.",1,0,0,0,
+360,513,14,400,4.8000,46,"267","10/02/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+361,450,26,1000,7.0600,33,"268","10/10/17 00:00:00",7.4600,"CHEF SERVICE - FORLI",1,,0,1,0,0,
+362,513,14,150,4.8000,46,"269","10/13/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+363,513,14,200,4.8000,46,"270","10/19/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+365,39,272,2000,5.9000,33,"272","10/24/17 00:00:00",6.0000,"VARESE, ITALY",1,,0,1,0,0,
+117,53,238,2000,8.1000,139,"73","01/12/16 00:00:00",9.0000,"VIA C.COLOMBO, 1   37030 VAGO DI LAVAGNO (VR) ITALY",1,"2000 KG OF ORGANIC BEEF TOPSIDE PAD AND WITHOUT CAP - FROZEN GOOD",0,1,0,0,
+107,88,254,600,12.3075,154,"67","10/29/15 00:00:00",13.5400,"SIRONE",3,"THE PRICE INCLUEDED ALREADY THE COST OF THE TRANSPORT - THE NET PRICE IS 12,00 €/KG WITHOUT THE TRANSPORT",0,1,0,0,
+118,15,251,21350,4.8500,33,"74","01/13/16 00:00:00",4.9500,"BARNWOOD - GLOUCESTER, UK",15,"FROZEN ORGANIC BUTTER.",1,0,0,0,
+119,118,77,10000,0.5800,37,"75","01/14/16 00:00:00",0.6000,"Sant'Ambrogio di Valpolicella VR - località Cà Verde",15,"Latte crudo fresco - certificato Biologico. Percentuali grasso/proteine conforme reg CE 834/07 art.29 Reg. CE889/08 reg- CE 853/04.",1,0,0,0,
+121,53,236,1400,8.2500,139,"77","01/22/16 00:00:00",9.1000,"VAGO DI LAVAGNO 37030, VR- Italy",2,"FROZEN Goods.   Pagamento:   RIBA 30 GG.Netto data fattura.",0,1,0,0,
+120,37,221,2000,3.9000,45,"76","01/18/16 00:00:00",4.1500,"PADOVA, Italie",2,"Pagamento:  30 GG.Riba netto data fattura.",0,1,0,0,
+125,439,12,25000,0.5050,37,"78","01/27/16 00:00:00",0.5500,"Via Filadelfia, 220, 10137 Torino",14,"ORGANIC RAW MILK FROM HUNGARY, DELIVERY WITHIN 11 O'CLOCK.",0,1,0,0,
+135,343,260,25000,0.2300,38,"85","02/18/16 00:00:00",0.2700,"Via Provinciale 17 -12050 Bosia (CN)",1,"FR ORIGIN RAW MILK.",0,1,0,0,
+902,1,284,125000,0.3670,193,"759","04/02/20 00:00:00",0.3720,"FRIBURGO",1,,1,0,0,0,
+903,620,67,60000,0.3000,38,"760","04/02/20 00:00:00",0.3100,"VIA COLOGNO 10 - 24053 BRIGNANO GERA D'ADDA - BG",1,,1,0,0,0,
+904,76,314,1500,5.2200,195,"761","04/03/20 00:00:00",5.9000,"DAVERIO, MI - ITALIE",1,"SICAPRO 6O% BIO.",0,1,0,0,
+908,616,360,3200,7.2000,93,"764","04/08/20 00:00:00",7.8000,"Via Omobono Cenini 19 - 23030 Chiuro - SO",1,"quantity between 800-1000 kg per delivery , ORGANIC BEEF TOPSIDE PAD, COMPLETELY CLEANED, WEIGHT RANGE MUST BE RESPECTED OF 5 KG + , a weight below 5 can not be accepted and this would be rejected",0,1,0,0,
+905,465,363,25000,0.2900,38,"762","04/07/20 00:00:00",0.3000,"Tagliata di Antognano 4 - Rustigazzo, 29018 Lugagnano Val D'Arda",3,"LATTE CRUDO ORIGINE : CZ",0,1,0,0,
+907,15,277,21600,4.3500,33,"763","04/07/20 00:00:00",4.3800,"63 CLERMONT FERRAND- FRANCE",1,"ORGANIC  FROZEN BUTTER - BURRO BIO. CANDIA ORGANIC FROZEN BUTTER.",1,0,0,0,
+834,1,284,100000,0.3670,193,"697","12/20/19 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+835,1,265,325000,0.4550,8,"698","12/20/19 00:00:00",0.4750,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",2,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,14
+229,11,12,25000,0.4800,37,"159","09/26/16 00:00:00",0.5100,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK, INVOICING WITH THE AVERAGE VALUE.",0,1,0,0,
+237,263,26,1000,6.3000,70,"165","10/10/16 00:00:00",7.3000,"PINEROLO (TO) 10064, ITALY",3,,0,0,0,0,
+236,37,286,2600,3.8000,45,"164","10/06/16 00:00:00",4.0000,"PADOVA,  ITALY",2,"Pagamento, 30 gg. RIBA NETTO DATA FATTURA.",0,0,0,0,
+238,510,11,25000,0.6200,37,"166","10/10/16 00:00:00",0.6550,"Tettnang",1,"ORGANIC RAW MILK FROM GERMANY. INVOICING WITH THE AVERAGE VALUE FROM THE WEIGHBRIDGES.",1,0,0,0,
+244,512,26,1000,5.1500,33,"172","10/17/16 00:00:00",5.8000,"VIDOR, TV- ITALY",3,,0,0,0,0,
+239,1,77,20000,0.5500,37,"167","10/14/16 00:00:00",0.5900,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"LATTE CRUDO BIOLOGICO NAZIONALE, FATTURAZIONE CON LA MEDIA DELLE PESATE.",1,0,0,0,
+246,113,77,20000,0.5700,37,"174","10/21/16 00:00:00",0.6100,"Parmalat spa - Loc.Barbere 5 - 37050 Santa Maria di Zevio (VR)",1,,0,1,0,0,
+248,513,14,700,4.1000,46,"175","10/24/16 00:00:00",4.4000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+691,80,330,4500,11.1000,150,"563","05/02/19 00:00:00",11.7000,"san giovanni del dosso - MN",1,"organic turkey breast frozen, same cut and same quality as already delivered / packaging: in E2 + boxes - PLASIC PALLET needed, delivery dates are just an indication, please do not deliver on Monday",0,1,0,0,
+690,564,325,3000,0.8000,21,"562","04/30/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - 3000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+695,1,284,125000,0.3600,193,"567","05/09/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+692,593,345,100,2.3000,131,"564","05/07/19 00:00:00",3.3000,"POLAND",3,"ANALOGUE MOZZARELLA  shredded",1,0,0,0,
+694,564,325,4500,0.8000,21,"566","05/07/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - 4000/5000 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+693,593,345,100,2.2000,131,"565","05/07/19 00:00:00",3.2000,"POLAND",3,"ANALOGUE MOZZARELLA IN BLOC.",1,0,0,0,
+696,1,81,25000,0.4400,200,"568","05/14/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+697,37,251,5000,3.0000,45,"569","05/14/19 00:00:00",3.2000,"PADOVA , ITALIE",2,,0,1,0,0,
+698,1,284,125000,0.3600,193,"570","05/15/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+699,513,294,160,2.9000,183,"571","05/16/19 00:00:00",3.5000,"VIDIGULFO - PV",2,,0,1,0,0,
+700,37,251,10000,2.9800,45,"572","05/20/19 00:00:00",3.1000,"PADOVA , ITALY",2,,0,1,0,0,
+701,513,14,100,4.8000,46,"573","05/21/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+702,1,81,25000,0.4400,200,"574","05/22/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+703,1,284,125000,0.3600,193,"575","05/24/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+704,564,325,8400,0.8000,21,"576","05/27/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza. Consegna 06/06  +100 € trasporto; consegna del 20/06 senza spese di trasporto.",1,0,0,0,
+705,1,81,25000,0.4400,200,"577","05/28/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+357,512,8,2000,6.7000,33,"264","09/27/17 00:00:00",6.9000,"VIDOR, TV- ITALY",3,,0,1,0,0,
+367,513,14,400,4.8000,46,"273","10/26/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+364,51,251,750,5.0500,59,"271","10/19/17 00:00:00",5.5000,"LAMERI SPA- via Martiri della Libertà, 19- 20060 Liscate (MI), Italy",2,"PAGAMENTO 30 GG.RIBA netto data fattura.",0,1,0,0,
+368,93,250,4000,11.8700,150,"274","10/27/17 00:00:00",12.7000,"RIPALTA CREMASCA",1,"2,000 kg of frozen organic turkey breast - delivery date of January ti be finally confirmed - price unchanged for the 1Q of 2018",0,1,0,0,
+370,548,272,13000,6.0300,33,"276","11/03/17 00:00:00",6.0700,"44470 CARQUEFOU,  France",3,,0,1,0,0,
+369,72,26,2000,6.5000,33,"275","11/02/17 00:00:00",6.8000,"COLOGNOLA AI COLLI, VR - ITALY",2,"Pagamento 30 Gg RIBA netto data fattura.",0,1,0,0,
+371,513,14,300,4.8000,46,"277","11/03/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+372,450,26,1000,6.6500,33,"278","11/08/17 00:00:00",7.0500,"CHEF SERVICE  - FORLI, ITALY",2,,0,1,0,0,
+836,1,284,100000,0.3670,193,"699","12/30/19 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+839,1,284,100000,0.3670,193,"701","01/08/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+841,1,284,125000,0.3670,193,"702","01/14/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+843,564,353,15000,0.9200,21,"704","01/21/20 00:00:00",1.1100,"5131 RC  ALPHEN (N-BR) - THE NETHERLANDS",13,"RAW GOAT MILK, price: 12,32 €/kg (fat/protein) invoicing in kgs, loading MORNING BETWEEN 8,00 UP TO 12,00 , transport company VEYNAT",1,0,0,0,1
+844,1,284,100000,0.3670,193,"705","01/21/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+846,614,353,15000,0.9200,21,"707","01/28/20 00:00:00",1.1100,"5131 RC ALPHEN (N-BR) - THE NETHERLANDS",3,"RAW GOAT MILK, pirce 12,32 €/kg fat and protein, invoicing in kgs, loading in the morning between 8,00 up to 12,00, transport company VEYNAT",1,0,0,0,1
+847,1,284,100000,0.3670,193,"708","01/29/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+849,564,325,10000,0.8300,21,"710","02/03/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, quantitativi indicativi da 3,000 a 5000 - pezzo espresso €/LITRO fco partenza + COSTO DI TRASPORTO 150 €URO",1,0,0,0,1
+491,1,284,25000,0.4400,184,"387","06/07/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+492,1,284,75000,0.3350,38,"388","06/07/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+496,450,26,2000,6.5800,33,"390","06/08/18 00:00:00",6.8900,"CHEF SERVICE - ITALY",2,,0,1,0,0,
+497,1,284,25000,0.4400,184,"391","06/14/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+498,1,284,75000,0.3350,38,"392","06/14/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+252,73,250,1000,12.7000,150,"178","10/27/16 00:00:00",13.7000,"Via dell'Agricoltura, 310 - 41058 Vignola Modena",1,"consegna 7/11 o al più tardi 8/11 - delivery date 7/11 or at the latest 8/11
+1000 kg of ORGANIC TURKEY BREAST-FROZEN",0,1,0,0,
+240,11,12,100000,0.5100,37,"168","10/14/16 00:00:00",0.5400,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK, INVOICING WITH THE AVERAGE VALUE.",0,1,0,0,
+250,504,283,300,6.9000,15,"176","10/26/16 00:00:00",7.6000,"Via Giuseppe Mazzini, 105, 24018 Villa d'Almè Bergamo, Italia",1,"300 OG OF FRESH ORGANIC PORK SHOULDERS, WEIGHT RANGE AROUND 6,00 KG, DEBONED, RIND OFF - DELIVERY2ND WEEK NOVEMBER",0,1,0,0,
+268,1,77,22000,0.5950,37,"191","12/06/16 00:00:00",0.6200,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",2,"LATTE CRUDO BIOLOGICO NAZIONALE, FATTURAZIONE CON LA MEDIA DELLE PESATE.",1,0,0,0,
+251,504,283,400,6.4000,105,"177","10/26/16 00:00:00",7.0500,"Via Giuseppe Mazzini, 105, 24018 Villa d'Almè Bergamo, Italia",1,"400 KG OF ORGANIC FRESH PORK NECKS, DEBONED, DEFATTED, RIND OFF, WEIGHT AROUND 2,0-2,5 KG, DELIVERY 2ND WEEK OF NOVEMBER",0,1,0,0,
+261,518,291,300,1.2000,170,"184","11/16/16 00:00:00",1.3200,"Via Ca' De' Vecchi, 1 - 27040 Fortunago (PV)",15,"Carico possibile dalle ore 10,00.",1,0,0,0,
+256,364,245,1000,5.0000,15,"180","11/14/16 00:00:00",5.8000,"TAVERNERIO - CO - ITALY",2,"SHOULDERS 4D - FROZEN",0,1,0,0,
+257,364,245,500,4.5000,163,"181","11/14/16 00:00:00",5.0000,"TAVERNERIO - CO - ITALY",2,"500 KG OF ORGANIC PORK BELLIES - FROZEN",0,1,0,0,
+241,509,283,510,7.4000,15,"169","10/14/16 00:00:00",8.1500,"VIA CASTELLETTO, 11 - 27057 VARZI, PAVIA",14,"510 KG OF ORGANIC PORK SHOULDERS DEBONED
+DELIVERY IN WEEK 43",0,1,0,0,
+242,509,283,90,6.8000,163,"170","10/14/16 00:00:00",7.5000,"VIA CASTELLETTO, 11 - 27057 VARZI, PAVIA",1,"90 KG OF ORGANIC BIG BELLIES RIND OFF - DELIVERY DATE WEEK 43",0,1,0,0,
+253,450,26,1000,5.2600,33,"179","10/31/16 00:00:00",5.6600,"CHEF SERVICE  , FORLI' - Italy",2,"Pagamento 30 GG Riba Netto data fattura,",0,1,0,0,
+258,364,245,1000,4.5000,16,"182","11/14/16 00:00:00",5.0000,"TAVERNERIO - CO - ITALIA",2,"FROZAN ORGANIC TRIMMING 85/15",0,1,0,0,
+259,80,245,2000,4.5000,16,"183","11/14/16 00:00:00",5.2000,"SAN GIOVANNI DEL DOSSO - MI - ITALY",1,"FROZEN ORGANIC  PORK TRIMMING 82/20 - 85/15",0,1,0,0,
+263,450,26,1000,5.4000,33,"186","11/24/16 00:00:00",5.7600,"CHEF  SERVICE, FORLI - ITALY",2,"Pagamento Riba 30 GG.Netto data fattura.",0,1,0,0,
+264,11,12,25000,0.5150,37,"187","11/30/16 00:00:00",0.5500,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",1,"HUNGARIAN ORIGIN ORGANIC RAW MILK, INVOICING WITH THE AVERAGE VALUE.",0,1,0,0,
+266,1,33,20000,0.6000,37,"189","12/01/16 00:00:00",0.6150,"Casalmaggiore, CR",1,"LATTE CRUDO BIO NAZIONALE.",1,0,0,0,
+243,509,283,40,11.2000,79,"171","10/14/16 00:00:00",12.3000,"VIA CASTELLETTO, 11 - 27057 VARZI, PAVIA",1,"40 KG OF ORGANIC PORK LOINS - DELIVERY DATE WEEK 43",0,1,0,0,
+267,71,54,24000,4.0200,45,"190","12/01/16 00:00:00",4.2000,"ALBAREDO D'ADIGE, VR - ITALY",1,"ORGANIC  SMP,  KOSHER.",0,1,0,0,
+269,518,291,1500,1.2000,170,"192","12/06/16 00:00:00",1.3200,"Via Ca' De' Vecchi, 1 - 27040 Fortunago (PV)",15,"Carico possible dalle ore 10,00",1,0,0,0,
+270,320,136,125000,0.4250,38,"193","12/21/16 00:00:00",0.4400,"Località San Martino - 58025 Monterotondo Marittimo (GR)",3,"LATTE CRUDO CECO, FATTURAZIONE CON LA MEDIA DELLE PESATE.
+Cz origin raw milk, invoicing with the average value.",0,1,0,0,
+273,513,14,300,4.1000,46,"195","12/28/16 00:00:00",4.4000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+271,37,19,1200,5.5000,59,"194","12/21/16 00:00:00",5.7000,"PADOVA , ITALY",2,"Pagamento, 30 GG.Riba netto data fattura.",0,1,0,0,
+277,71,188,1000,6.7000,58,"198","01/02/17 00:00:00",7.0500,"ALBAREDO D'ADIGE - ITALIE",1,,0,1,0,0,
+276,518,291,600,1.2000,170,"197","12/30/16 00:00:00",1.3200,"Via Ca' De' Vecchi, 1 - 27040 Fortunago (PV)",15,"Carico possible dalle ore 10,00 di ogni Giovedì",1,0,0,0,
+499,564,325,5000,0.7200,21,"393","06/14/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",13,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+500,39,26,10000,6.0500,33,"394","06/15/18 00:00:00",6.1500,"VARESE,  MI - ITALY",1,"BURRO BIOLOGICO CONGELATO.",0,1,0,0,
+505,1,284,75000,0.3350,38,"399","06/27/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+501,1,265,325000,0.4050,8,"395","06/20/18 00:00:00",0.4400,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+502,1,284,25000,0.4400,184,"396","06/21/18 00:00:00",0.4600,"Haslacher Straße 12  -  79115 Freiburg",1,"Organic Past. Milk with natural fat content - latte bio pastorizzato con grasso naturale.",1,0,0,0,
+503,1,284,75000,0.3350,38,"397","06/21/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+506,1,284,75000,0.3350,38,"400","07/05/18 00:00:00",0.3450,"FREIBURG",2,,1,0,0,0,
+504,564,325,5000,0.7200,21,"398","06/21/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",14,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+509,160,314,2000,2.6000,45,"402","07/11/18 00:00:00",2.8800,"ZENSON DI PIAVE - ITALY",1,,0,1,0,0,
+706,162,26,10000,4.8500,33,"578","05/30/19 00:00:00",4.9500,"DOSSOBUONO, VR - ITALY",2,,0,1,0,0,
+709,595,251,1000,3.1000,45,"581","05/31/19 00:00:00",3.2900,"20873 Cavenago di Brianza (MB) ,ITALIE",1,,0,1,0,0,
+710,513,14,200,4.8000,46,"582","06/05/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+711,1,81,25000,0.4400,200,"583","06/05/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+712,1,284,125000,0.3600,193,"584","06/06/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+713,37,27,2250,4.3200,59,"585","06/07/19 00:00:00",4.9700,"PADOVA, ITALIEN",2,,0,1,0,0,
+715,1,284,125000,0.3600,193,"587","06/13/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+716,1,81,25000,0.4400,200,"588","06/20/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+275,524,265,75000,0.2800,172,"196","12/28/16 00:00:00",0.3200,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",14,"Austrian origin organic skimmed milk. Invoicing with the average value.",1,0,0,0,
+265,520,265,25000,0.2950,172,"188","11/30/16 00:00:00",0.3150,"A-5252 Aspach Wildenauerstraße 11, AUSTRIA",14,"AUSTRIAN ORIGIN ORGANIC SKIMMED MILK(0,1% - 0,05% fat).",1,0,0,0,
+278,512,26,1000,5.4700,33,"199","01/09/17 00:00:00",5.7900,"VIDOR, Italy",1,"Organic Butter 82% in 25 kg blocs.",0,1,0,0,
+283,513,14,400,4.1000,46,"204","01/20/17 00:00:00",4.4000,"Via Madonnina 32 - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+286,524,265,100000,0.2800,172,"207","01/26/17 00:00:00",0.3200,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",14,"Austrian organic skimmed milk. Invoicing with the average value.",1,0,0,0,
+300,80,250,9100,11.9000,150,"218","03/03/17 00:00:00",12.7000,"SAN GIOVANNI DEL DOSSO",1,"organic turkey breast - usual quality - frozen goods - delivered on plastic pallets",0,1,0,0,
+301,37,221,3000,4.4000,45,"219","03/06/17 00:00:00",4.8000,"PADOVA, Italie",2,"Pagamento RIBA 30 GG Netto data fattura.",0,0,0,0,
+302,526,288,22500,1.2500,159,"220","03/13/17 00:00:00",1.2800,"ZAMORA, SPAIN",3,,1,0,0,0,
+707,513,14,175,4.8000,46,"579","05/30/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+708,1,284,125000,0.3600,193,"580","05/30/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+717,1,284,125000,0.3600,193,"589","06/20/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+719,37,27,2250,4.4400,59,"591","06/24/19 00:00:00",4.8200,"PADOVA, ITALIEN",2,,0,1,0,0,
+718,564,325,7500,0.8000,21,"590","06/20/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza  + 100 € trasporto.",1,0,0,0,
+720,1,81,25000,0.4400,200,"592","06/26/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+722,149,323,750,4.6000,59,"594","06/26/19 00:00:00",4.9900,"PONTE SAN MARCO, BS- ITALY",2,,0,1,0,0,
+723,1,16,25000,0.4450,38,"595","06/27/19 00:00:00",0.4550,"Via Barsotto, 3 -  55016 Porcari LU",1,,0,1,0,0,
+851,1,284,100000,0.3670,193,"712","02/05/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+855,615,353,30000,0.9200,21,"714","02/06/20 00:00:00",1.1100,"via Bovon, 3 - 31030 Breda di Piave TV",3,"LATTE CRUDO DI CAPRA, bollo Ce NLZ1977 EC - PREZZO €/KG SOGGETTO A VARIAZIONE SOMMA GRASSO/PROTEINE (BASE 7.5%) E KG CARICATI, TRASPORTATORE VEYNAT",1,0,0,0,1
+859,513,14,100,4.8000,46,"717","02/10/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,,0,1,0,0,2
+860,1,284,100000,0.3670,193,"718","02/10/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,1
+861,564,325,3000,0.8300,21,"719","02/18/20 00:00:00",0.9300,"SAN VITTORE OLONA",28,"latte di capra nazionale, - prezzo espresso €/Litro fco partenza + COSTO DI TRASPORTO 150 €uro",0,1,0,0,14
+862,564,325,23000,0.8300,21,"720","02/18/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, - prezzo espresso €/Litro fco partenza + COSTO DI TRASPORTO 150 €uro, è RICHIESTA MASSIMA PUNTUALITA' PER LO SCARICO DEL 10/03 ed eventualment eper quello agiguntivo del 14/04",0,1,0,0,14
+864,1,284,250000,0.3670,193,"722","02/20/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",3,,1,0,0,0,1
+870,576,325,4000,0.8300,21,"728","02/21/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, quantitativo previsto tra 3,000 - 4,000. prezzo €/litro, + 150 €uro di trasporto -- consegna richiesta mattina del 5/03",1,0,0,0,14
+1138,66,360,3500,7.2000,187,"951","02/09/21 00:00:00",7.8000,"LAVEZZOLA",1,"400 - 600 kg of each delivery, the specification of the cut must be respected, so heart of the topside PAD, completely cleaned, weight range 3,0 - 3,5 kg eacg and not less than 3 kg",0,1,0,0,1
+1143,604,296,3000,0.8300,169,"954","02/16/21 00:00:00",0.9300,"BAGNOLO in PIANO, RE",13,,0,1,0,0,1
+1144,450,26,3000,8.7500,70,"955","02/19/21 00:00:00",8.9600,"CHEF SERVICE, FORLI' - ITALY",2,"ORGANIC LIQUID BUTTEROIL.",0,1,0,0,1
+1145,1,12,25000,0.4800,37,"956","02/22/21 00:00:00",0.2500,"porcari",2,,0,1,0,0,1
+1147,595,314,1250,3.0000,45,"958","02/23/21 00:00:00",3.3300,"20873 Cavenago di Brianza (MB)       , Italie",2,,0,1,0,0,1
+1149,80,13,1500,11.2300,188,"960","02/23/21 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",1,"FESE BOVINE BIO PAD, ITALIANE , BOVINO ADULTO > 24 MESI - MERCE CONGELATA",0,1,0,0,13
+1150,80,13,650,8.5800,189,"961","02/23/21 00:00:00",9.3800,"SAN GIOVANNI DEL DOSSO",1,"SOTTOFESA BOVINA BIO PAD, NAZIONALE, VITELLONE < 24 MESI - MERCE CONGELATA CON SCADENZA: LUGLIO 2021, DICEMBRE 2021",0,1,0,0,13
+1154,564,325,5000,0.8300,21,"964","02/24/21 00:00:00",0.9300,"SAN VITTORE OLONA",14,"LATTE NAZIONALE DI CAPRA, prezzo espresso €/litro + costo di trasporto 150 €uro. Orario di scarico 8,30 - 9,00",1,0,0,0,13
+721,1,284,125000,0.3600,193,"593","06/26/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+725,563,323,750,4.6000,59,"597","07/01/19 00:00:00",4.9900,"VALSAMOGGIA, BO - ITALY",13,,0,1,0,0,
+724,1,265,350000,0.4300,8,"596","06/27/19 00:00:00",0.4550,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+726,1,284,125000,0.3600,193,"598","07/03/19 00:00:00",0.3700,"FREIBURG",2,,1,0,0,0,
+727,1,81,25000,0.4400,200,"599","07/03/19 00:00:00",0.4700,"ANDECHS, Germania",2,,1,0,0,0,
+728,1,81,25000,0.4400,200,"600","07/11/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+730,513,14,1400,4.8000,46,"602","07/11/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+731,4,26,1000,5.1500,33,"603","07/11/19 00:00:00",5.4000,"MARENE, CN- ITALY",2,,0,1,0,0,
+507,570,19,800,4.6000,172,"401","07/06/18 00:00:00",4.8500,"PONTEDERA, PISA- ITALY",1,"ORGANIC SKIMMED MILKPOWDER INSTANT ''ELBMILCH''. Pagamento 30 giorni Riba netto data fattura,",0,0,0,0,
+510,1,284,75000,0.3350,38,"403","07/12/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+511,513,14,150,4.8000,46,"404","07/12/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+513,37,314,5000,2.7200,45,"406","07/13/18 00:00:00",2.9800,"PADOVA - ITALIE",1,,0,1,0,0,
+514,548,273,10000,6.0500,33,"407","07/13/18 00:00:00",6.0800,"CARQUEFOU , FRANCE",3,,0,1,0,0,
+515,1,284,75000,0.3350,38,"408","07/19/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+517,512,26,3000,6.2000,33,"409","07/23/18 00:00:00",6.5000,"VIDOR- ITALY",3,,0,1,0,0,
+518,1,284,75000,0.3350,38,"410","08/26/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+729,1,284,125000,0.3600,193,"601","07/11/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+732,1,81,25000,0.4400,200,"604","07/18/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+734,1,81,25000,0.4400,200,"606","07/24/19 00:00:00",0.4700,"Biomilchstraße 1 - 82346 Andechs",25,,1,0,0,0,
+735,1,284,125000,0.3600,193,"607","07/24/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+736,263,26,1000,7.3800,70,"608","07/29/19 00:00:00",7.9500,"Via Fenestrelle, 32 – 10064 Pinerolo (TO), Italy",3,,0,1,0,0,
+737,37,314,5000,2.9000,45,"609","07/30/19 00:00:00",3.0500,"PADOVA, ITALIE",2,,0,1,0,0,
+738,1,284,25000,0.4470,37,"610","08/01/19 00:00:00",0.4650,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+739,1,284,125000,0.3600,193,"611","08/01/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+519,563,323,750,4.6000,59,"411","07/30/18 00:00:00",5.0000,"VALSAMOGGIA ( BO ) , ITALY",1,,0,1,0,0,
+520,1,284,75000,0.3350,38,"412","08/02/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+521,37,323,750,4.6000,59,"413","08/02/18 00:00:00",5.0000,"PADOVA, ITALIEN",1,,0,1,0,0,
+522,513,14,200,4.8000,46,"414","08/02/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+524,93,331,3000,11.8000,150,"415","08/08/18 00:00:00",12.7000,"Via Vitytorio Veneto - 26100 Ripalta Cremasca CR - ITALY",29,"stardard cut, packed as the last time, delivered deep frozen",0,1,0,0,
+525,76,251,800,4.3500,192,"416","08/08/18 00:00:00",4.8500,"DAVERIO, MI - ITALY",1,,0,1,0,0,
+526,1,284,75000,0.3350,38,"417","08/08/18 00:00:00",0.3450,"FRIBURGO, GERMANY",2,,1,0,0,0,
+527,80,13,500,11.8800,188,"418","08/09/18 00:00:00",12.9800,"SAN GIOVANNI DEL DOSSO MANTOVA",13,"VITELLONE < 24 MESI
+DATE DI CONSEGNA INDICATIVE
+MERCE CONGELATA",0,1,0,0,
+733,1,284,125000,0.3600,193,"605","07/18/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+742,1,284,25000,0.4470,37,"613","08/09/19 00:00:00",0.4650,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+740,564,349,4300,0.8000,21,"612","08/06/19 00:00:00",0.8500,"Castellazzo Bormida (AL)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro franco partenza. Fatturazione in Litri. Prezzo trasporto: 200 € da aggiungere.",1,0,0,0,
+747,1,284,125000,0.3600,193,"615","08/13/19 00:00:00",0.3700,"FRIBURGO - Germany",2,,1,0,0,0,
+748,1,284,25000,0.4470,37,"616","08/13/19 00:00:00",0.4650,"FRIBURGO",2,,1,0,0,0,
+750,1,284,125000,0.3600,193,"618","08/21/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+749,576,325,3000,0.8000,21,"617","08/19/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+751,1,284,25000,0.4470,37,"619","08/21/19 00:00:00",0.4650,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+871,616,360,1000,7.2000,93,"729","03/02/20 00:00:00",7.8000,"Via Omobono Cenini, 19 - 23030 Chiuro (SO)",2,"organic beef topside PAD | Fresh",0,1,0,0,1
+872,513,14,120,4.8000,46,"730","03/02/20 00:00:00",5.1000,"via Madonnina 32 - 27018 Vidigulfo (PV)",2,"+ certificato di analisi come sempre",0,1,0,0,2
+875,66,360,300,7.2000,187,"732","03/04/20 00:00:00",7.8000,"Via dell’Industria 6/8 , 48017 Lavezzola (RA)",2,"organic beef heart of the topside pad - Binden Cut, weight range 4 - 5,5 kg",0,1,0,0,1
+876,88,360,300,7.2000,185,"733","03/04/20 00:00:00",7.8000,"SALUMIFICIO MOTTOLINI - Via Lozzoni 5 - 23020 Poggiridenti Piano (SO)",2,"vaccum packed -",0,1,0,0,1
+878,1,284,125000,0.3670,193,"735","03/04/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+880,1,67,25000,0.3200,38,"737","03/05/20 00:00:00",0.3300,"24053 Brignano Gera d'Adda (BG)",2,,1,0,0,0,1
+882,1,67,30000,0.3200,38,"739","03/10/20 00:00:00",0.3300,"24053 Brignano Gera d'Adda (BG)",2,,1,0,0,0,1
+883,1,284,100000,0.3670,193,"740","03/11/20 00:00:00",0.3720,"friburgo",2,,1,0,0,0,1
+752,76,350,720,4.2000,202,"620","08/23/19 00:00:00",4.8000,"DAVERIO, MI - ITALIEN",1,,0,1,0,0,
+744,1,284,125000,0.3600,193,"614","08/09/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,"13/08: 1 truck past. milk + 1 truck raw milk",1,0,0,0,
+753,564,325,3000,0.8000,21,"621","08/23/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+754,1,284,125000,0.3600,193,"622","08/29/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+757,72,26,1000,5.2800,33,"625","09/03/19 00:00:00",5.9000,"COLOGNOLA AI COLLI - VR. ITALY",2,,0,1,0,0,
+755,564,325,6000,0.8000,21,"623","09/02/19 00:00:00",0.8500,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+758,1,284,125000,0.3600,193,"626","09/04/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+759,149,314,2500,2.8800,45,"627","09/04/19 00:00:00",3.1800,"PONTE SAN MARCO, BS - ITALIE",2,,0,1,0,0,
+528,80,13,500,9.2800,189,"419","08/09/18 00:00:00",10.0800,"SAN GIOVANNI DEL DOSSO",13,"VITELLONE < 24 MESI
+DATE DI CONSEGNA INDICATIVE
+MERCE CONGELATA",0,0,0,0,
+529,80,13,1000,11.2300,188,"420","08/09/18 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO - MANTOVA",13,"BOVINO ADULTO > 24 MESI
+DATE DI CONSEGNA INDICATIVE
+MERCE CONGELATA",0,1,0,0,
+530,80,13,1000,8.0800,189,"421","08/09/18 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO - MANTOVA",13,"BOVINO ADULTO > 24 MESI
+DATE DI CONSEGNA INDICATIVE
+MERCE CONGELATA",0,1,0,0,
+533,1,284,75000,0.3350,38,"424","08/16/18 00:00:00",0.3450,"FRIBURGO",2,,1,0,0,0,
+537,450,273,1500,6.1500,33,"426","08/22/18 00:00:00",6.3500,"CHEF SERVICE - FORLI",6,,0,1,0,0,
+536,564,325,18000,0.7200,21,"425","08/21/18 00:00:00",0.7700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",14,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Prezzo comprensivo di trasporto 100 €.",0,1,0,0,
+538,513,14,250,4.8000,46,"427","08/23/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+539,1,284,75000,0.3350,38,"428","08/23/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+531,513,14,100,4.8000,46,"422","08/09/18 00:00:00",5.1000,"VIA MADONNINA, 32 - 27018 VIDIGULFO - PV",1,,0,1,0,0,
+542,513,14,250,4.8000,46,"430","08/27/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+541,576,325,24000,0.8200,21,"429","08/24/18 00:00:00",0.8700,"Via Roma 32 – 28060 Castellazzo Novarese (NO)",14,"Latte di capra fresco nazionale - 5.000/6.000 litri a consegna. Il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri.",0,1,0,0,
+543,513,14,100,4.8000,46,"431","08/30/18 00:00:00",5.1000,"via madonnina 32 - 27018 vidigulfo PV",1,,0,1,0,0,
+544,1,284,75000,0.3350,38,"432","08/31/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+545,513,14,200,4.8000,46,"433","09/06/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+546,1,284,75000,0.3350,38,"434","09/06/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+547,1,284,75000,0.3350,38,"435","09/13/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+373,513,14,250,4.8000,46,"279","11/09/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+374,76,26,1000,6.6500,33,"280","11/10/17 00:00:00",7.0000,"DAVERIO, ITALY",1,"ORGANIC BUTTER 82% ORIGINE DANESE - DANISH ORIGIN.",0,1,0,0,
+375,76,26,2500,5.1800,156,"281","11/10/17 00:00:00",5.3300,"DAVERIO, ITALY",1,"BURRO SALATO MAX 2% SALE ORIGINE INGHILTERRA/ IRLANDA.",0,1,0,0,
+376,549,26,50,14.2000,70,"282","11/13/17 00:00:00",16.2000,"26036 RIVAROLO DEL RE (CR), ITALY",3,"50 ORGANIC  AMF 1O KG BLOCS. BURRO ANIDRO BIOLOGICO BIO. BLOCCHI DA 10 KG, CONGELATO.",0,1,0,0,
+378,513,14,150,4.8000,46,"284","11/17/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+377,6,192,9000,0.5200,37,"283","11/15/17 00:00:00",0.5500,"Via Manenti, 20 - 28060 Casalino (NO)",1,"Latte Crudo Bio - carico ore 06,00. Fatturazione con pesata riscontrata dal cliente - salvo differenze ingenti. Il prezzo sopra riportato è da intendersi €/litro.",1,0,0,0,
+382,364,317,650,8.4000,14,"288","11/28/17 00:00:00",9.3000,"VIA BRIANTEA, 18 - 22038 TAVERNERIO (CO) - ITALY",3,"1 pallet - 72 pieces of fresh organic pork legs 4D ivp - delivered in red E2 boxes, shipment 4/12/2017 - delivery place FUMAGALLI INDUSTRIA ALIMENTARI SPA, Via Briantea 18 - 22038 Tavernerio (CO) -ITALY",0,1,0,0,
+380,1,265,25000,0.4700,8,"286","11/23/17 00:00:00",0.5000,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+381,6,294,9000,0.5500,37,"287","11/24/17 00:00:00",0.5800,"Via Desgioi, 5 - 26017 Trescore Cremasco",1,"Latte Crudo Bio - carico ore 08,30. Fatturazione con media pesate cliente-fornitore.",1,0,0,0,
+383,513,14,150,4.8000,46,"289","11/30/17 00:00:00",5.1000,"via Madonnina, 32 - 27018 Vidigulfo (PV)",1,,0,1,0,0,
+386,39,26,2000,6.3500,33,"291","12/01/17 00:00:00",6.5000,"VARESE - ITALY",1,,0,1,0,0,
+387,450,26,1000,6.6000,33,"292","12/04/17 00:00:00",6.9900,"CHEF SERVICE - FORLI' Italy",2,,0,1,0,0,
+388,513,14,1250,4.8000,46,"293","12/04/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+392,512,26,1000,6.4500,33,"297","12/13/17 00:00:00",6.7500,"VIDOR, ITALY",1,,0,1,0,0,
+389,97,265,25000,0.4700,37,"294","12/04/17 00:00:00",0.5000,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Raw milk - invoicing with average kg value. Latte crudo bio - fatturazione con media valori kg riscontrati.",1,0,0,0,
+390,37,251,750,5.0500,59,"295","12/07/17 00:00:00",5.4500,"PADOVA, ITALY",2,"PAGAMENTO 30 gg. Riba netto.",0,1,0,0,
+385,557,294,300,2.9000,183,"290","12/01/17 00:00:00",3.0000,"35010 S.Pietro in GU-Padova",28,,0,1,0,0,
+391,6,294,10000,0.5500,37,"296","12/07/17 00:00:00",0.5800,"Via Desgioi, 5 - 26017 Trescore Cremasco",2,"Latte Crudo Bio - consegna entro ore 12,00. Fatturazione con media pesate cliente-fornitore. Fatturazione diretta del trasporto pari a 180 € da parte di EREDI GATTI
+NOSARI.",1,0,0,0,
+394,561,317,480,8.9000,14,"298","12/13/17 00:00:00",9.9000,"VIA CURIEL, 35 - 20020 BUSTO GAROLFO MILANO",3,"NR 50 ORGANIC PORK LEGS 4D - IVP - FRESH",0,1,0,0,
+395,526,319,5625,1.9800,103,"299","12/18/17 00:00:00",2.0300,"Valsamoggia ( BO-ITALY)",3,,1,0,0,0,
+398,513,14,100,4.8000,46,"300","12/20/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,1,0,0,0,
+400,513,14,150,4.8000,46,"302","12/29/17 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+403,534,251,1000,4.0000,45,"305","01/10/18 00:00:00",4.3000,"MONACO DI BAVIERA , GERMANY",15,"1000 KG ON INDUSTRY PALLETT",0,1,0,0,
+402,149,251,750,5.0500,59,"304","01/05/18 00:00:00",5.3800,"PONTE SAN MARCO, BS - ITALY",2,"PAGAMENTO RIBA 30 GG. NETTO D.F.",0,1,0,0,
+887,315,361,10000,0.2700,38,"744","03/17/20 00:00:00",0.2900,"Via San Gervasio, 25 - 25020 Cigole (BS)",3,"orario di arrivo circa ore 11'00",0,1,0,0,1
+889,315,361,10000,0.2700,38,"746","03/18/20 00:00:00",0.2900,"Via San Gervasio, 25 - 25020 Cigole (BS)",3,,0,1,0,0,1
+890,1,284,100000,0.3670,193,"747","03/18/20 00:00:00",0.3720,"FRIBURGO",2,,1,0,0,0,1
+891,1,135,31000,0.2600,38,"748","03/19/20 00:00:00",0.2700,"Vi Cuneo 1 - Cavallermaggiore",2,,1,0,0,0,1
+892,1,265,325000,0.4550,8,"749","03/19/20 00:00:00",0.4750,"Wildenauerstraße 11 -   A-5252 Aspach (Austria",2,"Organic Pasteurized Milk 3,5% - invoicing with average values
+latte Bio Pastorizzato al 3,5% - fatturazione con media valori",1,0,0,0,14
+893,1,135,31000,0.2600,38,"750","03/19/20 00:00:00",0.2700,"Vi Cuneo 1 - Cavallermaggiore",2,,1,0,0,0,1
+895,616,360,1000,7.2000,93,"752","03/24/20 00:00:00",7.8000," Via Omobono Cenini, 19 - 23030 Chiuro (SO)",2,"ORGANIC BEEF TOPSIDE PAD",0,1,0,0,1
+896,1,284,125000,0.3670,193,"753","03/26/20 00:00:00",0.3720,"friburgo",2,,1,0,0,0,1
+399,557,294,500,2.9000,183,"301","12/20/17 00:00:00",3.0000,"35010 S.PIETRO IN GU ( PD)",13,,0,1,0,0,
+404,450,272,2000,5.4700,33,"306","01/10/18 00:00:00",5.7500,"CHEF SERVICE, 47121 FORLI' (FC), Italy",2,"BURRO BIOLOGICO produzione Dicembre 2017 - Shelf lifes come da corrispondenza e.mails. Pagamento RIBA 30 GG. netto data fattura.",0,1,0,0,
+405,557,294,500,2.9000,183,"307","01/11/18 00:00:00",3.0000,"SAN PIETRO IN GU - PD, ITALIA",14,,0,1,0,0,
+410,513,14,100,4.8000,46,"309","01/22/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+409,557,294,500,2.9000,183,"308","01/18/18 00:00:00",3.0000,"SAN PIETRO IN GU - PD, ITALIA",13,,0,1,0,0,
+411,72,26,4000,5.8200,33,"310","01/25/18 00:00:00",5.9000,"COLOGNOLA AI COLLI - VR, ITALY",2,"FROZEN ORGANIC BUTTER 82% IN 25 KG BLOCS - BURRO BIOLOGICO CONGELATO IN BLOCCHI DA 25 KG. PAGAMENTO 30 GG.NETTO DATA FATTURA.",0,1,0,0,
+413,513,14,100,4.8000,46,"312","02/01/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+412,557,294,500,2.9000,183,"311","01/26/18 00:00:00",3.0000,"SAN PIETRO IN GU-PD, ITALIA",13,,0,1,0,0,
+756,1,350,25000,0.4700,8,"624","09/02/19 00:00:00",0.4900,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+760,1,350,25000,0.4700,8,"628","09/05/19 00:00:00",0.4900,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+761,1,350,50000,0.4850,8,"629","09/05/19 00:00:00",0.5000,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+762,513,14,150,4.8000,46,"630","09/05/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+763,563,323,750,4.6000,59,"631","09/06/19 00:00:00",5.2000,"VALSAMOGGIA - BO, ITALY",13,,0,1,0,0,
+764,1,200,30000,0.4600,38,"632","09/06/19 00:00:00",0.4650,"via san Lorenzo in Cavellas 2 24060 Casazza BG",1,,1,0,0,0,
+765,513,14,180,4.8000,46,"633","09/09/19 00:00:00",5.1000,"via madonnina 32 - 27018 Vidigulfo (PV)",1,,0,1,0,0,
+766,1,284,125000,0.3600,193,"634","09/10/19 00:00:00",0.3700,"FRIBURGO",2,,1,0,0,0,
+901,465,67,22000,0.3200,38,"758","04/01/20 00:00:00",0.3300,"Via Cologno 10 – 24053 Brignano Gera d’Adda BG",3,"orario carico 8,30 - 9,00",0,0,0,0,1
+941,564,325,12000,0.8300,21,"789","05/13/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30, QUANTITA' TRA 5,000 - 6,000 LITRI A CONSEGNA",0,1,0,0,14
+943,548,273,22000,4.4300,33,"791","05/18/20 00:00:00",4.4700,"HOLLAND",3,,1,0,0,0,1
+946,1,270,30000,0.3500,38,"794","05/18/20 00:00:00",0.3600,"Via Stelvio, 139  23014  DELEBIO  prov. di SO",2,"Giorno e Orario di carico:     martedì 19 maggio 2020 ore 10,30",1,0,0,0,1
+944,66,360,3800,7.2000,187,"792","05/18/20 00:00:00",7.8000,"VIA DELL'INDUSTRIA 6/8 - 48017 LAVEZZOLA - RA - ITALY",2,"THE SPECIFICATION OF THE CUT MUST BE RESPECTED, SO HEART OF THE TOPSIDE PAD, COMPLETELY CLEANED, WEIGHT RANGE -- 3,00 - 3,50 KG EACH, NOT LESS THAN 3 KGS",0,1,0,0,1
+945,88,360,300,7.2000,185,"793","05/18/20 00:00:00",7.8000,"SALUMIFICIO MOTTOLINI - Via Lozzoni 5 - 23020 Poggiridenti Piano (SO)",2,"individually vaccum packed -",0,1,0,0,1
+947,563,323,750,4.7000,59,"795","05/19/20 00:00:00",5.2300,"VALSAMOGGIA, BO - ITALY",13,,0,1,0,0,1
+948,6,67,30000,0.3250,38,"796","05/19/20 00:00:00",0.3450,"3BLATTE, via Cologno 10, 24053 Brignano Gera D'Adda",1,,1,0,0,0,1
+554,1,265,325000,0.4200,8,"442","09/21/18 00:00:00",0.4500,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+548,128,325,10000,0.8000,21,"436","09/13/18 00:00:00",0.9000,"Via G. Puccini 14/A - 20028 San Vittore Olona ( Mi )",14,"Latte di capra fresco nazionale. Il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri. Trasporto gestito da AUTOTRASPORTI CHEROBIN. Carico ore 14,00.",1,0,0,0,
+550,71,188,3000,7.2600,58,"438","09/17/18 00:00:00",7.5000,"ALBAREDO D'ADIGE- ITALY",1,,0,1,0,0,
+551,513,14,250,4.8000,46,"439","09/20/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+552,1,284,75000,0.3350,38,"440","09/20/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+555,80,13,500,11.8800,188,"443","09/27/18 00:00:00",12.9800,"SAN GIOVANNI DEL DOSSO",13,"fesa bovina bio PAD - VITELLONE < 24 MESI
+le date di consegna sono indicative",0,1,0,0,
+553,74,14,3000,3.6500,46,"441","09/21/18 00:00:00",3.8500,"Viale della Favorita 19 - 46100 Mantova",2,"Panna bio 40%. Prezzo e fatturazione da intendersi €/litro.",0,1,0,0,
+556,80,13,500,9.2800,189,"444","09/27/18 00:00:00",10.0800,"SAN GIOVANNI DEL DOSSO",13,"sottofese bovine bio congelate - VITELLONE < 24 mesi
+date di consegna indicative",0,1,0,0,
+557,80,13,500,11.2300,188,"445","09/27/18 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",13,"FESE BOVINE BIO CONGELATE, BOV.ADULTO > 24 MESI
+date di consegna indicative",0,1,0,0,
+561,39,26,12000,5.2500,33,"448","09/27/18 00:00:00",5.3000,"VARESE, ITALY",1,,0,1,0,0,
+558,80,13,500,8.0800,189,"446","09/27/18 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO",13,"SOTTOFESE BOVINE BIO CONGELATE, BOVINO ADULTO > 24 MESI
+date di consegna indicative",0,1,0,0,
+562,37,26,1000,7.6800,70,"449","09/27/18 00:00:00",7.8800,"PADOVA, ITALY",2,,0,1,0,0,
+563,513,14,600,4.8000,46,"450","09/28/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+564,71,314,23000,2.4500,45,"451","10/03/18 00:00:00",2.5000,"ALBAREDO D'ADIGE - VR, ITALIE",1,"MARCHANDISE IN BIG BAG . MERCE IN BIG BAG.",0,1,0,0,
+565,513,294,140,2.9000,183,"452","10/04/18 00:00:00",3.2000,"VIDIGULFO - PV",2,,0,1,0,0,
+566,513,14,200,4.8000,46,"453","10/04/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+560,1,284,75000,0.3350,38,"447","09/27/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+568,37,314,1000,2.6000,45,"455","10/05/18 00:00:00",2.8500,"PADOVA, ITALIE",2,,0,1,0,0,
+567,1,284,75000,0.3350,38,"454","10/05/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+569,513,14,200,4.8000,46,"456","10/09/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+574,513,14,350,4.8000,46,"459","10/12/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+571,564,325,10000,0.8200,21,"458","10/09/18 00:00:00",0.8700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",14,"Latte di capra fresco nazionale. Quantitativo dai 4.000 ai 6.000 litri a consegna. Il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri.",0,1,0,0,
+575,1,284,75000,0.3350,38,"460","10/12/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+576,93,330,2700,11.5500,150,"461","10/17/18 00:00:00",12.7000,"Via V.Veneto 1M- Ripalta Cremasca 26010 - Cremona",1,"organic turkey breast frozen",0,1,0,0,
+1148,586,314,2500,2.9100,45,"959","02/23/21 00:00:00",3.0600,"WIESBADEN, GERMANY",1,,0,1,0,0,1
+1151,492,148,900,1.8300,59,"962","02/23/21 00:00:00",2.0000,"HOLLAND",1,"ORGANIC FCMP LAKTOSE-FREE.",0,1,0,0,1
+1152,465,249,25000,0.3750,38,"963","02/24/21 00:00:00",0.3850,"caseificio valchero",3,"SK origin, delivery WEDNESDAY AFTERNOON 12,00 - 18,00",0,1,0,0,1
+1155,635,12,25000,0.4800,37,"965","03/02/21 00:00:00",0.5500,"STARO-SELO - 5671, LOVECH REGION, BULGARIA",3,"organic hungarian raw milk, hours for the unloading 8.00 am - 5,30 pm
+invoicing with the AVERAGE WEIGHT.",0,1,0,0,1
+1156,57,148,1000,1.2000,213,"966","03/04/21 00:00:00",1.4300,"CERTOSA- ITALY",16,,0,1,0,0,1
+1158,534,251,1000,3.3300,45,"968","03/09/21 00:00:00",3.5900,"MONACO GERMANY",15,,0,1,0,0,1
+1157,68,148,25000,1.9200,20,"967","03/08/21 00:00:00",1.9500,"CASTIGLIONE DELLE STIVIERE",1,"delivery 16th March in the afternoon, origin: ES 15,008282 | SO .
+PRICE 4,80 €/kg for 100% fat , payment in advance for 18,000 €uro",0,1,0,0,1
+1164,37,314,5000,3.0000,45,"973","03/19/21 00:00:00",3.1000,"PADOVA, ITALIE",2,,0,1,0,0,1
+770,1,350,25000,0.4900,8,"637","09/19/19 00:00:00",0.5100,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",2,,1,0,0,0,
+771,1,350,50000,0.4950,8,"638","09/19/19 00:00:00",0.5100,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+772,1,284,125000,0.3600,193,"639","09/20/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+774,61,33,15000,0.5500,37,"641","09/26/19 00:00:00",0.6150,"Via E. Fermi, 79 - 26041 - Casalmaggiore (CR)",1,"Latte Crudo vaccino biologico italiano",1,0,0,0,
+773,564,325,9000,0.8500,21,"640","09/24/19 00:00:00",0.9000,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+775,1,284,125000,0.3600,193,"642","09/26/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+777,1,350,25000,0.5000,8,"644","10/01/19 00:00:00",0.5100,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+776,1,265,325000,0.4500,8,"643","09/27/19 00:00:00",0.4750,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+577,1,284,75000,0.3350,38,"462","10/18/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",2,,1,0,0,0,
+570,576,325,5000,0.8200,21,"457","10/09/18 00:00:00",0.8700,"Via Roma 32 – 28060 Castellazzo Novarese (NO)",14,"Latte di capra fresco nazionale. Il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri.",0,1,0,0,
+578,513,14,500,4.8000,46,"463","10/24/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+579,1,284,75000,0.3350,38,"464","10/26/18 00:00:00",0.3450,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+580,513,14,100,4.8000,46,"465","10/26/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+581,80,330,4500,11.5500,150,"466","10/29/18 00:00:00",12.8500,"via S.Giovanni 16/A - 46020 San Giovanni del Dosso - Mantova",1,"organic turkey breast frozen - packaging: in bags and boxes E2 as already delivered
+delivery dates must be finally agreed, they are just an indication",0,1,0,0,
+582,1,284,50000,0.3500,38,"467","11/02/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+583,513,14,200,4.8000,46,"468","11/02/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+778,162,26,2000,5.0550,33,"645","10/01/19 00:00:00",5.2850,"DOSSOBUONO, VR- ITALY",2,,0,1,0,0,
+779,1,284,125000,0.3600,193,"646","10/02/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+780,513,14,150,4.8000,46,"647","10/03/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+781,564,289,3000,0.8500,21,"648","10/03/19 00:00:00",0.9000,"zona Cuneo (CN)",1,"Latte di capra fresco nazionale. Prezzo fco partenza + trasporto da aggiungere pari a
+350 €. Consegna a Casalino (NO). Orario di consegna 11,30.",1,0,0,0,
+782,1,284,25000,0.3600,193,"649","10/07/19 00:00:00",0.3700,"friburgo",1,,1,0,0,0,
+783,513,14,1400,4.8000,46,"650","10/09/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+784,1,284,125000,0.3600,193,"651","10/10/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+787,1,77,10000,0.5300,37,"653","10/14/19 00:00:00",0.5800,"Via delle Fosse n. 10 - 37050 VALLESE DI OPPEANO VR",2,"Latte crudo biologico vaccino. Carico dalle ore 08,00. Fatturazione con media delle pesate.",1,0,0,0,
+587,1,265,25000,0.4000,38,"470","11/05/18 00:00:00",0.4100,"A-5252 Aspach Wildenauerstraße 11",14,"Conventional Raw Milk - base 3,7% - fat correction 4 cent. Latte crudo base 3,7%, correzione grasso 4 cent.",1,0,0,0,
+588,583,314,3000,2.5000,45,"471","11/07/18 00:00:00",2.6000,"Veldhuisweg 9, 8362 VB  Nederland (ov.) THE NETHERLANDS",1,,0,1,0,0,
+589,513,14,300,4.8000,46,"472","11/07/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+590,1,284,50000,0.3500,38,"473","11/08/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+591,71,314,24000,2.4500,45,"474","11/09/18 00:00:00",2.5000,"ALBAREDO D'ADIGE ,VR- ITALIE",1,,0,1,0,0,
+593,513,14,300,4.8000,46,"476","11/16/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+595,76,251,1600,4.3000,111,"477","11/16/18 00:00:00",4.8000,"DAVERIO, ITALY",1,,0,1,0,0,
+596,1,284,50000,0.3500,38,"478","11/16/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+592,452,26,6000,5.6500,33,"475","11/12/18 00:00:00",5.7500,"via circonvallazione ovest 25- CATSELFRANCO VENETO/TV, ITALY
+castelfranco veneto tv",1,,0,1,0,0,
+597,564,325,3370,0.8200,21,"479","11/19/18 00:00:00",0.8700,"Via dell'Industria, 26 - Località Orfengo - 28060 CASALINO (No)",14,"Latte di capra fresco nazionale. Il prezzo sopra riportato è da intendersi €/litro. Fatturazione in Litri.",0,1,0,0,
+598,512,26,2000,5.7000,33,"480","11/20/18 00:00:00",5.9700,"VIDOR, ITALY",3,,0,1,0,0,
+599,450,26,12600,7.4800,70,"481","11/21/18 00:00:00",7.6800,"FORLI' - CHEF SERVICE - ITALY",2,"ORGANIC LIQUID BUTTEROIL IN IBC - HEATEAD containers.
+12-14 IBC / per Year with deliveries of  2 IBC per time every 1,5-2 months approx. for all 2O19  ( with option to switch to Organic Butter 82% in Blocs in case of any problems ).  INDICATIVE QUANTITY .",0,1,0,0,
+600,513,14,700,4.8000,46,"482","11/22/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+601,37,323,750,4.6000,59,"483","11/22/18 00:00:00",5.0000,"PADOVA , ITALIEN",2,,0,1,0,0,
+602,1,284,50000,0.3500,38,"484","11/23/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+604,513,14,200,4.8000,46,"486","11/30/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+605,1,284,50000,0.3500,38,"487","11/30/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+607,513,14,100,4.8000,46,"489","12/06/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+1160,564,325,25000,0.8300,21,"970","03/16/21 00:00:00",0.9300,"san vittore olona",13,"latte di capra nazionale, prezzo espresso €/litro, + costo di trasporto di 150 €uro, orario di scarico 8,30-9,00",1,0,0,0,14
+1159,149,251,4000,3.1500,45,"969","03/12/21 00:00:00",3.2500,"PONTE  SAN  MARCO, BS- ITALIE",2,"Palletts da 1.OOO kg.",0,1,0,0,1
+1163,76,367,500,4.6500,107,"972","03/18/21 00:00:00",5.2500,"DAVERIO",1,"MOZZARELLA SENZA LATTOSIO ''NOBILI''.",0,1,0,0,14
+4,1,231,225,3.3000,138,"1","10/28/14 00:00:00",3.8000,"FIORENZUOLA D'ARDA (PC)",3," 225 KG  (9 SACCHI DA 25 KG).  DATA DI CONSEGNA INDICATIVA PER IL NS.SISTEMA  -  IL FORNITORE  CI SARA' PRECISO.",1,0,0,0,
+789,1,350,50000,0.4950,8,"655","10/15/19 00:00:00",0.5100,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+788,576,349,3500,0.9000,21,"654","10/15/19 00:00:00",0.9500,"Castellazzo Bormida (AL)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro franco partenza. Fatturazione in Litri. Prezzo trasporto: 200 € da aggiungere.",1,0,0,0,
+790,76,251,1000,4.2400,192,"656","10/16/19 00:00:00",4.5600,"DAVERIO - ITALY",1,,0,1,0,0,
+793,1,265,25000,0.4600,8,"659","10/23/19 00:00:00",0.4900,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",14,,1,0,0,0,
+792,576,349,4000,0.9000,21,"658","10/21/19 00:00:00",0.9500,"Castellazzo Bormida (AL)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro franco partenza. Fatturazione in Litri. Prezzo trasporto: 200 € da aggiungere.",1,0,0,0,
+798,563,323,750,4.6000,59,"664","10/30/19 00:00:00",5.2000,"VALSAMOGGIA - BO, ITALY",13,,0,1,0,0,
+796,576,349,4000,0.9000,21,"662","10/24/19 00:00:00",0.9500,"Castellazzo Bormida (AL)",1,"Latte di capra fresco nazionale - il prezzo sopra riportato è da intendersi €/litro franco partenza. Fatturazione in Litri. Prezzo trasporto: 200 € da aggiungere.",1,0,0,0,
+797,1,284,125000,0.3600,193,"663","10/24/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+791,1,284,125000,0.3600,193,"657","10/16/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+794,452,26,6000,5.0250,33,"660","10/23/19 00:00:00",5.1700,"CASTELFRANCO VENETO, ITALY",13,,0,1,0,0,
+801,1,284,125000,0.3600,193,"666","10/31/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+800,105,353,15000,0.8896,21,"665","10/30/19 00:00:00",1.0800,"Via Guart di Luincis, 75/B - 33025 OVARO (UD)",3,"Latte crudo di capra. Prezzo soggetto a variazioni in base a somma graso proteine e kg effettivamente caricati.",0,1,0,0,
+802,149,323,750,4.6000,59,"667","11/05/19 00:00:00",5.2000,"PONTE SAN MARCO, BS- ITALY",2,,0,1,0,0,
+803,149,314,2500,2.8800,45,"668","11/05/19 00:00:00",3.1800,"PONTE SAN MARCO, BS- ITALIE",2,,0,1,0,0,
+804,564,325,1800,0.8500,21,"669","11/07/19 00:00:00",0.9000,"San Vittore Olona",14,"Latte di capra nazionale - 1800 litri circa - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+805,1,33,18000,0.5500,37,"670","11/07/19 00:00:00",0.5800,"Via E. Fermi, 79 - 26041 - Casalmaggiore (CR)",1,,1,0,0,0,
+608,1,284,50000,0.3500,38,"490","12/06/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+606,564,289,8000,0.8500,21,"488","12/05/18 00:00:00",0.9000,"Scarnafigi (CN)",1,"Latte di capra fresco nazionale. Prezzo fco partenza + trasporto da aggiungere pari a 350 €.",1,0,0,0,
+610,149,251,750,5.0500,59,"491","12/10/18 00:00:00",5.2800,"PONTE SAN MARCO - BS, ITALY",1,,0,1,0,0,
+611,512,26,8000,5.6800,33,"492","12/10/18 00:00:00",5.9800,"VIDOR-TV, ITALY",3,,0,1,0,0,
+612,37,314,2000,2.7600,45,"493","12/11/18 00:00:00",2.9600,"PADOVA, ITALIE",2,,0,1,0,0,
+613,563,323,750,4.6000,59,"494","12/11/18 00:00:00",5.0000,"VALSAMOGGIA - BO, ITALY",13,,0,1,0,0,
+618,1,284,50000,0.3500,193,"497","12/17/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+617,513,14,100,4.8000,46,"496","12/14/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+1146,439,12,25000,0.0000,37,"957","02/22/21 00:00:00",0.3500,"REGGIO EMILIA",14,,0,1,0,0,1
+620,513,14,1500,4.8000,46,"499","12/20/18 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",1,,0,1,0,0,
+619,1,265,325000,0.4100,8,"498","12/19/18 00:00:00",0.4400,"A-5252 Aspach Wildenauerstraße 11",14,"Organic Pasteurized milk 3,5% - invoicing with average value. Latte bio pastorizzato 3,5% - fatturazione con media valori.",1,0,0,0,
+621,1,284,50000,0.3500,193,"500","12/20/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+622,162,26,5000,5.5100,33,"501","12/21/18 00:00:00",5.5800,"DOSSOBUONO, VR- ITALY",1,,0,1,0,0,
+624,1,284,75000,0.3500,193,"502","12/27/18 00:00:00",0.3600,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+627,80,13,750,8.0800,189,"504","01/02/19 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO",13,"SOTTOFESA BOVINA BIO PAD, CONGELATA - BOVINO ADULTO >24 MESI",0,1,0,0,
+628,80,13,750,11.8800,188,"505","01/02/19 00:00:00",12.9800,"SAN GIOVANNI DEL DOSSO",13,"FESA BOVINA BIO PAD CONGELATA - VITELLONE <24 MESI",0,1,0,0,
+961,1,13,20000,0.5500,37,"805","06/05/20 00:00:00",0.5700,"Via Torlino 40 - 26020 Palazzo Pignano",2,"carico in mattinada dalle ore 6,00",1,0,0,0,13
+962,77,9,22000,3.0900,17,"806","06/09/20 00:00:00",3.1300,"ZANE' - VI,  ITALY",2,,0,0,0,0,1
+963,465,9,25000,0.3600,38,"807","06/09/20 00:00:00",0.3800,"TAGLIATA D'ANTOGNANO 4 - RUSTIGAZZO 29018 LUGAGNANO VAL D'ARDA PC - ITALY",3,"SK ORIGIN OF RAW MILK",0,1,0,0,1
+964,564,325,12000,0.8300,21,"808","06/11/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30, QUANTITA' TRA 5,000 - 6,000 LITRI A CONSEGNA da confermare il giorno prima",0,1,0,0,14
+965,576,349,3000,0.8000,21,"809","06/15/20 00:00:00",0.9000,"Via Isola Grande 201 Castellazzo Bormida -AL",13,"LATTE DI CAPRA NAZIONALE FRESCO - PREZZO DA INTENDERSI €/LITRO - CARICO GIOVEDI' MATTINA DOPO LE ORE 7,00",1,0,0,0,1
+967,624,251,400,4.8000,192,"811","06/24/20 00:00:00",5.8000,"VIA TANARO 19/28 20015 PARABIAGO MILANO",2,"indicative delivery date, data di consegna indicativa",0,1,0,0,1
+968,623,251,300,11.6000,205,"812","06/29/20 00:00:00",12.6000,"FIRENZUOLA, FI - ITALY",2,,0,1,0,0,1
+969,37,314,2500,2.6800,45,"813","06/30/20 00:00:00",3.0500,"PADOVA, ITALIE",2,,0,1,0,0,1
+959,477,281,25000,1.0300,22,"803","06/04/20 00:00:00",1.0600,"ROCCASTRADA, GR- ITALY",3,"Fresh RAW  MILK. DELIVERY : Via Della Tana, 29/33
+ Roccastrada, 58036 GR (IT)",0,1,0,0,3
+960,477,281,25000,1.0400,22,"804","06/04/20 00:00:00",1.0700,"ROCCASTRADA, GR- ITALY",3,"Fresh RAW MILK . DELIVERY : Via Della Tana, 29/33
+ Roccastrada, 58036 GR (IT)",0,1,0,0,3
+966,1,265,325000,0.4600,8,"810","06/15/20 00:00:00",0.4850,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",2,"Organic Pasteurized Milk 3,5% - invoicing with average values latte Bio Pastorizzato al 3,5% - fatturazione con media valori",1,0,0,0,14
+970,465,249,25000,0.3450,38,"814","07/01/20 00:00:00",0.3500,"29018 Lugagnano Val D'arda PC",3,"HU ORIGIN MILK",0,1,0,0,1
+973,68,344,25000,1.6300,20,"817","07/09/20 00:00:00",1.6500,"CASTIGLIONE DELLE STIVIERE",1,,0,1,0,0,1
+971,450,26,3000,7.3800,70,"815","07/02/20 00:00:00",7.6000,"CHEF SERVICE, FORLI' - ITALY",2,"ORGANIC LIQUID BUTTEROIL in 500 kg container.",0,1,0,0,1
+972,564,325,10000,0.8300,21,"816","07/07/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI
+TRASPORTO 150 €URO, orario di scarico 8,00 -8,30, 
+in attesa di conferma per data 25/08",0,1,0,0,14
+974,149,272,48000,0.9600,112,"818","07/13/20 00:00:00",0.9850,"PONTE SAN MARCO,  BS- ITALY",2,"LACTOSE IN BIG BAGS,  '' ALPI ''",0,1,0,0,1
+795,564,325,9000,0.8500,21,"661","10/23/19 00:00:00",0.9000,"San Vittore Olona",14,"Latte di capra nazionale - fatturazione in litri. Il prezzo sopra riportato è da intendersi €/litro fco partenza + 100 euro trasporto.",1,0,0,0,
+806,1,284,125000,0.3600,193,"671","11/08/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+807,162,26,1000,5.1500,33,"672","11/08/19 00:00:00",5.4500,"DOSSOBUONO, VR -  ITALY",2,,0,1,0,0,
+831,563,323,750,4.6000,59,"694","12/14/19 00:00:00",5.2000,"VALSAMOGGIA - BO, ITALY",13,,0,1,0,0,
+808,450,26,2700,7.3800,70,"673","11/12/19 00:00:00",7.6000,"CHEF SERVICE  FORLì,  ITALY",2,"  3  IBC  ORGANIC LIQUID AMF.",0,1,0,0,
+809,105,353,15000,0.9240,21,"674","11/13/19 00:00:00",1.1140,"Via Guart di Luincis, 75/B 33025 OVARO (UD)",2,"Latte crudo di capra. Prezzo soggetto a variazioni in base a somma
+graso proteine e kg effettivamente caricati.",0,1,0,0,
+811,1,33,18000,0.5500,37,"676","11/15/19 00:00:00",0.5800,"Via E. Fermi, 79 - 26041 - Casalmaggiore (CR)",1,,1,0,0,0,
+812,1,284,125000,0.3600,193,"677","11/15/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+813,513,14,120,4.8000,46,"678","11/20/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+814,1,33,18000,0.5500,37,"679","11/20/19 00:00:00",0.5800,"Via E. Fermi, 79 - 26041 - Casalmaggiore (CR)",1,,1,0,0,0,
+815,71,314,192000,2.8400,45,"680","11/22/19 00:00:00",2.9800,"ALBAREDO, VR- ITALIE",13,"ORGANIC SMP in BB1B.",0,1,0,0,
+816,1,284,125000,0.3600,193,"681","11/22/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+817,1,33,18000,0.5500,37,"682","11/28/19 00:00:00",0.5800,"Via E. Fermi, 79 - 26041 - Casalmaggiore (CR)",1,,1,0,0,0,
+820,32,350,31575,4.2000,33,"684","11/29/19 00:00:00",4.2700,"TASSULLO - TN, ITALY",2,,0,1,0,0,
+821,513,14,1500,4.8000,46,"685","12/02/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+822,1,350,25000,0.5100,8,"686","12/04/19 00:00:00",0.5300,"Theodor-Aufsberg-Str. 10, 87527 Sonthofen",11,,1,0,0,0,
+819,1,284,125000,0.3600,193,"683","11/28/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+823,162,26,4000,4.9800,33,"687","12/05/19 00:00:00",5.1600,"PALUANI in Dossobuono / or at NOVELLINI - NORTH ITALY",2,,0,1,0,0,
+824,1,284,125000,0.3600,193,"688","12/06/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+825,37,314,2500,2.9300,45,"689","12/09/19 00:00:00",3.1000,"PADOVA, ITALIE",2,,0,1,0,0,
+826,513,14,100,4.8000,46,"690","12/10/19 00:00:00",5.1000,"VIA MADONNINA, 32  - 27018 VIDIGULFO (PV)",2,,0,1,0,0,
+828,450,26,2700,7.3800,70,"691","12/10/19 00:00:00",7.6000,"CHEF SERVICE , FORLI'- ITALY",2," ORGANIC LIQUID BUTTEROIL.",0,1,0,0,
+829,1,284,125000,0.3600,193,"692","12/12/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+832,1,284,125000,0.3600,193,"695","12/20/19 00:00:00",0.3700,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+810,71,314,72000,2.8200,45,"675","11/14/19 00:00:00",2.9000,"ALBAREDO, VR- ITALY",13,,0,1,0,0,
+833,1,284,25000,0.3450,193,"696","12/20/19 00:00:00",0.3550,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+949,534,314,2000,2.6000,45,"797","05/20/20 00:00:00",2.8500,"MONACO DI BAVIERA, GERMANY",15,,0,0,0,0,1
+951,616,360,4000,7.2000,93,"799","05/25/20 00:00:00",7.8000,"Via Omobono Cenini,19 - 23030 Chiuro (SO)",2,"quantity between 800 up to 1,000 kg per delivery - ORGANIC BEEF TOPSIDE PAD, completely cleaned, weight range 5kg + , a weight below 5 will be not accepted and then rejected",0,1,0,0,1
+950,88,360,1800,7.2000,185,"798","05/22/20 00:00:00",7.8000,"SALUMIFICIO MOTTOLINI - Via Lozzoni 5 - 23020 Poggiridenti Piano (SO)",1,"individually vaccum packed -",0,1,0,0,1
+838,1,284,25000,0.3670,193,"700","01/02/20 00:00:00",0.3720,"Haslacher Straße 12  -  79115 Freiburg",1,,1,0,0,0,
+952,149,314,3750,2.5800,45,"800","05/26/20 00:00:00",2.9000,"PONTE SAN MARCO, BS - ITALIE",2,,0,1,0,0,1
+975,37,323,1500,4.7000,59,"819","07/21/20 00:00:00",5.2500,"VIALE DELL'INDUSTRIA 72/1 - 35129 PADOVA (PD)",2,,0,1,0,0,1
+830,1,265,25000,0.3550,204,"693","12/12/19 00:00:00",0.3650,"Wildenauerstraße 11 -   A-5252 Aspach (Austria)",2,"Pasteurized Milk 4%",1,0,0,0,
+842,513,294,150,3.2000,183,"703","01/21/20 00:00:00",3.9500,"VIDIGULFO - PAVIA",2,,0,1,0,0,
+953,465,249,25000,0.3500,38,"801","05/27/20 00:00:00",0.3700,"TAGLIATA D'ANTOGNANO 4 - RUSTIGAZZO 29018 LUGAGNANO VAL D'ARDA PC - ITALY",3,"latte SK origin, deivery TUESDAY AFTERNOON",0,1,0,0,1
+845,452,26,24000,5.1900,33,"706","01/28/20 00:00:00",5.2800,"Via Circonvallazione Ovest, 25/27 Castelfranco Veneto (TV)- Italy",13,"PERIOD OF DELIVERY :  SEPTEMBER- OCTOBER -NOVEMBER 2O2O.",0,1,0,0,
+958,465,9,25000,0.3500,38,"802","06/03/20 00:00:00",0.3700,"TAGLIATA D'ANTOGNANO 4 - RUSTIGAZZO 29018 LUGAGNANO VAL D'ARDA PC - ITALY",3,"SK ORIGIN RAW MILK",0,0,0,0,1
+977,160,314,3750,2.7900,45,"821","07/28/20 00:00:00",3.1000,"ZENSON DI PIAVE, TV- ITALIE",1,,0,1,0,0,1
+848,512,26,1000,5.5800,33,"709","01/29/20 00:00:00",5.9000,"VIDOR, ITALY",2,"Prezzi :
+1.000 kg à consegna  5.90  €/kg fco arrivo Vidor
+3.000 kg à consegna  5.73  €/kg fco arrivo Vidor
+PAGAMENTO: RIBA 30 GG.NETTO DATA FATTURA.",0,1,0,0,
+978,422,366,44,4.7500,206,"822","07/27/20 00:00:00",4.7500,"Fellern 14, A 4891 Pöndorf  AUSTRIA",15,,1,0,0,0,15
+979,616,360,7000,7.2000,93,"823","07/29/20 00:00:00",7.8000,"via Omobono Cenini , 19 - 23030 Chiuro (SO)",2,"organic beef topside PAD - QUANTITY between 800 kg and 1,000 kg - completely cleaned, weight range 5,0 kg + , a weight below 5 will not be accepted and then rejected",0,1,0,0,1
+980,37,314,3800,2.7900,45,"824","07/29/20 00:00:00",3.0800,"PADOVA, ITALIE",2,,0,1,0,0,1
+985,477,281,25000,1.0400,22,"826","08/04/20 00:00:00",1.0700,"ROCCASTRADA, ITALY",3,"FRESH RAW MILK, PRICE €/LITER.",0,1,0,0,3
+981,66,360,4500,7.2000,187,"825","07/30/20 00:00:00",7.8000,"Via dell'Industria, 6/8, 48017 Lavezzola RA",2,"THE SPECIFICATION OF THE CUT MUST BE RESPECTED, SO HEART OF THE TOPSIDE PAD, COMPLETELY CLEANED, WEIGHT RANGE -- 3,00 - 3,50 KG EACH, NOT LESS THAN 3 KGS",0,1,0,0,1
+989,1,12,25000,0.4800,37,"829","08/06/20 00:00:00",0.5000,"ALIVAL SPA - Via Barsotto, 3, 55016 Porcari LU",2,"HU ORIGIN ORGANIC MILK, invoice with AVERAGE WEIGHT, hour of arrival to be finally definied but between 17 up to 18",0,1,0,0,1
+999,465,249,25000,0.3850,38,"837","09/01/20 00:00:00",0.3950,"Tagliata Di Antognano 4 - Rustigazzo,29018 Lugagnano Val D’arda PC",3,"sk origin raw milk, delivery TUESDAY MORNING",0,1,0,0,1
+990,422,366,600,4.8300,206,"830","08/12/20 00:00:00",5.3300,"PONDORF, AUSTRIA",2,,1,0,0,0,1
+991,604,296,2500,0.8000,169,"831","08/18/20 00:00:00",0.8900,"BAGNOLO IN PIANO - RE, ITALY",13,,0,1,0,0,1
+986,465,249,25000,0.3400,38,"827","08/05/20 00:00:00",0.3500,"Tagliata Di Antognano 4 - Rustigazzo,29018 Lugagnano Val D’arda PC",3,"RAW MILK SK ORIGIN",0,1,0,0,1
+992,71,314,48000,2.9500,45,"832","08/19/20 00:00:00",3.0300,"ALBAREDO D'ADIGE - VR, ITALIE",13,,0,0,0,0,1
+988,162,26,11000,5.2000,33,"828","08/06/20 00:00:00",5.3500,"PALUANI
+‘’Magazzini Novellini Giovani’’
+Via R. Bacchelli, 48
+46045 Marengo ( Mantova ) , Italie
+
+
+‘’Magazzini Novellini Giovani’’
+Via R. Bacchelli, 48
+46045 Marengo ( Mantova ) , Italie",3,"frozen organic butter.",0,1,0,0,3
+993,1,12,25000,0.4800,37,"833","08/19/20 00:00:00",0.5000,"PORCARI - ITALY",2,"FOR  THE INVOICING IT WILL BE ALWAYS CONSIDERED THE AVARAGE WEIGHT.
+PER LA FATTURA, VERRA' SEMPRE CONSIDERATA LA MEDIA DEI PESI.",0,1,0,0,1
+998,88,360,2700,7.2000,185,"836","08/27/20 00:00:00",7.8000,"Via Lozzoni 5 - 23020 Poggiridenti Piano (SO)",1,"INDIVIDUALLY VACUUM PACKED",0,1,0,0,1
+1000,513,14,1850,4.8000,46,"838","09/02/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna pastorizzata biologica 36% + certificato di analisi",0,1,0,0,2
+1001,1,12,75000,0.4800,37,"839","09/03/20 00:00:00",0.5000,"PORCARI",2,"FOR THE INVOICING IT WILL BE ALWAYS CONSIDERED THE
+AVARAGE WEIGHT.
+PER LA FATTURA, VERRA' SEMPRE CONSIDERATA LA
+MEDIA DEI PESI.",0,1,0,0,1
+1008,451,314,100,3.1500,45,"844","09/11/20 00:00:00",3.7000,"Unionplus s.r.l. via del lavoro 2 – 37060 Nogarole Rocca (VR), Italie",3,,0,1,0,0,1
+996,1,12,25000,0.4800,37,"835","08/26/20 00:00:00",0.5000,"porcari",2,"FOR THE INVOICING IT WILL BE ALWAYS CONSIDERED THE
+AVARAGE WEIGHT.
+PER LA FATTURA, VERRA' SEMPRE CONSIDERATA LA
+MEDIA DEI PESI.",0,1,0,0,1
+1002,465,249,25000,0.3750,38,"840","09/08/20 00:00:00",0.3900,"Tagliata Di Antognano 4 - Rustigazzo,29018 Lugagnano Val D’arda PC",3,"SK ORIGIN",0,1,0,0,1
+1004,627,249,25000,0.3900,38,"841","09/09/20 00:00:00",0.4000,"CASEIFICIO FARNESE, Loc.Poggio alle Sarde - 01010 Farnese (VT)",3,"SK ORIGIN",0,1,0,0,1
+1006,564,325,5000,0.8300,21,"842","09/10/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"quantità: 4000 - 5000 litri-  latte di capra nazionale, prezzo espressoo €/LITRO fco partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30,",0,1,0,0,14
+1007,513,14,150,4.8000,46,"843","09/11/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna pastorizzata biologica 36% + certificato di analisi",0,1,0,0,2
+1009,80,13,900,11.2300,188,"845","09/14/20 00:00:00",12.1800,"SAN GIOVANNI DEL DOSSO",1,"FESE BOVINE BIO NAZIONALI PAD, BOVINO ADULTO > 24 MESI",0,1,0,0,13
+1010,80,13,600,8.0800,189,"846","09/14/20 00:00:00",8.8800,"SAN GIOVANNI DEL DOSSO",1,"SOTTOFESA BOVINA BIO PAD - BOVINO ADULTO >24 MESI",0,1,0,0,13
+1011,1,12,350000,0.4800,37,"847","09/16/20 00:00:00",0.5000,"PORCARI",2,"invoicing with average weight - contract valid subject quality of the milk respected",0,1,0,0,1
+1012,4,26,1000,5.4600,33,"848","09/16/20 00:00:00",5.6600,"MARENE, CUNEO- ITALY",2,"FROZEN  ORGANIC  BUTTER 82% IN 25 KG BLOCS.",0,1,0,0,1
+1013,627,249,25000,0.3900,38,"849","09/17/20 00:00:00",0.4000,"CASEIFICIO FARNESE, Loc.Poggio alle Sarde - 01010 Farnese (VT)",3,"origine: SK 4 9 16",0,1,0,0,1
+1017,564,325,10000,0.8300,21,"851","09/18/20 00:00:00",0.9300,"SAN VITTORE OLONA",13,"quantità: 4000 - 5000 litri- latte di capra nazionale, prezzo espressoo €/LITRO fco
+partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30
+Opzionata possibile consegna aggiuntiva 20 / 27?",0,1,0,0,14
+1018,451,43,880,1.7800,48,"852","09/18/20 00:00:00",1.8500,"GERMANY",3,"LATTE CONDENSATO BAG IN BOX DA 5 KG.",1,0,0,0,1
+1019,563,323,750,4.7500,59,"853","09/21/20 00:00:00",5.3500,"Valsamaggia, BO - ITALY",13,,0,1,0,0,1
+1025,513,14,100,4.8000,46,"858","09/28/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna biologica 36% + certificato di analisi",0,1,0,0,2
+1020,71,188,4000,7.4800,58,"854","09/22/20 00:00:00",7.6500,"ALBAREDO D'ADIGE, VR- ITALIE",13,"NOP  SMP  IN EQUIVALENCE - 4 TONNES.",0,0,0,0,1
+1021,627,249,,,38,"855","09/22/20 00:00:00",,"CASEIFICIO FARNESE, Loc.Poggio alle Sarde - 01010 Farnese (VT)",3,"SK ORIGIN usual origin, DELIVERY DATE to be finally agreed WEDNESDAY or THURSDAY DELIVERY",0,1,0,0,1
+1015,465,249,25000,0.3750,38,"850","09/17/20 00:00:00",0.3850,"caseificio valchero",3,"SK ORIGIN",0,1,0,0,1
+1026,265,27,400,5.8500,207,"859","09/29/20 00:00:00",6.2900,"CONSELICE , RAVENNA - ITALIEN",14,,0,1,0,0,1
+1027,450,26,3000,7.3800,70,"860","09/29/20 00:00:00",7.6000,"FOOD FOR ALL CHEF SERVICE , FORLI - ITALY",2,,0,0,0,0,1
+1028,627,249,25000,0.3950,38,"861","09/30/20 00:00:00",0.4050,"VITERBO",3,,0,1,0,0,1
+1030,620,319,1125,2.7200,103,"862","10/01/20 00:00:00",2.9500,"THIESI, SASSARI",3,,0,1,0,0,1
+1031,37,251,1000,4.8100,59,"863","10/01/20 00:00:00",5.2700,"PADOVA, ITALY",2,,0,1,0,0,1
+1032,71,314,7000,2.8300,10,"864","10/02/20 00:00:00",2.9500,"ALBAREDO  D'ADIGE - VR,  ITALIE",13,,0,0,0,0,1
+1033,12,26,22000,5.4500,33,"865","10/02/20 00:00:00",5.4800,"BOLZANO VICENTINO, VI - ITALY",3,"SODIAAL  ORGANIC  BUTTER.",0,1,0,0,3
+1022,465,249,25000,0.3700,38,"856","09/22/20 00:00:00",0.3800,"caseificio VALCHERO",3,"sk origin,
+delivery MONDAY AFTERNOON",0,1,0,0,1
+1038,549,26,500,8.1500,70,"869","10/06/20 00:00:00",9.1500,"Casella burro Srl
+Via Balilla, 7/B
+26036 Rivarolo del Re (CR), Italy",3,"5OO kg. Organic  AMF in blocs.",0,1,0,0,1
+1039,623,251,300,11.6000,205,"870","10/07/20 00:00:00",12.6000,"Via Pietramala-Mazzetta, 670/A- Italy",2,,0,1,0,0,1
+1040,452,26,4000,5.4000,33,"871","10/07/20 00:00:00",5.5800,"CASTELFRANCO VENETO, TV- ITALY",13,,0,1,0,0,1
+1041,604,296,2500,0.8000,169,"872","10/08/20 00:00:00",0.8900,"BAGNOLO  IN  PIANO, RE- ITALY",13,,0,1,0,0,1
+1045,564,349,4000,0.9500,21,"875","10/12/20 00:00:00",1.0500,"Via dell'Industria, 26 -Località Orfengo of 28060 CASALINO (No)",13,"latte di capra nazionale,  prezzo espresso €/LITRO, orario di consegna previsto 8,40",0,1,0,0,1
+1046,564,325,5000,0.8800,21,"876","10/12/20 00:00:00",0.9800,"san vittore olona",13,"quantità: 4000 - 5000 litri- latte di capra nazionale, prezzo espressoo €/LITRO fco
+partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30
+Opzionata possibile consegna aggiuntiva  27?",1,0,0,0,14
+1047,627,249,0,0.4000,38,"877","10/13/20 00:00:00",0.4150,"Viterbo",3,"I: latte slovacco, solita origine, SK MILK usual origin",0,1,0,0,1
+1034,513,14,200,4.8000,46,"866","10/05/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna biologica 36% + certificato di analisi",0,1,0,0,2
+1042,402,240,13000,0.4000,38,"873","10/08/20 00:00:00",0.4200," Via di Cortona, 66A, 52045 Foiano della Chiana AR",2,"consegna ore 18 - contattare sig.Stefano Matteassi 15 minuti prima della consegna al numero 338/2396814",0,1,0,0,23
+1049,71,314,120000,2.9000,45,"878","10/13/20 00:00:00",3.0000,"ALBAREDO D'ADIGE, VR- ITALIE",13," 5  FULLTRUCKS in the usual RIGONI Big Bag.",0,1,0,0,1
+1050,521,124,25000,1.3000,22,"879","10/13/20 00:00:00",1.3500,"AUSTRIA   Heidenreichstein + Vitis",1,"Pasteurised milk, price €/LITER.",0,1,0,0,1
+1051,451,318,132000,1.8700,182,"880","10/16/20 00:00:00",1.8900,"NOGAROLE ROCCA, VR- ITALY",3,"BMP in the standard Big Bag.  6  trucks remaining after UNIGRA' swap.",0,1,0,0,3
+1052,604,296,5000,0.8000,169,"881","10/16/20 00:00:00",0.8900,"BAGNOLO, RE- ITALY",13,,0,1,0,0,1
+1054,564,325,5000,0.8800,21,"883","10/21/20 00:00:00",0.9800,"SAN VITTORE OLONA",13,"quantità: 4000 - 5000 litri- latte di capra nazionale, prezzo espressoo €/LITRO fco
+partenza + COSTO DI TRASPORTO 150 €URO, orario di scarico 8,00 -8,30",1,0,0,0,14
+1057,564,349,3500,0.9500,21,"886","10/27/20 00:00:00",1.0500,"Via dell'Industria, 26 -Località Orfengo of 28060 CASALINO (No)",13,"latte di capra nazionale, prezzo espresso in  €uro/litro",0,1,0,0,1
+1036,71,314,7000,2.8300,45,"867","10/05/20 00:00:00",2.9500,"ALBAREDO D'ADIGE - VR, ITALY",13,,0,1,0,0,1
+1044,627,249,25000,0.4000,38,"874","10/08/20 00:00:00",0.4100,"VITERBO",3,"latte slovacco, solita origine, SK MILK usual origin",0,1,0,0,1
+1053,76,367,300,4.6500,107,"882","10/19/20 00:00:00",5.3000,"DAVERIO, MI",1,"MOZZARELLA  SENZA  LATTOSIO.",0,1,0,0,14
+1055,76,367,300,4.6500,107,"884","10/27/20 00:00:00",5.3000,"DAVERIO, MI- ITALY",1,"MOZZARELLA SENZA LATTOSIO.",0,1,0,0,14
+1056,37,251,1400,4.1900,192,"885","10/27/20 00:00:00",4.7500,"PADOVA, ITALY",2,,0,1,0,0,1
+1060,564,325,5000,0.8800,21,"887","10/27/20 00:00:00",0.9800,"SAN VITTORE OLONA",13,"quantità 4,000 - 5,000 litri - latte di capra nazionale prezzo espresso €/litro  fco partenza + costro di trasporto150 €uro, orario di scarico 8,00 - 8,30",1,0,0,0,14
+1066,76,251,700,4.2200,192,"893","11/05/20 00:00:00",4.7900,"DAVERIO, MI -  ITALY",1,"SIERO DOLCE IN POLVERE BIOLOGICO.",0,1,0,0,1
+1077,149,314,3750,2.9500,45,"902","11/16/20 00:00:00",3.1200,"PONTE SAN MARCO, BS- ITALIE",2,,0,1,0,0,1
+1037,451,314,95000,2.6500,45,"868","10/05/20 00:00:00",2.7500,"FRANCE",3,,1,0,0,0,1
+1062,450,26,3000,7.3800,70,"889","10/28/20 00:00:00",7.6000,"CHEF SERVICE  FORLI, ITALY",2,"ORGANIC  LIQUID  BUTTEROIL.",0,1,0,0,1
+1064,76,368,300,4.4000,131,"891","11/02/20 00:00:00",4.9900,"22042 SAN FERMO DELLA BATTAGLIA Loc. Cavallasca (Como)",1,"SCAMORZA  BIANCA  NON AFFUMICATA - FILIONE DA 1 KG, SOTTOVUOTO.",0,1,0,0,3
+1065,564,325,5000,0.8800,21,"892","11/03/20 00:00:00",0.9800,"SAN VITTORE OLONA",13,"quantità 4,000 - 5,000 litri - latte di capra nazionale prezzo espresso €/litro  fco partenza + costro di trasporto150 €uro, orario di scarico 8,00 - 8,30",0,1,0,0,14
+1067,616,360,5000,7.2000,93,"894","11/05/20 00:00:00",7.8000,"Via Omobono Cenini, 19 - 23030 Chiuro - SO",2,"ORGANIC BEEF TOPSIDE PAD, quantity between 800/1000 kg , completely cleaned, weight range 5,0 kg + , a weight below 5 will not be accepted and then rejected.",0,1,0,0,1
+1068,595,251,720,4.9600,59,"895","11/05/20 00:00:00",5.4000,"MONZA BRIANZA, ITALY",2,,0,1,0,0,1
+1071,564,349,4000,0.9500,21,"896","11/09/20 00:00:00",1.0500,"Via dell'Industria, 26 -Località Orfengo of 28060 CASALINO (No)",13,"latte di capra nazionale , prezzo inteso €/litro",0,1,0,0,1
+1072,76,366,2500,4.9200,208,"897","11/11/20 00:00:00",5.1200,"DAVERIO, ITALY",1,"ORGANIC BIO EMMENTHAL .",0,1,0,0,1
+1073,450,26,2700,8.0500,70,"898","11/11/20 00:00:00",8.3000,"CHEF SERVICE, FORLI - ITALY",2,,0,1,0,0,1
+1074,1,13,25000,0.5100,37,"899","11/12/20 00:00:00",0.5250,"Via Torlino 40 - 26020 Palazzo Pignano",2,"carico latte MARTEDì MATTINA dopo le ore 7.00",1,0,0,0,13
+1075,149,27,1500,4.8500,59,"900","11/12/20 00:00:00",5.2500,"PONTE SAN MARCO, BS - ITALIEN",2,,0,1,0,0,1
+1076,564,325,3000,0.8800,21,"901","11/13/20 00:00:00",0.9800,"SAN VITTORE OLONA",13,"latte di capra nazionale prezzo espresso €/litro  fco partenza + costro di trasporto150 €uro, orario di scarico 8,00 - 8,30",1,0,0,0,14
+1061,619,296,20000,4.2800,121,"888","10/28/20 00:00:00",4.2900,"NHAVA SHEVA India",3,"wpc 8O%  CARICO CA. 27.11",0,1,0,0,3
+1078,628,62,46000,3.9300,209,"903","11/17/20 00:00:00",3.9500,"FOSSANO, CN- ITALY",1,"AMF FROM CREAM, IN 25 KG BLOCS.",0,1,0,0,1
+1079,149,272,72000,0.9850,112,"904","11/17/20 00:00:00",0.9950,"PONTE SAN MARCO , BRESCIA - ITALY",2,"3 TRUCKS  POLMLEK LACTOSE IN BIG BAGS.",0,1,0,0,1
+1082,576,349,3500,0.9300,21,"906","11/18/20 00:00:00",0.9800,"CASTELLAZZO NOVARESE",13,"latte di capra nazionale, fresco - prezzo da intendersi €/litro - consegna giovedì mattina ore 8.50",0,1,0,0,1
+1081,564,349,12000,0.9500,21,"905","11/17/20 00:00:00",1.0500,"Via dell'Industria, 26 -Località Orfengo of 28060 CASALINO (No)",13,"prezzo espresso €/litro - latte di capra nazionale",0,1,0,0,1
+1083,1,13,25000,0.5100,37,"907","11/20/20 00:00:00",0.5250,"Via Torlino 40 - 26020 Palazzo Pignano",2,,1,0,0,0,13
+1084,564,370,12000,0.9500,21,"908","11/20/20 00:00:00",1.0500,"MARIO COSTA SRL, 28060 ORFENGO CASALINO - NO",13,"IL CONTRATTO SI RIETIENE VALIDO A SEGUITO DELLA QUALITA' DEL LATTE CONSEGNATO IN DATA 26/11 - PREZZO ESPRESSO €/LITRO",0,1,0,0,2
+1088,37,314,2500,3.0200,45,"911","11/27/20 00:00:00",3.3300,"PADOVA, ITALIE",2,,0,1,0,0,1
+1086,629,369,6750,4.6500,59,"909","11/23/20 00:00:00",4.8500,"GERMANY",1,"organic  FCMP  28%",1,0,0,0,1
+1087,595,314,1250,3.0000,10,"910","11/23/20 00:00:00",3.3500,"MONZA BRIANZA, ITALY",2,,0,1,0,0,1
+1092,258,62,22000,3.8800,209,"913","12/04/20 00:00:00",3.9000,"FOSSANO, CN- ITALY",1,"AMF in 25 kg blocs",0,1,0,0,1
+1091,12,273,22000,5.0700,33,"912","12/01/20 00:00:00",5.1500,"BOLZANO VICENTINO, VI - ITALY",2,"ARLA  WESTBURY ORGANIC SWEET CREAM BUTTER. FROZEN, end September production - expiry 2022.",0,1,0,0,1
+1093,37,251,1440,4.8300,59,"914","12/07/20 00:00:00",5.3900,"PADOVA, ITALIE",2,,0,0,0,0,1
+1094,258,62,22000,3.9000,209,"915","12/10/20 00:00:00",3.9500,"FOSSANO - ITALY",1,,0,1,0,0,1
+1095,80,13,1900,11.2000,188,"916","12/15/20 00:00:00",12.8000,"SAN GIOVANNI DEL DOSSO",1,"FESA BOVINA BIO NAZIONALE PAD VITELLONE < 24 MESI",0,1,0,0,13
+1097,513,14,150,4.8000,46,"918","12/17/20 00:00:00",5.1000,"Via Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna bio 36 % + certificato di analisi",0,1,0,0,2
+1096,13,336,10800,4.5200,25,"917","12/15/20 00:00:00",4.6700,"CAVRIAGO DI REGGIO EMILIA, ITALY",2,"AMF  WITH  PER.EXPORT CERTIFICATE FOR KOREA - IN 25 KG BLOCS",0,1,0,0,3
+1102,631,272,800,6.1250,210,"920","12/21/20 00:00:00",6.5800,"VILLESSE, GORIZIA - ITALY",2," 1 PALLETT  MPC 85%",0,1,0,0,1
+1103,630,119,100,6.0000,33,"921","12/21/20 00:00:00",7.5000,"TASSULLO, TN-ITALIA",3,,1,0,0,0,1
+1105,1,12,450000,0.4800,37,"923","12/30/20 00:00:00",0.5000,"PORCARI",2,"INVOICING WITH THE AVERAGE WEIGHT",0,1,0,0,1
+1098,66,360,3500,7.2000,187,"919","12/21/20 00:00:00",7.8000,"LAVEZZOLA",1,"The specification of the cut must be respected, so Hearlt of the topside PAD, completely cleaned, weight range 3,0 - 3,5 kg each, not less than 3 kg",0,1,0,0,1
+1104,76,367,300,4.6500,107,"922","12/22/20 00:00:00",5.3000,"DAVERIO, MI - ITALIA",1,"Mozzarella senza LATTOSIO.",0,0,0,0,14
+1107,575,296,22000,0.4600,169,"924","01/07/21 00:00:00",0.4900,"HRINOVA, SLOVAK",17,,1,0,0,0,3
+1115,513,14,100,4.8000,46,"932","01/12/21 00:00:00",5.1000,"Va Madonnina 32 - 27018 Vidigulfo (PV)",2,"panna bio 36% + certificato di analisi",0,1,0,0,2
+1120,632,170,22500,0.5900,169,"934","01/12/21 00:00:00",0.6200,"GHEDI, BS- ITALY",2,,0,1,0,0,1
+1122,118,33,10000,0.6650,211,"935","01/13/21 00:00:00",0.6850,"26010 Ripalta Cremasca",2,"latte intero pastorizzato biologico nazionale",0,1,0,0,1
+1123,118,33,15000,2.0500,212,"936","01/13/21 00:00:00",2.1200,"26010 Ripalta Cremasca",2,"panna biologica nazionale con titolo di grasso  25%",0,1,0,0,1
+1124,37,251,1000,4.3600,192,"937","01/13/21 00:00:00",4.9900,"PADOVA, ITALIE",2,,0,1,0,0,1

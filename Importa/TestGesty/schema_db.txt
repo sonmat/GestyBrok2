@@ -1,0 +1,209 @@
+Tabella: t_articoli
+    id_articolo - 4
+    nome_articolo - 10
+    unita_misura - 10
+    famiglia - 10
+    tipologia - 10
+
+Tabella: t_banche
+    id_banca - 4
+    banca - 10
+    riga1 - 10
+    riga2 - 10
+    riga3 - 10
+
+Tabella: t_compratore_cerca
+    id_cerca - 4
+    compratore - 4
+    articolo - 4
+    note - 12
+
+Tabella: t_compratori
+    id_compratore - 4
+    azienda - 10
+    indirizzo - 10
+    cap - 10
+    citta - 10
+    stato - 10
+    fax - 10
+    telefono - 10
+    piva - 10
+    italiano - 1
+    tipo_pagamento - 4
+    iva - 4
+
+Tabella: t_conferme
+    id_conferma - 4
+    compratore - 4
+    venditore - 4
+    qta - 4
+    prezzo - 5
+    articolo - 4
+    n_conf - 10
+    data_conf - 8
+    provvigione - 6
+    tipologia - 10
+    luogo_consegna - 10
+    condizioni_pag - 4
+    note - 12
+    carico - 1
+    arrivo - 1
+    emailv - 4
+    emailc - 4
+
+Tabella: t_conferme_trading
+    id_conferma - 4
+    compratore - 4
+    venditore - 4
+    qta - 4
+    prezzo_acq - 5
+    articolo - 4
+    n_conf - 10
+    data_conf - 8
+    prezzo_vend - 5
+    luogo_consegna - 10
+    condizioni_pag - 4
+    note - 12
+    carico - 1
+    arrivo - 1
+    emailv - 4
+    emailc - 4
+    condizioni_pag_venditore - 4
+
+Tabella: t_date_consegna
+    ID - 4
+    id_conferma - 4
+    data_consegna - 8
+    qta_consegna - 4
+
+Tabella: t_date_consegna_trading
+    ID - 4
+    id_conferma - 4
+    data_consegna - 8
+    qta_consegna - 4
+    fatturata - 1
+    data_pagamento_uscita - 8
+    data_pagamento_entrata - 8
+
+Tabella: t_dati_compratori
+    id_compratore - 4
+    email - 10
+    fax - 10
+    ntel - 10
+    ntel_tipologia - 10
+    contatto - 10
+
+Tabella: t_dati_venditori
+    id_venditore - 4
+    email - 10
+    fax - 10
+    ntel - 10
+    ntel_tipologia - 10
+    contatto - 10
+
+Tabella: t_famiglia_articoli
+    descrizione - 10
+
+Tabella: t_fat_studio_dett
+    ID_fat_studio_det - 4
+    id_fatt_studio - 4
+    compratore - 4
+    qta - 4
+    prezzo - 5
+    provvigione - 6
+    tipologia - 10
+    data_consegna - 8
+
+Tabella: t_fat_studio_dett_trading
+    ID_fat_studio_det - 4
+    id_fatt_studio - 4
+    articolo - 4
+    qta - 4
+    prezzo - 5
+    data_consegna - 8
+
+Tabella: t_fatture
+    id_fattura - 4
+    confermaordine - 4
+    n_fat - 4
+    data_fat - 8
+    nota_acr - 1
+    articolo - 4
+    qta - 4
+    prezzo - 5
+    iva_perc - 6
+    data_consegna - 8
+    compilato - 1
+    fatturata - 1
+
+Tabella: t_fatture_studio
+    id_fatt_studio - 4
+    n_fat - 4
+    data_fat - 8
+    nota_acr - 1
+    cliente - 4
+    t_iva - 4
+    t_pagamento - 4
+    note - 12
+    id_banca - 4
+
+Tabella: t_fatture_studio_trading
+    id_fatt_studio - 4
+    n_fat - 4
+    data_fat - 8
+    nota_acr - 1
+    cliente - 4
+    t_iva - 4
+    t_pagamento - 4
+    note - 12
+    id_banca - 4
+    n_conf - 4
+
+Tabella: t_fatture_trading
+    id_fattura - 4
+    confermaordine - 4
+    n_fat - 4
+    data_fat - 8
+    nota_acr - 1
+    articolo - 4
+    qta - 4
+    prezzo - 5
+    iva_perc - 6
+    data_consegna - 8
+    compilato - 1
+    fatturata - 1
+
+Tabella: t_iva
+    id_iva - 4
+    descriz - 10
+    iva - 4
+
+Tabella: t_pagamenti
+    id_pagamento - 4
+    tipo - 10
+
+Tabella: t_tipo_articoli
+    tipologia - 10
+
+Tabella: t_venditori
+    id_venditore - 4
+    azienda - 10
+    indirizzo - 10
+    cap - 10
+    citta - 10
+    stato - 10
+    fax - 10
+    telefono - 10
+    piva - 10
+    italiano - 1
+    tipo_pagamento - 4
+    iva - 4
+
+Tabella: t_venditori_offre
+    id_offre - 4
+    venditore - 4
+    articolo - 4
+    prezzo - 5
+    provvigione - 6
+    tipologia - 10
+

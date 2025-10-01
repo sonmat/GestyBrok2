@@ -1,39 +1,42 @@
 """
-Database configuration con SQLAlchemy
+Configurazione database per db_gesty.db esistente
 """
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-import os
 from pathlib import Path
 
-# Configurazione database
+# Path al tuo database - la cartella backend
 BASE_DIR = Path(__file__).resolve().parent
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    f"sqlite:///{BASE_DIR}/gestybrok.db"
-)
+DATABASE_PATH = f"{BASE_DIR}/db_gesty.db"
+DATABASE_URL = f"sqlite:///{DATABASE_PATH}"
 
-# Engine con pool connections per SQLite
+# Crea engine con settings per evitare cache
 engine = create_engine(
     DATABASE_URL,
-    connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {},
-    pool_pre_ping=True,
-    echo=False  # Imposta True per debug SQL
+    connect_args={
+        "check_same_thread": False,
+        "isolation_level": None  # IMPORTANTE: disabilita transazioni implicite
+    },
+    pool_pre_ping=True,  # Verifica connessione prima di usarla
+    pool_recycle=3600,   # Ricrea connessioni dopo 1 ora
+    echo=False
 )
 
-# Session factory
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# Session
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=True,  # IMPORTANTE: flush automatico
+    bind=engine,
+    expire_on_commit=False  # Non scadere gli oggetti dopo commit
+)
 
-# Base class per models
+# Base per models
 Base = declarative_base()
 
 
 def get_db():
-    """
-    Dependency per ottenere sessione database
-    Usa yield per garantire chiusura anche in caso di errore
-    """
+    """Ottiene sessione database"""
     db = SessionLocal()
     try:
         yield db
@@ -42,13 +45,5 @@ def get_db():
 
 
 def init_db():
-    """Inizializza database creando tutte le tabelle"""
-    Base.metadata.create_all(bind=engine)
-    print("Database initialized successfully")
-
-
-def reset_db():
-    """ATTENZIONE: Elimina e ricrea tutte le tabelle"""
-    Base.metadata.drop_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
-    print("Database reset completed")
+    """Connette al database esistente SENZA modificarlo"""
+    print(f"✓ Database connesso: {DATABASE_PATH}")

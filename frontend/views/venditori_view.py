@@ -1,297 +1,635 @@
 """
-Vista per gestione Venditori
+Vista Venditori con 3 tabelle:
+- t_venditori (sopra, larghezza piena)
+- t_dati_venditori (sotto a sinistra)
+- t_venditore_offre (sotto a destra)
 """
-import tkinter as tk
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+import customtkinter as ctk
 from tkinter import ttk, messagebox
-from typing import Optional, List, Dict
+import requests
+from views.anagrafiche_dialogs import VenditoreDialog, DatiVenditoreDialog
 
 
-class VenditoriView(ttk.Frame):
-    """Vista per gestione venditori"""
-    
+class VenditoriView(ctk.CTkFrame):
+    """Vista venditori con layout a 3 tabelle"""
+
     def __init__(self, parent, api_client):
         super().__init__(parent)
         self.api_client = api_client
-        self.selected_id: Optional[int] = None
-        
-        self.setup_ui()
-        self.load_data()
-    
-    def setup_ui(self):
-        """Configura interfaccia"""
-        # Toolbar
-        toolbar = ttk.Frame(self)
-        toolbar.pack(fill=tk.X, padx=5, pady=5)
-        
-        ttk.Button(toolbar, text="Nuovo", command=self.nuovo).pack(side=tk.LEFT, padx=2)
-        ttk.Button(toolbar, text="Modifica", command=self.modifica).pack(side=tk.LEFT, padx=2)
-        ttk.Button(toolbar, text="Elimina", command=self.elimina).pack(side=tk.LEFT, padx=2)
-        ttk.Button(toolbar, text="Aggiorna", command=self.load_data).pack(side=tk.LEFT, padx=2)
-        
-        # Ricerca
-        ttk.Label(toolbar, text="Cerca:").pack(side=tk.LEFT, padx=(20, 5))
-        self.search_var = tk.StringVar()
-        self.search_var.trace('w', lambda *args: self.filter_data())
-        ttk.Entry(toolbar, textvariable=self.search_var, width=30).pack(side=tk.LEFT)
-        
-        # Tabella
-        table_frame = ttk.LabelFrame(self, text="Lista Venditori", padding=10)
-        table_frame.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
-        
-        # Treeview
-        columns = ("id", "codice", "azienda", "piva", "citta", "telefono", "italiano", "attivo")
-        self.tree = ttk.Treeview(table_frame, columns=columns, show="tree headings", selectmode="browse")
-        
-        # Scrollbar
-        vsb = ttk.Scrollbar(table_frame, orient="vertical", command=self.tree.yview)
-        vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        self.tree.configure(yscrollcommand=vsb.set)
-        
-        # Configurazione colonne
-        self.tree.column("#0", width=0, stretch=tk.NO)
-        self.tree.column("id", width=50, anchor=tk.CENTER)
-        self.tree.column("codice", width=80)
-        self.tree.column("azienda", width=250)
-        self.tree.column("piva", width=120)
-        self.tree.column("citta", width=150)
-        self.tree.column("telefono", width=120)
-        self.tree.column("italiano", width=70, anchor=tk.CENTER)
-        self.tree.column("attivo", width=70, anchor=tk.CENTER)
-        
-        # Headers
-        for col in columns:
-            self.tree.heading(col, text=col.capitalize())
-        
-        self.tree.pack(fill=tk.BOTH, expand=True)
-        self.tree.bind("<<TreeviewSelect>>", self.on_select)
-        self.tree.bind("<Double-1>", lambda e: self.modifica())
-        
-        # Form dettaglio
-        self.detail_frame = ttk.LabelFrame(self, text="Dettaglio Venditore", padding=10)
-        self.detail_frame.pack(fill=tk.X, padx=5, pady=5)
-        self.setup_form()
-    
-    def setup_form(self):
-        """Setup form dettaglio"""
-        form = ttk.Frame(self.detail_frame)
-        form.pack(fill=tk.X)
-        
-        # Variabili
-        self.form_vars = {
-            "id": tk.StringVar(),
-            "codice": tk.StringVar(),
-            "azienda": tk.StringVar(),
-            "partita_iva": tk.StringVar(),
-            "indirizzo": tk.StringVar(),
-            "cap": tk.StringVar(),
-            "citta": tk.StringVar(),
-            "telefono": tk.StringVar(),
-            "email": tk.StringVar(),
-            "italiano": tk.BooleanVar(value=True),
-            "attivo": tk.BooleanVar(value=True)
-        }
-        
-        # Layout form (2 colonne)
-        row = 0
-        ttk.Label(form, text="ID:").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["id"], state="readonly", width=10).grid(row=row, column=1, sticky=tk.W, padx=5, pady=3)
-        
-        ttk.Label(form, text="Codice:").grid(row=row, column=2, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["codice"], width=20).grid(row=row, column=3, sticky=tk.W, padx=5, pady=3)
-        
-        row += 1
-        ttk.Label(form, text="Azienda:*").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["azienda"], width=40).grid(row=row, column=1, columnspan=3, sticky=tk.EW, padx=5, pady=3)
-        
-        row += 1
-        ttk.Label(form, text="P.IVA:").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["partita_iva"], width=20).grid(row=row, column=1, sticky=tk.W, padx=5, pady=3)
-        
-        ttk.Label(form, text="Email:").grid(row=row, column=2, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["email"], width=30).grid(row=row, column=3, sticky=tk.EW, padx=5, pady=3)
-        
-        row += 1
-        ttk.Label(form, text="Indirizzo:").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["indirizzo"], width=40).grid(row=row, column=1, columnspan=3, sticky=tk.EW, padx=5, pady=3)
-        
-        row += 1
-        ttk.Label(form, text="CAP:").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["cap"], width=10).grid(row=row, column=1, sticky=tk.W, padx=5, pady=3)
-        
-        ttk.Label(form, text="Città:").grid(row=row, column=2, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["citta"], width=25).grid(row=row, column=3, sticky=tk.EW, padx=5, pady=3)
-        
-        row += 1
-        ttk.Label(form, text="Telefono:").grid(row=row, column=0, sticky=tk.W, padx=5, pady=3)
-        ttk.Entry(form, textvariable=self.form_vars["telefono"], width=20).grid(row=row, column=1, sticky=tk.W, padx=5, pady=3)
-        
-        ttk.Checkbutton(form, text="Italiano", variable=self.form_vars["italiano"]).grid(row=row, column=2, sticky=tk.W, padx=5, pady=3)
-        ttk.Checkbutton(form, text="Attivo", variable=self.form_vars["attivo"]).grid(row=row, column=3, sticky=tk.W, padx=5, pady=3)
-        
-        # Bottoni
-        btn_frame = ttk.Frame(self.detail_frame)
-        btn_frame.pack(fill=tk.X, pady=(10, 0))
-        
-        ttk.Button(btn_frame, text="Salva", command=self.salva).pack(side=tk.LEFT, padx=5)
-        ttk.Button(btn_frame, text="Annulla", command=self.annulla).pack(side=tk.LEFT, padx=5)
-        
-        self.set_form_state(False)
-    
-    def set_form_state(self, enabled: bool):
-        """Abilita/disabilita form"""
-        state = "normal" if enabled else "disabled"
-        for widget in self.detail_frame.winfo_children():
-            if isinstance(widget, ttk.Frame):
-                for child in widget.winfo_children():
-                    if isinstance(child, (ttk.Entry, ttk.Checkbutton)) and child.cget("state") != "readonly":
-                        child.config(state=state)
-    
-    def load_data(self):
-        """Carica dati"""
+        self.base_url = "http://localhost:8000"
+        self.selected_venditore_id = None
+
+        self.db_path = os.path.join(
+            os.path.dirname(__file__),
+            "..", "..", "backend", "db_gesty.db"
+        )
+
+        # Dati e stato ordinamento
+        self.venditori_data = []
+        self.dati_data = []
+        self.offre_data = []
+
+        self.sort_venditori_col = None
+        self.sort_venditori_reverse = False
+        self.sort_dati_col = None
+        self.sort_dati_reverse = False
+        self.sort_offre_col = None
+        self.sort_offre_reverse = False
+
+        self.create_widgets()
+        self.load_venditori()
+
+    def create_widgets(self):
+        """Crea il layout con 3 tabelle"""
+        # Titolo principale
+        title_label = ctk.CTkLabel(
+            self,
+            text="Gestione Venditori",
+            font=("Arial", 20, "bold")
+        )
+        title_label.pack(pady=10)
+
+        # Pulsanti principali per venditori
+        btn_frame = ctk.CTkFrame(self, fg_color="transparent")
+        btn_frame.pack(fill="x", padx=10, pady=5)
+
+        ctk.CTkButton(
+            btn_frame,
+            text="➕ Nuovo Venditore",
+            command=self.nuovo_venditore,
+            width=150
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            btn_frame,
+            text="✏️ Modifica Venditore",
+            command=self.modifica_venditore,
+            width=150
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            btn_frame,
+            text="🗑️ Elimina Venditore",
+            command=self.elimina_venditore,
+            width=150
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            btn_frame,
+            text="🔄 Aggiorna",
+            command=self.load_venditori,
+            width=100
+        ).pack(side="right", padx=5)
+
+        # === TABELLA VENDITORI (sopra) ===
+        venditori_frame = ctk.CTkFrame(self)
+        venditori_frame.pack(fill="both", expand=False, padx=10, pady=5)
+
+        ctk.CTkLabel(
+            venditori_frame,
+            text="Lista Venditori",
+            font=("Arial", 14, "bold")
+        ).pack(pady=5)
+
+        # Treeview venditori con scrollbar
+        tree_container = ctk.CTkFrame(venditori_frame)
+        tree_container.pack(fill="both", expand=True, padx=5, pady=5)
+
+        venditori_cols = ("id", "azienda", "indirizzo", "cap", "citta", "stato",
+                         "fax", "telefono", "piva", "italiano", "tipo_pagamento", "iva")
+        self.tree_venditori = ttk.Treeview(
+            tree_container,
+            columns=venditori_cols,
+            show="headings",
+            selectmode="browse",
+            height=8
+        )
+
+        for col in venditori_cols:
+            self.tree_venditori.heading(
+                col,
+                text=col.replace("_", " ").title(),
+                command=lambda c=col: self.sort_venditori(c)
+            )
+            if col == "id":
+                self.tree_venditori.column(col, width=50, anchor="center")
+            elif col in ["azienda", "indirizzo"]:
+                self.tree_venditori.column(col, width=200, anchor="w")
+            else:
+                self.tree_venditori.column(col, width=100, anchor="center")
+
+        # Scrollbar verticale per venditori
+        vsb_venditori = ttk.Scrollbar(tree_container, orient="vertical",
+                                      command=self.tree_venditori.yview)
+        hsb_venditori = ttk.Scrollbar(tree_container, orient="horizontal",
+                                     command=self.tree_venditori.xview)
+        self.tree_venditori.configure(yscrollcommand=vsb_venditori.set,
+                                     xscrollcommand=hsb_venditori.set)
+
+        self.tree_venditori.grid(row=0, column=0, sticky="nsew")
+        vsb_venditori.grid(row=0, column=1, sticky="ns")
+        hsb_venditori.grid(row=1, column=0, sticky="ew")
+
+        tree_container.grid_rowconfigure(0, weight=1)
+        tree_container.grid_columnconfigure(0, weight=1)
+
+        # Bind selezione
+        self.tree_venditori.bind("<<TreeviewSelect>>", self.on_venditore_select)
+
+        # === CONTAINER BOTTOM: 2 tabelle affiancate ===
+        bottom_container = ctk.CTkFrame(self)
+        bottom_container.pack(fill="both", expand=True, padx=10, pady=5)
+
+        # === TABELLA DATI VENDITORI (sotto sx) ===
+        dati_frame = ctk.CTkFrame(bottom_container)
+        dati_frame.pack(side="left", fill="both", expand=True, padx=(0, 5))
+
+        ctk.CTkLabel(
+            dati_frame,
+            text="Dati Contatto Venditore",
+            font=("Arial", 14, "bold")
+        ).pack(pady=5)
+
+        # Pulsanti gestione dati
+        dati_btn_frame = ctk.CTkFrame(dati_frame, fg_color="transparent")
+        dati_btn_frame.pack(fill="x", padx=5, pady=5)
+
+        ctk.CTkButton(
+            dati_btn_frame,
+            text="➕ Nuovo Dato",
+            command=self.nuovo_dato_venditore,
+            width=120
+        ).pack(side="left", padx=2)
+
+        ctk.CTkButton(
+            dati_btn_frame,
+            text="✏️ Modifica",
+            command=self.modifica_dato_venditore,
+            width=100
+        ).pack(side="left", padx=2)
+
+        ctk.CTkButton(
+            dati_btn_frame,
+            text="🗑️ Elimina",
+            command=self.elimina_dato_venditore,
+            width=100
+        ).pack(side="left", padx=2)
+
+        # Treeview dati venditori
+        dati_tree_container = ctk.CTkFrame(dati_frame)
+        dati_tree_container.pack(fill="both", expand=True, padx=5, pady=5)
+
+        dati_cols = ("id", "mail", "fax", "telefono", "tipologia", "contatto")
+        self.tree_dati = ttk.Treeview(
+            dati_tree_container,
+            columns=dati_cols,
+            show="headings",
+            selectmode="browse",
+            height=8
+        )
+
+        for col in dati_cols:
+            self.tree_dati.heading(
+                col,
+                text=col.replace("_", " ").title(),
+                command=lambda c=col: self.sort_dati(c)
+            )
+            if col == "id":
+                self.tree_dati.column(col, width=40, anchor="center")
+            else:
+                self.tree_dati.column(col, width=120, anchor="w")
+
+        vsb_dati = ttk.Scrollbar(dati_tree_container, orient="vertical",
+                                command=self.tree_dati.yview)
+        hsb_dati = ttk.Scrollbar(dati_tree_container, orient="horizontal",
+                                command=self.tree_dati.xview)
+        self.tree_dati.configure(yscrollcommand=vsb_dati.set,
+                                xscrollcommand=hsb_dati.set)
+
+        self.tree_dati.grid(row=0, column=0, sticky="nsew")
+        vsb_dati.grid(row=0, column=1, sticky="ns")
+        hsb_dati.grid(row=1, column=0, sticky="ew")
+
+        dati_tree_container.grid_rowconfigure(0, weight=1)
+        dati_tree_container.grid_columnconfigure(0, weight=1)
+
+        # === TABELLA VENDITORE OFFRE (sotto dx) ===
+        offre_frame = ctk.CTkFrame(bottom_container)
+        offre_frame.pack(side="right", fill="both", expand=True, padx=(5, 0))
+
+        ctk.CTkLabel(
+            offre_frame,
+            text="Cosa Offre",
+            font=("Arial", 14, "bold")
+        ).pack(pady=5)
+
+        # Pulsanti gestione offerte
+        offre_btn_frame = ctk.CTkFrame(offre_frame, fg_color="transparent")
+        offre_btn_frame.pack(fill="x", padx=5, pady=5)
+
+        ctk.CTkButton(
+            offre_btn_frame,
+            text="➕ Nuova Offerta",
+            command=self.nuova_offerta,
+            width=120
+        ).pack(side="left", padx=2)
+
+        ctk.CTkButton(
+            offre_btn_frame,
+            text="🗑️ Elimina Offerta",
+            command=self.elimina_offerta,
+            width=120
+        ).pack(side="left", padx=2)
+
+        # Treeview offerte
+        offre_tree_container = ctk.CTkFrame(offre_frame)
+        offre_tree_container.pack(fill="both", expand=True, padx=5, pady=5)
+
+        offre_cols = ("id", "articolo", "prezzo", "provvigione", "tipologia")
+        self.tree_offre = ttk.Treeview(
+            offre_tree_container,
+            columns=offre_cols,
+            show="headings",
+            selectmode="browse",
+            height=8
+        )
+
+        for col in offre_cols:
+            self.tree_offre.heading(
+                col,
+                text=col.replace("_", " ").title(),
+                command=lambda c=col: self.sort_offre(c)
+            )
+            if col == "id":
+                self.tree_offre.column(col, width=40, anchor="center")
+            elif col == "articolo":
+                self.tree_offre.column(col, width=200, anchor="w")
+            else:
+                self.tree_offre.column(col, width=100, anchor="center")
+
+        vsb_offre = ttk.Scrollbar(offre_tree_container, orient="vertical",
+                                 command=self.tree_offre.yview)
+        hsb_offre = ttk.Scrollbar(offre_tree_container, orient="horizontal",
+                                 command=self.tree_offre.xview)
+        self.tree_offre.configure(yscrollcommand=vsb_offre.set,
+                                 xscrollcommand=hsb_offre.set)
+
+        self.tree_offre.grid(row=0, column=0, sticky="nsew")
+        vsb_offre.grid(row=0, column=1, sticky="ns")
+        hsb_offre.grid(row=1, column=0, sticky="ew")
+
+        offre_tree_container.grid_rowconfigure(0, weight=1)
+        offre_tree_container.grid_columnconfigure(0, weight=1)
+
+    def load_venditori(self):
+        """Carica lista venditori"""
         try:
-            self.venditori = self.api_client.get_venditori()
-            self.populate_table(self.venditori)
+            response = requests.get(f"{self.base_url}/api/venditori")
+            if response.status_code == 200:
+                self.venditori_data = response.json()
+                self.populate_venditori()
         except Exception as e:
-            messagebox.showerror("Errore", f"Impossibile caricare i dati:\n{str(e)}")
-    
-    def populate_table(self, data: List[Dict]):
-        """Popola tabella"""
-        for item in self.tree.get_children():
-            self.tree.delete(item)
-        
-        for idx, v in enumerate(data):
+            print(f"Errore caricamento venditori: {e}")
+
+    def populate_venditori(self):
+        """Popola tabella venditori dai dati in memoria"""
+        for item in self.tree_venditori.get_children():
+            self.tree_venditori.delete(item)
+
+        for v in self.venditori_data:
             values = (
                 v.get("id", ""),
-                v.get("codice", ""),
                 v.get("azienda", ""),
-                v.get("partita_iva", ""),
+                v.get("indirizzo", ""),
+                v.get("cap", ""),
                 v.get("citta", ""),
+                v.get("stato", ""),
+                v.get("fax", ""),
                 v.get("telefono", ""),
-                "Si" if v.get("italiano", False) else "No",
-                "Si" if v.get("attivo", True) else "No"
+                v.get("partita_iva", ""),
+                "Sì" if v.get("italiano") else "No",
+                v.get("tipo_pagamento", ""),
+                v.get("iva", "")
             )
-            tag = "evenrow" if idx % 2 == 0 else "oddrow"
-            self.tree.insert("", tk.END, values=values, tags=(tag,))
-        
-        self.tree.tag_configure("oddrow", background="#f0f0f0")
-        self.tree.tag_configure("evenrow", background="white")
-    
-    def filter_data(self):
-        """Filtra dati"""
-        search_term = self.search_var.get().lower()
-        if not search_term:
-            self.populate_table(self.venditori)
-            return
-        
-        filtered = [
-            v for v in self.venditori
-            if search_term in v.get("azienda", "").lower()
-            or search_term in v.get("codice", "").lower()
-            or search_term in v.get("citta", "").lower()
-        ]
-        self.populate_table(filtered)
-    
-    def on_select(self, event):
-        """Gestisce selezione"""
-        selection = self.tree.selection()
+            self.tree_venditori.insert("", "end", values=values,
+                                      tags=(str(v.get("id")),))
+
+    def on_venditore_select(self, event):
+        """Quando seleziono un venditore, carico dati e offerte"""
+        selection = self.tree_venditori.selection()
         if not selection:
             return
-        
-        values = self.tree.item(selection[0])["values"]
-        if values:
-            self.selected_id = values[0]
-            self.load_detail(self.selected_id)
-    
-    def load_detail(self, venditore_id: int):
-        """Carica dettaglio"""
-        venditore = next((v for v in self.venditori if v["id"] == venditore_id), None)
-        if venditore:
-            self.populate_form(venditore)
-    
-    def populate_form(self, data: Dict):
-        """Popola form"""
-        for key, var in self.form_vars.items():
-            value = data.get(key, "")
-            if isinstance(var, tk.BooleanVar):
-                var.set(bool(value))
-            else:
-                var.set(value if value is not None else "")
-    
-    def clear_form(self):
-        """Pulisce form"""
-        for var in self.form_vars.values():
-            if isinstance(var, tk.BooleanVar):
-                var.set(True)
-            else:
-                var.set("")
-    
-    def nuovo(self):
-        """Nuovo venditore"""
-        self.selected_id = None
-        self.clear_form()
-        self.set_form_state(True)
-    
-    def modifica(self):
-        """Modifica venditore"""
-        if not self.selected_id:
+
+        tags = self.tree_venditori.item(selection[0])['tags']
+        if tags:
+            self.selected_venditore_id = int(tags[0])
+            self.load_dati_venditore()
+            self.load_offre()
+
+    def load_dati_venditore(self):
+        """Carica dati contatto del venditore selezionato"""
+        if not self.selected_venditore_id:
+            return
+
+        try:
+            response = requests.get(
+                f"{self.base_url}/api/dati-venditori?id_venditore={self.selected_venditore_id}"
+            )
+            if response.status_code == 200:
+                self.dati_data = response.json()
+                self.populate_dati()
+        except Exception as e:
+            print(f"Errore caricamento dati venditore: {e}")
+
+    def populate_dati(self):
+        """Popola tabella dati dai dati in memoria"""
+        for item in self.tree_dati.get_children():
+            self.tree_dati.delete(item)
+
+        for d in self.dati_data:
+            values = (
+                d.get("id_dati_venditore", ""),
+                d.get("mail", ""),
+                d.get("fax", ""),
+                d.get("telefono", ""),
+                d.get("ntel_tipologia", ""),
+                d.get("contatto", "")
+            )
+            self.tree_dati.insert("", "end", values=values,
+                                 tags=(str(d.get("id_dati_venditore")),))
+
+    def load_offre(self):
+        """Carica cosa offre il venditore selezionato"""
+        if not self.selected_venditore_id:
+            return
+
+        try:
+            response = requests.get(
+                f"{self.base_url}/api/venditori/{self.selected_venditore_id}/offre"
+            )
+            if response.status_code == 200:
+                self.offre_data = response.json()
+                self.populate_offre()
+        except Exception as e:
+            print(f"Errore caricamento offerte: {e}")
+
+    def populate_offre(self):
+        """Popola tabella offerte dai dati in memoria"""
+        for item in self.tree_offre.get_children():
+            self.tree_offre.delete(item)
+
+        for o in self.offre_data:
+            values = (
+                o.get("id", ""),
+                o.get("articolo_nome", ""),
+                o.get("prezzo", ""),
+                o.get("provvigione", ""),
+                o.get("tipologia", "")
+            )
+            self.tree_offre.insert("", "end", values=values,
+                                  tags=(str(o.get("id")),))
+
+    # === METODI CRUD VENDITORI ===
+    def nuovo_venditore(self):
+        dialog = VenditoreDialog(self, self.api_client)
+        self.wait_window(dialog)
+        if dialog.result:
+            self.load_venditori()
+
+    def modifica_venditore(self):
+        if not self.selected_venditore_id:
             messagebox.showwarning("Attenzione", "Seleziona un venditore")
             return
-        self.set_form_state(True)
-    
-    def salva(self):
-        """Salva venditore"""
-        if not self.form_vars["azienda"].get():
-            messagebox.showwarning("Attenzione", "L'azienda è obbligatoria")
-            return
-        
-        data = {
-            "codice": self.form_vars["codice"].get() or None,
-            "azienda": self.form_vars["azienda"].get(),
-            "partita_iva": self.form_vars["partita_iva"].get() or None,
-            "indirizzo": self.form_vars["indirizzo"].get() or None,
-            "cap": self.form_vars["cap"].get() or None,
-            "citta": self.form_vars["citta"].get() or None,
-            "telefono": self.form_vars["telefono"].get() or None,
-            "email": self.form_vars["email"].get() or None,
-            "italiano": self.form_vars["italiano"].get(),
-            "attivo": self.form_vars["attivo"].get()
-        }
-        
-        try:
-            if self.selected_id:
-                self.api_client.update_venditore(self.selected_id, data)
-                messagebox.showinfo("Successo", "Venditore aggiornato")
-            else:
-                self.api_client.create_venditore(data)
-                messagebox.showinfo("Successo", "Venditore creato")
-            
-            self.load_data()
-            self.set_form_state(False)
-        except Exception as e:
-            messagebox.showerror("Errore", f"Impossibile salvare:\n{str(e)}")
-    
-    def elimina(self):
-        """Elimina venditore"""
-        if not self.selected_id:
+        dialog = VenditoreDialog(self, self.api_client, self.selected_venditore_id)
+        self.wait_window(dialog)
+        self.load_venditori()
+
+    def elimina_venditore(self):
+        if not self.selected_venditore_id:
             messagebox.showwarning("Attenzione", "Seleziona un venditore")
             return
-        
-        if not messagebox.askyesno("Conferma", "Confermi l'eliminazione?"):
+
+        if messagebox.askyesno("Conferma", "Eliminare il venditore selezionato?"):
+            try:
+                response = requests.delete(
+                    f"{self.base_url}/api/venditori/{self.selected_venditore_id}"
+                )
+                if response.status_code in [200, 204]:
+                    self.load_venditori()
+                    messagebox.showinfo("Successo", "Venditore eliminato")
+            except Exception as e:
+                messagebox.showerror("Errore", str(e))
+
+    # === METODI CRUD DATI VENDITORI ===
+    def nuovo_dato_venditore(self):
+        if not self.selected_venditore_id:
+            messagebox.showwarning("Attenzione", "Seleziona prima un venditore")
             return
-        
-        try:
-            self.api_client.delete_venditore(self.selected_id)
-            messagebox.showinfo("Successo", "Venditore eliminato")
-            self.selected_id = None
-            self.clear_form()
-            self.load_data()
-        except Exception as e:
-            messagebox.showerror("Errore", f"Impossibile eliminare:\n{str(e)}")
-    
-    def annulla(self):
-        """Annulla modifica"""
-        if self.selected_id:
-            self.load_detail(self.selected_id)
+        dialog = DatiVenditoreDialog(self, self.api_client, self.selected_venditore_id)
+        self.wait_window(dialog)
+        if dialog.result:
+            self.load_dati_venditore()
+
+    def modifica_dato_venditore(self):
+        selection = self.tree_dati.selection()
+        if not selection:
+            messagebox.showwarning("Attenzione", "Seleziona un dato da modificare")
+            return
+
+        tags = self.tree_dati.item(selection[0])['tags']
+        if not tags:
+            return
+        dato_id = int(tags[0])
+
+        dialog = DatiVenditoreDialog(self, self.api_client, self.selected_venditore_id, dato_id)
+        self.wait_window(dialog)
+        self.load_dati_venditore()
+
+    def elimina_dato_venditore(self):
+        selection = self.tree_dati.selection()
+        if not selection:
+            messagebox.showwarning("Attenzione", "Seleziona un dato da eliminare")
+            return
+
+        tags = self.tree_dati.item(selection[0])['tags']
+        if not tags:
+            return
+
+        dato_id = int(tags[0])
+
+        if messagebox.askyesno("Conferma", "Eliminare questo dato?"):
+            try:
+                response = requests.delete(
+                    f"{self.base_url}/api/dati-venditori/{dato_id}"
+                )
+                if response.status_code in [200, 204]:
+                    self.load_dati_venditore()
+                    messagebox.showinfo("Successo", "Dato eliminato")
+            except Exception as e:
+                messagebox.showerror("Errore", str(e))
+
+    # === METODI CRUD OFFERTE ===
+    def nuova_offerta(self):
+        if not self.selected_venditore_id:
+            messagebox.showwarning("Attenzione", "Seleziona prima un venditore")
+            return
+        messagebox.showinfo("TODO", "Implementare dialog nuova offerta")
+
+    def elimina_offerta(self):
+        selection = self.tree_offre.selection()
+        if not selection:
+            messagebox.showwarning("Attenzione", "Seleziona un'offerta da eliminare")
+            return
+
+        tags = self.tree_offre.item(selection[0])['tags']
+        if not tags:
+            return
+
+        offerta_id = int(tags[0])
+
+        if messagebox.askyesno("Conferma", "Eliminare questa offerta?"):
+            try:
+                response = requests.delete(
+                    f"{self.base_url}/api/offre/{offerta_id}"
+                )
+                if response.status_code in [200, 204]:
+                    self.load_offre()
+                    messagebox.showinfo("Successo", "Offerta eliminata")
+            except Exception as e:
+                messagebox.showerror("Errore", str(e))
+
+    # === METODI ORDINAMENTO ===
+    def sort_venditori(self, col):
+        """Ordina tabella venditori per colonna"""
+        if self.sort_venditori_col == col:
+            self.sort_venditori_reverse = not self.sort_venditori_reverse
         else:
-            self.clear_form()
-        self.set_form_state(False)
+            self.sort_venditori_col = col
+            self.sort_venditori_reverse = False
+
+        # Mappa colonne display -> chiavi API
+        col_map = {
+            "id": "id",
+            "azienda": "azienda",
+            "indirizzo": "indirizzo",
+            "cap": "cap",
+            "citta": "citta",
+            "stato": "stato",
+            "fax": "fax",
+            "telefono": "telefono",
+            "piva": "partita_iva",
+            "italiano": "italiano",
+            "tipo_pagamento": "tipo_pagamento",
+            "iva": "iva"
+        }
+
+        sort_key = col_map.get(col, col)
+
+        try:
+            self.venditori_data.sort(
+                key=lambda x: self._sort_key(x.get(sort_key, "")),
+                reverse=self.sort_venditori_reverse
+            )
+            self.populate_venditori()
+
+            # Aggiorna intestazioni con frecce
+            venditori_cols = ("id", "azienda", "indirizzo", "cap", "citta", "stato",
+                             "fax", "telefono", "piva", "italiano", "tipo_pagamento", "iva")
+            for c in venditori_cols:
+                text = c.replace("_", " ").title()
+                if c == col:
+                    text += " ↓" if self.sort_venditori_reverse else " ↑"
+                self.tree_venditori.heading(c, text=text)
+        except Exception as e:
+            print(f"Errore ordinamento: {e}")
+
+    def sort_dati(self, col):
+        """Ordina tabella dati per colonna"""
+        if self.sort_dati_col == col:
+            self.sort_dati_reverse = not self.sort_dati_reverse
+        else:
+            self.sort_dati_col = col
+            self.sort_dati_reverse = False
+
+        col_map = {
+            "id": "id_dati_venditore",
+            "mail": "mail",
+            "fax": "fax",
+            "telefono": "telefono",
+            "tipologia": "ntel_tipologia",
+            "contatto": "contatto"
+        }
+
+        sort_key = col_map.get(col, col)
+
+        try:
+            self.dati_data.sort(
+                key=lambda x: self._sort_key(x.get(sort_key, "")),
+                reverse=self.sort_dati_reverse
+            )
+            self.populate_dati()
+
+            # Aggiorna intestazioni con frecce
+            dati_cols = ("id", "mail", "fax", "telefono", "tipologia", "contatto")
+            for c in dati_cols:
+                text = c.replace("_", " ").title()
+                if c == col:
+                    text += " ↓" if self.sort_dati_reverse else " ↑"
+                self.tree_dati.heading(c, text=text)
+        except Exception as e:
+            print(f"Errore ordinamento: {e}")
+
+    def sort_offre(self, col):
+        """Ordina tabella offerte per colonna"""
+        if self.sort_offre_col == col:
+            self.sort_offre_reverse = not self.sort_offre_reverse
+        else:
+            self.sort_offre_col = col
+            self.sort_offre_reverse = False
+
+        col_map = {
+            "id": "id",
+            "articolo": "articolo_nome",
+            "prezzo": "prezzo",
+            "provvigione": "provvigione",
+            "tipologia": "tipologia"
+        }
+
+        sort_key = col_map.get(col, col)
+
+        try:
+            self.offre_data.sort(
+                key=lambda x: self._sort_key(x.get(sort_key, "")),
+                reverse=self.sort_offre_reverse
+            )
+            self.populate_offre()
+
+            # Aggiorna intestazioni con frecce
+            offre_cols = ("id", "articolo", "prezzo", "provvigione", "tipologia")
+            for c in offre_cols:
+                text = c.replace("_", " ").title()
+                if c == col:
+                    text += " ↓" if self.sort_offre_reverse else " ↑"
+                self.tree_offre.heading(c, text=text)
+        except Exception as e:
+            print(f"Errore ordinamento: {e}")
+
+    def _sort_key(self, value):
+        """Restituisce chiave di ordinamento normalizzata"""
+        if value is None:
+            return ""
+        if isinstance(value, (int, float)):
+            return value
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, str):
+            # Prova a convertire in numero se possibile
+            try:
+                return float(value.replace(",", "."))
+            except:
+                return value.lower()
+        return str(value).lower()
