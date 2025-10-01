@@ -153,6 +153,14 @@ class ConfermeOrdineView(ctk.CTkFrame):
         tree_container.grid_rowconfigure(0, weight=1)
         tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record
+        self.info_conferme_label = ctk.CTkLabel(
+            conferme_frame,
+            text="Totale conferme: 0",
+            font=("Arial", 10, "italic")
+        )
+        self.info_conferme_label.pack(pady=5)
+
         # Bind selezione
         self.tree_conferme.bind("<<TreeviewSelect>>", self.on_conferma_select)
 
@@ -233,6 +241,14 @@ class ConfermeOrdineView(ctk.CTkFrame):
         date_tree_container.grid_rowconfigure(0, weight=1)
         date_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record date
+        self.info_date_label = ctk.CTkLabel(
+            date_frame,
+            text="Totale date: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_date_label.pack(pady=2)
+
         # === TABELLA FATTURE (sotto dx) ===
         fatture_frame = ctk.CTkFrame(bottom_container)
         fatture_frame.pack(side="right", fill="both", expand=True, padx=(5, 0))
@@ -298,6 +314,14 @@ class ConfermeOrdineView(ctk.CTkFrame):
         fatture_tree_container.grid_rowconfigure(0, weight=1)
         fatture_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record fatture
+        self.info_fatture_label = ctk.CTkLabel(
+            fatture_frame,
+            text="Totale fatture: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_fatture_label.pack(pady=2)
+
     def load_conferme(self):
         """Carica lista conferme"""
         try:
@@ -335,6 +359,9 @@ class ConfermeOrdineView(ctk.CTkFrame):
             )
             self.tree_conferme.insert("", "end", values=values,
                                      tags=(str(c.get("id")),))
+
+        # Aggiorna contatore
+        self.info_conferme_label.configure(text=f"Totale conferme: {len(self.conferme_data)}")
 
     def on_conferma_select(self, event):
         """Quando seleziono una conferma, carico date e fatture"""
@@ -377,6 +404,9 @@ class ConfermeOrdineView(ctk.CTkFrame):
             self.tree_date.insert("", "end", values=values,
                                  tags=(str(d.get("id")),))
 
+        # Aggiorna contatore
+        self.info_date_label.configure(text=f"Totale date: {len(self.date_data)}")
+
     def load_fatture(self):
         """Carica fatture della conferma selezionata"""
         if not self.selected_conferma_id:
@@ -398,21 +428,25 @@ class ConfermeOrdineView(ctk.CTkFrame):
             self.tree_fatture.delete(item)
 
         for f in self.fatture_data:
+            # Converti tutti i valori in stringhe, gestendo None/NULL
             values = (
-                f.get("id_fattura", ""),
-                f.get("n_fat", ""),
-                f.get("data_fat", ""),
-                f.get("nota_acr", ""),
-                f.get("articolo", ""),
-                f.get("qta", ""),
-                f.get("prezzo", ""),
-                f.get("iva_perc", ""),
-                f.get("data_consegna", ""),
-                "Sì" if f.get("compilato") else "No",
-                "Sì" if f.get("fatturata") else "No"
+                str(f.get("id_fattura", "")) if f.get("id_fattura") is not None else "",
+                str(f.get("n_fat", "")) if f.get("n_fat") not in [None, ""] else "",
+                str(f.get("data_fat", "")) if f.get("data_fat") not in [None, ""] else "",
+                str(f.get("nota_acr", "")) if f.get("nota_acr") not in [None, ""] else "",
+                str(f.get("articolo", "")) if f.get("articolo") not in [None, ""] else "",
+                str(f.get("qta", "")) if f.get("qta") not in [None, ""] else "",
+                str(f.get("prezzo", "")) if f.get("prezzo") not in [None, ""] else "",
+                str(f.get("iva_perc", "")) if f.get("iva_perc") not in [None, ""] else "",
+                str(f.get("data_consegna", "")) if f.get("data_consegna") not in [None, ""] else "",
+                "Sì" if f.get("compilato") == 1 else ("No" if f.get("compilato") == 0 else ""),
+                "Sì" if f.get("fatturata") == 1 else ("No" if f.get("fatturata") == 0 else "")
             )
             self.tree_fatture.insert("", "end", values=values,
                                     tags=(str(f.get("id_fattura")),))
+
+        # Aggiorna contatore
+        self.info_fatture_label.configure(text=f"Totale fatture: {len(self.fatture_data)}")
 
     # === METODI CRUD CONFERME ===
     def nuova_conferma(self):

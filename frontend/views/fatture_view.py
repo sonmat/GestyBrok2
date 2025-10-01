@@ -87,6 +87,10 @@ class FattureView(ttk.Frame):
 
         self.tree.pack(fill=tk.BOTH, expand=True)
 
+        # Info totale record
+        self.info_fatture_label = ttk.Label(table_frame, text="Totale fatture: 0", font=("Arial", 10, "italic"))
+        self.info_fatture_label.pack(pady=5)
+
         # Tag per fatture pagate/non pagate
         self.tree.tag_configure("pagata", background="#d4edda")
         self.tree.tag_configure("non_pagata", background="#fff3cd")
@@ -117,6 +121,9 @@ class FattureView(ttk.Frame):
 
             tag = "pagata" if f.get("pagata") else "non_pagata"
             self.tree.insert("", tk.END, values=values, tags=(tag,))
+
+        # Aggiorna contatore
+        self.info_fatture_label.config(text=f"Totale fatture: {len(data)}")
 
     def sort_by(self, col):
         """Ordina per colonna"""

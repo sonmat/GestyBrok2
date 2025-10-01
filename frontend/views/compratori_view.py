@@ -137,6 +137,14 @@ class CompratorView(ctk.CTkFrame):
         tree_container.grid_rowconfigure(0, weight=1)
         tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record
+        self.info_compratori_label = ctk.CTkLabel(
+            compratori_frame,
+            text="Totale compratori: 0",
+            font=("Arial", 10, "italic")
+        )
+        self.info_compratori_label.pack(pady=5)
+
         # Bind selezione
         self.tree_compratori.bind("<<TreeviewSelect>>", self.on_compratore_select)
 
@@ -217,6 +225,14 @@ class CompratorView(ctk.CTkFrame):
         dati_tree_container.grid_rowconfigure(0, weight=1)
         dati_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record dati
+        self.info_dati_label = ctk.CTkLabel(
+            dati_frame,
+            text="Totale contatti: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_dati_label.pack(pady=2)
+
         # === TABELLA COMPRATORE CERCA (sotto dx) ===
         cerca_frame = ctk.CTkFrame(bottom_container)
         cerca_frame.pack(side="right", fill="both", expand=True, padx=(5, 0))
@@ -285,6 +301,14 @@ class CompratorView(ctk.CTkFrame):
         cerca_tree_container.grid_rowconfigure(0, weight=1)
         cerca_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record ricerche
+        self.info_cerca_label = ctk.CTkLabel(
+            cerca_frame,
+            text="Totale ricerche: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_cerca_label.pack(pady=2)
+
     def load_compratori(self):
         """Carica lista compratori"""
         try:
@@ -317,6 +341,9 @@ class CompratorView(ctk.CTkFrame):
             )
             self.tree_compratori.insert("", "end", values=values,
                                        tags=(str(c.get("id")),))
+
+        # Aggiorna contatore
+        self.info_compratori_label.configure(text=f"Totale compratori: {len(self.compratori_data)}")
 
     def on_compratore_select(self, event):
         """Quando seleziono un compratore, carico dati e ricerche"""
@@ -362,6 +389,9 @@ class CompratorView(ctk.CTkFrame):
             self.tree_dati.insert("", "end", values=values,
                                  tags=(str(d.get("id_dati_compratore")),))
 
+        # Aggiorna contatore
+        self.info_dati_label.configure(text=f"Totale contatti: {len(self.dati_data)}")
+
     def load_cerca(self):
         """Carica cosa cerca il compratore selezionato"""
         if not self.selected_compratore_id:
@@ -390,6 +420,9 @@ class CompratorView(ctk.CTkFrame):
             )
             self.tree_cerca.insert("", "end", values=values,
                                   tags=(str(c.get("id")),))
+
+        # Aggiorna contatore
+        self.info_cerca_label.configure(text=f"Totale ricerche: {len(self.cerca_data)}")
 
     # === METODI CRUD COMPRATORI ===
     def nuovo_compratore(self):

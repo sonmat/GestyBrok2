@@ -66,6 +66,10 @@ class FattureStudioView(ttk.Frame):
         self.tree_master.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         vsb_master.pack(side=tk.RIGHT, fill=tk.Y)
 
+        # Info totale record
+        self.info_master_label = ttk.Label(top_frame, text="Totale fatture: 0", font=("Arial", 10, "italic"))
+        self.info_master_label.pack(pady=5)
+
         self.tree_master.bind("<<TreeviewSelect>>", self.on_master_select)
 
         # Frame inferiore: Dettagli Fattura (Detail)
@@ -105,6 +109,10 @@ class FattureStudioView(ttk.Frame):
         self.tree_detail.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         vsb_detail.pack(side=tk.RIGHT, fill=tk.Y)
 
+        # Info totale record dettagli
+        self.info_detail_label = ttk.Label(bottom_frame, text="Totale dettagli: 0", font=("Arial", 10, "italic"))
+        self.info_detail_label.pack(pady=5)
+
     def load_data(self):
         """Carica fatture studio"""
         try:
@@ -132,6 +140,9 @@ class FattureStudioView(ttk.Frame):
                 fatt.get("note", "")
             )
             self.tree_master.insert("", tk.END, values=values)
+
+        # Aggiorna contatore
+        self.info_master_label.config(text=f"Totale fatture: {len(self.fatture)}")
 
     def get_cliente_name(self, cliente_id):
         """Ottieni nome cliente (venditore)"""
@@ -191,23 +202,39 @@ class FattureStudioView(ttk.Frame):
             self.tree_detail.delete(item)
 
         if not self.selected_id:
+            self.info_detail_label.config(text="Totale dettagli: 0")
             return
 
         try:
+            print(f"DEBUG FRONTEND: Caricamento dettagli per fattura {self.selected_id}")
             dettagli = self.api_client.get(f"/api/fatture-studio/{self.selected_id}/dettagli")
+            print(f"DEBUG FRONTEND: Ricevuti {len(dettagli)} dettagli")
+            print(f"DEBUG FRONTEND: Dettagli = {dettagli}")
+
             for det in dettagli:
+                # Usa compratore_nome se disponibile, altrimenti fallback
+                compratore_display = det.get("compratore_nome", "") or self.get_compratore_name(det.get("compratore"))
+
                 values = (
                     det.get("id_fat_studio_det", ""),
-                    self.get_compratore_name(det.get("compratore")),
+                    compratore_display,
                     det.get("qta", ""),
                     det.get("prezzo", ""),
                     det.get("provvigione", ""),
                     det.get("tipologia", ""),
                     det.get("data_consegna", "")
                 )
+                print(f"DEBUG FRONTEND: Inserisco riga: {values}")
                 self.tree_detail.insert("", tk.END, values=values)
+
+            # Aggiorna contatore
+            self.info_detail_label.config(text=f"Totale dettagli: {len(dettagli)}")
+            print(f"DEBUG FRONTEND: Dettagli caricati con successo")
         except Exception as e:
-            print(f"Errore caricamento dettagli: {e}")
+            print(f"ERRORE caricamento dettagli: {e}")
+            import traceback
+            traceback.print_exc()
+            self.info_detail_label.config(text="Totale dettagli: 0")
 
     def get_compratore_name(self, compratore_id):
         """Ottieni nome compratore"""

@@ -15,6 +15,7 @@ from models import (
     TDatiVenditore, TDatiCompratore, TIva, TPagamento, TBanca
 )
 from pdf_generator import PDFConfermaOrdine
+from pdf_report_generator import PDFReportGenerator
 
 # Connetti al database
 init_db()
@@ -486,9 +487,12 @@ def get_conferme_ordine(skip: int = 0, limit: int = 1000, db: Session = Depends(
         venditore = db.query(TVenditore).filter(TVenditore.id_venditore == c.venditore).first()
         compratore = db.query(TCompratore).filter(TCompratore.id_compratore == c.compratore).first()
         articolo = db.query(TArticolo).filter(TArticolo.id_articolo == c.articolo).first()
+        pagamento = db.query(TPagamento).filter(TPagamento.id_pagamento == c.condizioni_pag).first()
 
         result.append({
             "id": c.id_conferma,
+            "n_conf": c.n_conf or "",
+            "data_conf": c.data_conf or "",
             "numero_conferma": c.n_conf or "",
             "data_conferma": c.data_conf or "",
             "venditore_id": c.venditore,
@@ -497,10 +501,19 @@ def get_conferme_ordine(skip: int = 0, limit: int = 1000, db: Session = Depends(
             "compratore_nome": compratore.azienda if compratore else f"ID: {c.compratore}",
             "articolo_id": c.articolo,
             "articolo_nome": articolo.nome_articolo if articolo else f"ID: {c.articolo}",
+            "qta": c.qta or "",
             "quantita": parse_float(c.qta),
-            "prezzo": parse_float(c.prezzo),
-            "provvigione": parse_float(c.provvigione),
-            "tipologia": c.tipologia or ""
+            "prezzo": c.prezzo or "",
+            "provvigione": c.provvigione or "",
+            "tipologia": c.tipologia or "",
+            "luogo_consegna": c.luogo_consegna or "",
+            "condizioni_pag": pagamento.tipo_pagamento if pagamento else (str(c.condizioni_pag) if c.condizioni_pag else ""),
+            "condizioni_pag_id": c.condizioni_pag,
+            "carico": c.carico or "",
+            "arrivo": c.arrivo or "",
+            "emailv": c.emailv or "",
+            "emailc": c.emailc or "",
+            "note": c.note or ""
         })
 
     return result
@@ -512,17 +525,31 @@ def get_conferma_ordine(conferma_id: int, db: Session = Depends(get_db)):
     c = db.query(TConferma).filter(TConferma.id_conferma == conferma_id).first()
     if not c:
         raise HTTPException(status_code=404, detail="Conferma non trovata")
+
+    # Recupera il nome del pagamento
+    pagamento = db.query(TPagamento).filter(TPagamento.id_pagamento == c.condizioni_pag).first()
+
     return {
         "id": c.id_conferma,
+        "n_conf": c.n_conf or "",
+        "data_conf": c.data_conf or "",
         "numero_conferma": c.n_conf or "",
         "data_conferma": c.data_conf or "",
         "venditore_id": c.venditore,
         "compratore_id": c.compratore,
         "articolo_id": c.articolo,
+        "qta": c.qta or "",
         "quantita": parse_float(c.qta),
-        "prezzo": parse_float(c.prezzo),
-        "provvigione": parse_float(c.provvigione),
+        "prezzo": c.prezzo or "",
+        "provvigione": c.provvigione or "",
         "tipologia": c.tipologia or "",
+        "luogo_consegna": c.luogo_consegna or "",
+        "condizioni_pag": pagamento.tipo_pagamento if pagamento else (str(c.condizioni_pag) if c.condizioni_pag else ""),
+        "condizioni_pag_id": c.condizioni_pag,
+        "carico": c.carico or "",
+        "arrivo": c.arrivo or "",
+        "emailv": c.emailv or "",
+        "emailc": c.emailc or "",
         "note": c.note or ""
     }
 
@@ -895,7 +922,7 @@ def get_fatture_conferma(id_conferma: int, db: Session = Depends(get_db)):
     fatture = db.query(TFattura).filter(
         TFattura.confermaordine == id_conferma
     ).all()
-    
+
     result = []
     for f in fatture:
         # Calcola importo se disponibili qta e prezzo
@@ -905,15 +932,22 @@ def get_fatture_conferma(id_conferma: int, db: Session = Depends(get_db)):
                 importo = float(f.qta) * float(f.prezzo)
             except:
                 importo = 0
-        
+
         result.append({
-            "id": f.id_fattura,
-            "n_fat": f.n_fat if f.n_fat else "",
-            "data_fat": f.data_fat if f.data_fat else "",
-            "importo": importo,
-            "fatturata": bool(f.fatturata) if f.fatturata else False
+            "id_fattura": f.id_fattura if f.id_fattura is not None else "",
+            "n_fat": str(f.n_fat) if f.n_fat is not None else "",
+            "data_fat": str(f.data_fat) if f.data_fat is not None else "",
+            "nota_acr": str(f.nota_acr) if f.nota_acr is not None else "",
+            "articolo": str(f.articolo) if f.articolo is not None else "",
+            "qta": str(f.qta) if f.qta is not None else "",
+            "prezzo": str(f.prezzo) if f.prezzo is not None else "",
+            "iva_perc": str(f.iva_perc) if f.iva_perc is not None else "",
+            "data_consegna": str(f.data_consegna) if f.data_consegna is not None else "",
+            "compilato": f.compilato if f.compilato is not None else "",
+            "fatturata": f.fatturata if f.fatturata is not None else "",
+            "importo": importo
         })
-    
+
     return result
 
 @app.get("/api/fatture")
@@ -1196,7 +1230,7 @@ def get_pagamenti(db: Session = Depends(get_db)):
     """Lista pagamenti"""
     from models import TPagamento
     pagamenti = db.query(TPagamento).all()
-    return [{"id_pagamento": p.id_pagamento, "tipo_pagamento": p.tipo_pagamento} for p in pagamenti]
+    return [{"id": p.id_pagamento, "id_pagamento": p.id_pagamento, "tipo": p.tipo_pagamento, "tipo_pagamento": p.tipo_pagamento} for p in pagamenti]
 
 
 @app.get("/api/pagamenti/{pag_id}")
@@ -1442,9 +1476,13 @@ def delete_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
 @app.get("/api/fatture-studio/{id_fattura}/dettagli")
 def get_dettagli_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
     """Lista dettagli di una fattura studio con nomi delle relazioni"""
+    print(f"DEBUG: Richiesta dettagli per fattura {id_fattura}")
+
     dettagli = db.query(TFatturaStudioDet).filter(
         TFatturaStudioDet.id_fat_studio == id_fattura
     ).all()
+
+    print(f"DEBUG: Trovati {len(dettagli)} dettagli")
 
     result = []
     for d in dettagli:
@@ -1467,6 +1505,7 @@ def get_dettagli_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
             "data_consegna": d.data_consegna
         })
 
+    print(f"DEBUG: Restituisco {len(result)} dettagli")
     return result
 
 
@@ -1522,6 +1561,297 @@ def delete_dettaglio_fattura_studio(id_dettaglio: int, db: Session = Depends(get
     db.delete(dettaglio)
     db.commit()
     return {"message": "Dettaglio eliminato"}
+
+
+# ==================== REPORT ====================
+@app.get("/api/report/potenziale")
+def get_report_potenziale(
+    data_dal: str = Query(..., description="Data inizio (YYYY-MM-DD)"),
+    data_al: str = Query(..., description="Data fine (YYYY-MM-DD)"),
+    id_venditore: Optional[int] = Query(None, description="Filtro opzionale per venditore"),
+    db: Session = Depends(get_db)
+):
+    """
+    Report POTENZIALE: consegne previste da t_date_consegna
+    """
+    from datetime import datetime as dt
+
+    # Valida date
+    try:
+        data_dal_obj = dt.strptime(data_dal, "%Y-%m-%d")
+        data_al_obj = dt.strptime(data_al, "%Y-%m-%d")
+    except:
+        raise HTTPException(status_code=400, detail="Formato data non valido. Usare YYYY-MM-DD")
+
+    # Query SEMPLICE: leggi date consegna previste
+    query = db.query(
+        TDataConsegna.data_consegna,
+        TDataConsegna.qta_consegna,
+        TConferma.prezzo,
+        TConferma.provvigione,
+        TConferma.tipologia,
+        TConferma.arrivo,
+        TConferma.carico,
+        TVenditore.azienda.label('venditore_nome'),
+        TCompratore.azienda.label('compratore_nome'),
+        TArticolo.nome_articolo,
+        TArticolo.tipologia.label('articolo_tipologia')
+    ).join(
+        TConferma, TDataConsegna.id_conferma == TConferma.id_conferma
+    ).join(
+        TVenditore, TConferma.venditore == TVenditore.id_venditore
+    ).join(
+        TCompratore, TConferma.compratore == TCompratore.id_compratore
+    ).join(
+        TArticolo, TConferma.articolo == TArticolo.id_articolo
+    )
+
+    # Filtro venditore opzionale
+    if id_venditore:
+        query = query.filter(TVenditore.id_venditore == id_venditore)
+
+    results = query.all()
+
+    # Filtra per date e calcola totali
+    records = []
+    for r in results:
+        # Filtra per data (formato DD/MM/YYYY)
+        if r.data_consegna:
+            try:
+                if '/' in str(r.data_consegna):
+                    data_obj = dt.strptime(str(r.data_consegna), "%d/%m/%Y")
+                    if not (data_dal_obj <= data_obj <= data_al_obj):
+                        continue
+            except:
+                continue
+
+        # Calcola importo (gestisci stringhe vuote e None)
+        try:
+            qta = float(r.qta_consegna) if r.qta_consegna and str(r.qta_consegna).strip() else 0.0
+        except:
+            qta = 0.0
+
+        try:
+            prezzo = float(r.prezzo) if r.prezzo and str(r.prezzo).strip() else 0.0
+        except:
+            prezzo = 0.0
+
+        try:
+            provvigione = float(r.provvigione) if r.provvigione and str(r.provvigione).strip() else 0.0
+        except:
+            provvigione = 0.0
+
+        if r.tipologia == "Q.TA":
+            euro = qta * provvigione
+        else:
+            euro = qta * provvigione * prezzo
+
+        records.append({
+            'compratore_azienda': r.compratore_nome or '',
+            'venditore_azienda': r.venditore_nome or '',
+            'articolo_nome': r.nome_articolo or '',
+            'articolo_tipologia': r.articolo_tipologia or '',
+            'arrivo': r.arrivo or '',
+            'carico': r.carico or '',
+            'qta_cons': qta,
+            'prezzo': prezzo,
+            'delta': provvigione,
+            'euro': euro,
+            'data_consegna': r.data_consegna or '',
+            'tipologia': r.tipologia or ''
+        })
+
+    return {
+        "data_dal": data_dal,
+        "data_al": data_al,
+        "id_venditore": id_venditore,
+        "records": records,
+        "totale_righe": len(records)
+    }
+
+
+@app.get("/api/report/potenziale/pdf")
+def download_report_potenziale_pdf(
+    data_dal: str = Query(..., description="Data inizio (YYYY-MM-DD)"),
+    data_al: str = Query(..., description="Data fine (YYYY-MM-DD)"),
+    id_venditore: Optional[int] = Query(None, description="Filtro opzionale per venditore"),
+    db: Session = Depends(get_db)
+):
+    """Genera e scarica PDF report potenziale"""
+    # Ottieni dati
+    report_data = get_report_potenziale(data_dal, data_al, id_venditore, db)
+
+    # Nome venditore per titolo
+    venditore_nome = None
+    if id_venditore:
+        venditore = db.query(TVenditore).filter(TVenditore.id_venditore == id_venditore).first()
+        if venditore:
+            venditore_nome = venditore.azienda
+
+    # Genera PDF
+    pdf_gen = PDFReportGenerator()
+    pdf_buffer = pdf_gen.genera_report_potenziale(
+        data_dal,
+        data_al,
+        report_data['records'],
+        venditore_nome
+    )
+
+    # Nome file
+    filename = f"report_potenziale_{data_dal}_{data_al}.pdf"
+
+    return StreamingResponse(
+        pdf_buffer,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}"
+        }
+    )
+
+
+@app.get("/api/report/effettivo")
+def get_report_effettivo(
+    data_dal: str = Query(..., description="Data inizio (YYYY-MM-DD)"),
+    data_al: str = Query(..., description="Data fine (YYYY-MM-DD)"),
+    id_venditore: Optional[int] = Query(None, description="Filtro opzionale per venditore"),
+    db: Session = Depends(get_db)
+):
+    """
+    Report EFFETTIVO: vendite fatturate da t_fatture
+    """
+    from datetime import datetime as dt
+
+    # Valida date
+    try:
+        data_dal_obj = dt.strptime(data_dal, "%Y-%m-%d")
+        data_al_obj = dt.strptime(data_al, "%Y-%m-%d")
+    except:
+        raise HTTPException(status_code=400, detail="Formato data non valido. Usare YYYY-MM-DD")
+
+    # Query SEMPLICE: leggi fatture effettive
+    query = db.query(
+        TFattura.data_consegna,
+        TFattura.qta,
+        TFattura.prezzo,
+        TConferma.provvigione,
+        TConferma.tipologia,
+        TConferma.arrivo,
+        TConferma.carico,
+        TVenditore.azienda.label('venditore_nome'),
+        TCompratore.azienda.label('compratore_nome'),
+        TArticolo.nome_articolo,
+        TArticolo.tipologia.label('articolo_tipologia')
+    ).join(
+        TConferma, TFattura.confermaordine == TConferma.id_conferma
+    ).join(
+        TVenditore, TConferma.venditore == TVenditore.id_venditore
+    ).join(
+        TCompratore, TConferma.compratore == TCompratore.id_compratore
+    ).join(
+        TArticolo, TConferma.articolo == TArticolo.id_articolo
+    )
+
+    # Filtro venditore opzionale
+    if id_venditore:
+        query = query.filter(TVenditore.id_venditore == id_venditore)
+
+    results = query.all()
+
+    # Filtra per date e calcola totali
+    records = []
+    for r in results:
+        # Filtra per data (può essere formato DD/MM/YYYY o numero)
+        if r.data_consegna:
+            try:
+                if isinstance(r.data_consegna, str) and '/' in r.data_consegna:
+                    data_obj = dt.strptime(r.data_consegna, "%d/%m/%Y")
+                    if not (data_dal_obj <= data_obj <= data_al_obj):
+                        continue
+            except:
+                continue
+
+        # Calcola importo (gestisci stringhe vuote e None)
+        try:
+            qta = float(r.qta) if r.qta and str(r.qta).strip() else 0.0
+        except:
+            qta = 0.0
+
+        try:
+            prezzo = float(r.prezzo) if r.prezzo and str(r.prezzo).strip() else 0.0
+        except:
+            prezzo = 0.0
+
+        try:
+            provvigione = float(r.provvigione) if r.provvigione and str(r.provvigione).strip() else 0.0
+        except:
+            provvigione = 0.0
+
+        if r.tipologia == "Q.TA":
+            euro = qta * provvigione
+        else:
+            euro = qta * provvigione * prezzo
+
+        records.append({
+            'compratore_azienda': r.compratore_nome or '',
+            'venditore_azienda': r.venditore_nome or '',
+            'articolo_nome': r.nome_articolo or '',
+            'articolo_tipologia': r.articolo_tipologia or '',
+            'arrivo': r.arrivo or '',
+            'carico': r.carico or '',
+            'qta': qta,
+            'prezzo': prezzo,
+            'delta': provvigione,
+            'euro': euro,
+            'data_consegna': str(r.data_consegna) if r.data_consegna else '',
+            'tipologia': r.tipologia or ''
+        })
+
+    return {
+        "data_dal": data_dal,
+        "data_al": data_al,
+        "id_venditore": id_venditore,
+        "records": records,
+        "totale_righe": len(records)
+    }
+
+
+@app.get("/api/report/effettivo/pdf")
+def download_report_effettivo_pdf(
+    data_dal: str = Query(..., description="Data inizio (YYYY-MM-DD)"),
+    data_al: str = Query(..., description="Data fine (YYYY-MM-DD)"),
+    id_venditore: Optional[int] = Query(None, description="Filtro opzionale per venditore"),
+    db: Session = Depends(get_db)
+):
+    """Genera e scarica PDF report effettivo"""
+    # Ottieni dati
+    report_data = get_report_effettivo(data_dal, data_al, id_venditore, db)
+
+    # Nome venditore per titolo
+    venditore_nome = None
+    if id_venditore:
+        venditore = db.query(TVenditore).filter(TVenditore.id_venditore == id_venditore).first()
+        if venditore:
+            venditore_nome = venditore.azienda
+
+    # Genera PDF
+    pdf_gen = PDFReportGenerator()
+    pdf_buffer = pdf_gen.genera_report_effettivo(
+        data_dal,
+        data_al,
+        report_data['records'],
+        venditore_nome
+    )
+
+    # Nome file
+    filename = f"report_effettivo_{data_dal}_{data_al}.pdf"
+
+    return StreamingResponse(
+        pdf_buffer,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}"
+        }
+    )
 
 
 if __name__ == "__main__":

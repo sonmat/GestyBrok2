@@ -132,7 +132,46 @@ class APIClient:
     def get_fatture(self, **filters) -> List[Dict]:
         """Recupera fatture"""
         return self.get("/api/fatture", params=filters)
-    
+
     def genera_fatture(self, mesi: List[str], anno: int) -> List[Dict]:
         """Genera fatture per mesi specificati"""
         return self.post("/api/fatture/genera", data={"mesi": mesi, "anno": anno})
+
+    # ==================== REPORT ====================
+    def get_report_potenziale(self, data_dal: str, data_al: str, id_venditore: Optional[int] = None) -> Dict:
+        """Recupera dati report potenziale"""
+        params = {"data_dal": data_dal, "data_al": data_al}
+        if id_venditore:
+            params["id_venditore"] = id_venditore
+        return self.get("/api/report/potenziale", params=params)
+
+    def download_report_potenziale_pdf(self, data_dal: str, data_al: str,
+                                       id_venditore: Optional[int] = None) -> bytes:
+        """Scarica PDF report potenziale"""
+        params = {"data_dal": data_dal, "data_al": data_al}
+        if id_venditore:
+            params["id_venditore"] = id_venditore
+
+        url = f"{self.base_url}/api/report/potenziale/pdf"
+        response = self.session.get(url, params=params)
+        response.raise_for_status()
+        return response.content
+
+    def get_report_effettivo(self, data_dal: str, data_al: str, id_venditore: Optional[int] = None) -> Dict:
+        """Recupera dati report effettivo"""
+        params = {"data_dal": data_dal, "data_al": data_al}
+        if id_venditore:
+            params["id_venditore"] = id_venditore
+        return self.get("/api/report/effettivo", params=params)
+
+    def download_report_effettivo_pdf(self, data_dal: str, data_al: str,
+                                      id_venditore: Optional[int] = None) -> bytes:
+        """Scarica PDF report effettivo"""
+        params = {"data_dal": data_dal, "data_al": data_al}
+        if id_venditore:
+            params["id_venditore"] = id_venditore
+
+        url = f"{self.base_url}/api/report/effettivo/pdf"
+        response = self.session.get(url, params=params)
+        response.raise_for_status()
+        return response.content

@@ -70,7 +70,11 @@ class ArticoliView(ttk.Frame):
         
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         vsb.pack(side=tk.RIGHT, fill=tk.Y)
-        
+
+        # Info totale record
+        self.info_articoli_label = ttk.Label(top_frame, text="Totale articoli: 0", font=("Arial", 10, "italic"))
+        self.info_articoli_label.pack(pady=5)
+
         self.tree.bind("<<TreeviewSelect>>", self.on_select)
         
         # Frame inferiore: Chi offre + Chi cerca
@@ -94,7 +98,11 @@ class ArticoliView(ttk.Frame):
             self.tree_offre.column(col, width=120)
         
         self.tree_offre.pack(fill=tk.BOTH, expand=True)
-        
+
+        # Info totale record offre
+        self.info_offre_label = ttk.Label(offre_frame, text="Totale offerte: 0", font=("Arial", 9, "italic"))
+        self.info_offre_label.pack(pady=2)
+
         # Chi cerca (Compratori)
         cerca_frame = ttk.LabelFrame(detail_paned, text="Chi Cerca (Compratori)", padding=5)
         detail_paned.add(cerca_frame, weight=1)
@@ -106,9 +114,13 @@ class ArticoliView(ttk.Frame):
         for col in cols_cerca:
             self.tree_cerca.heading(col, text=col.capitalize())
             self.tree_cerca.column(col, width=200)
-        
+
         self.tree_cerca.pack(fill=tk.BOTH, expand=True)
-    
+
+        # Info totale record cerca
+        self.info_cerca_label = ttk.Label(cerca_frame, text="Totale ricerche: 0", font=("Arial", 9, "italic"))
+        self.info_cerca_label.pack(pady=2)
+
     def load_data(self):
         """Carica articoli"""
         try:
@@ -121,7 +133,7 @@ class ArticoliView(ttk.Frame):
         """Popola tabella"""
         for item in self.tree.get_children():
             self.tree.delete(item)
-        
+
         for a in data:
             values = (
                 a.get("id"),
@@ -131,6 +143,9 @@ class ArticoliView(ttk.Frame):
                 a.get("famiglia_id", "")
             )
             self.tree.insert("", tk.END, values=values)
+
+        # Aggiorna contatore
+        self.info_articoli_label.config(text=f"Totale articoli: {len(data)}")
     
     def filter_data(self):
         """Filtra"""
@@ -191,10 +206,12 @@ class ArticoliView(ttk.Frame):
             self.tree_offre.delete(item)
         for item in self.tree_cerca.get_children():
             self.tree_cerca.delete(item)
-        
+
         if not self.selected_id:
+            self.info_offre_label.config(text="Totale offerte: 0")
+            self.info_cerca_label.config(text="Totale ricerche: 0")
             return
-        
+
         try:
             # Chi offre
             offre = self.api_client.get(f"/api/articoli/{self.selected_id}/offre")
@@ -205,7 +222,8 @@ class ArticoliView(ttk.Frame):
                     o.get("provvigione", ""),
                     o.get("tipologia", "")
                 ))
-            
+            self.info_offre_label.config(text=f"Totale offerte: {len(offre)}")
+
             # Chi cerca
             cerca = self.api_client.get(f"/api/articoli/{self.selected_id}/cerca")
             for c in cerca:
@@ -213,6 +231,7 @@ class ArticoliView(ttk.Frame):
                     c.get("compratore_nome", ""),
                     c.get("note", "")
                 ))
+            self.info_cerca_label.config(text=f"Totale ricerche: {len(cerca)}")
         except Exception as e:
             print(f"Errore caricamento dettagli: {e}")
     

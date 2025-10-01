@@ -136,7 +136,7 @@ class TDatiCompratore(Base):
 
 class TConferma(Base):
     __tablename__ = "t_conferme"
-    
+
     id_conferma = Column(Integer, primary_key=True)
     compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
     venditore = Column(Integer, ForeignKey("t_venditori.id_venditore"))
@@ -148,12 +148,15 @@ class TConferma(Base):
     provvigione = Column(Text)
     tipologia = Column(Text)
     luogo_consegna = Column(Text)
-    condizioni_pag = Column(Text)
+    condizioni_pag = Column(Integer, ForeignKey("t_pagamenti.id_pagamento"))
     note = Column(Text)
     carico = Column(Text)
     arrivo = Column(Text)
     emailv = Column(Text)
     emailc = Column(Text)
+
+    # Relazione con pagamento
+    pagamento = relationship("TPagamento", foreign_keys=[condizioni_pag])
 
 
 class TDataConsegna(Base):
@@ -167,7 +170,7 @@ class TDataConsegna(Base):
 
 class TFattura(Base):
     __tablename__ = "t_fatture"
-    
+
     id_fattura = Column(Integer, primary_key=True)
     confermaordine = Column(Integer, ForeignKey("t_conferme.id_conferma"))
     n_fat = Column(Integer)
@@ -184,29 +187,29 @@ class TFattura(Base):
 
 class TFatturaStudio(Base):
     __tablename__ = "t_fatture_studio"
-    
+
     id_fatt_studio = Column(Integer, primary_key=True)
-    n_fat = Column(Integer)
-    data_fat = Column(Integer)
-    nota_acr = Column(Integer)
+    n_fat = Column(Text)
+    data_fat = Column(Text)
+    nota_acr = Column(Text)
     cliente = Column(Integer, ForeignKey("t_venditori.id_venditore"))
     t_iva = Column(Integer, ForeignKey("t_iva.id_iva"))
     t_pagamento = Column(Integer, ForeignKey("t_pagamenti.id_pagamento"))
-    note = Column(Integer)
+    note = Column(Text)
     id_banca = Column(Integer, ForeignKey("t_banche.id_banca"))
 
 
 class TFatturaStudioDet(Base):
     __tablename__ = "t_fat_studio_det"
-    
+
     id_fat_studio_det = Column(Integer, primary_key=True)
     id_fat_studio = Column(Integer, ForeignKey("t_fatture_studio.id_fatt_studio"))
     compratore = Column(Integer, ForeignKey("t_compratori.id_compratore"))
-    qta = Column(Integer)
-    prezzo = Column(Integer)
-    provvigione = Column(Integer)
-    tipologia = Column(Integer)
-    data_consegna = Column(Integer)
+    qta = Column(Text)
+    prezzo = Column(Text)
+    provvigione = Column(Text)
+    tipologia = Column(Text)
+    data_consegna = Column(Text)
 
 
 # ==================== TABELLE TRADING ====================
@@ -247,45 +250,45 @@ class TDataConsegnaTrading(Base):
 
 class TFatturaTrading(Base):
     __tablename__ = "t_fatture_trading"
-    
+
     id_fattura = Column(Integer, primary_key=True)
     confermaordine = Column(Integer, ForeignKey("t_conferme_trading.id_conferma"))
-    n_fat = Column(Integer)
-    data_fat = Column(Integer)
-    nota_acr = Column(Integer)
+    n_fat = Column(Text)
+    data_fat = Column(Text)
+    nota_acr = Column(Text)
     articolo = Column(Integer)
-    qta = Column(Integer)
-    prezzo = Column(Integer)
-    iva_perc = Column(Integer)
-    data_consegna = Column(Integer)
+    qta = Column(Text)
+    prezzo = Column(Text)
+    iva_perc = Column(Text)
+    data_consegna = Column(Text)
     compilato = Column(Integer)
     fatturata = Column(Integer)
 
 
 class TFatturaStudioTrading(Base):
     __tablename__ = "t_fatture_studio_trading"
-    
+
     id_fatt_studio = Column(Integer, primary_key=True)
-    n_fat = Column(Integer)
-    data_fat = Column(Integer)
-    nota_acr = Column(Integer)
+    n_fat = Column(Text)
+    data_fat = Column(Text)
+    nota_acr = Column(Text)
     cliente = Column(Integer, ForeignKey("t_compratori.id_compratore"))
     t_iva = Column(Integer, ForeignKey("t_iva.id_iva"))
     t_pagamento = Column(Integer, ForeignKey("t_pagamenti.id_pagamento"))
-    note = Column(Integer)
+    note = Column(Text)
     id_banca = Column(Integer)
-    n_conf = Column(Integer)
+    n_conf = Column(Text)
 
 
 class TFatturaStudioDetTrading(Base):
     __tablename__ = "t_fat_studio_det_trading"
-    
+
     id_fat_studio_det = Column(Integer, primary_key=True)
     id_fat_studio = Column(Integer, ForeignKey("t_fatture_studio_trading.id_fatt_studio"))
     articolo = Column(Integer, ForeignKey("t_articoli.id_articolo"))
-    qta = Column(Integer)
-    prezzo = Column(Integer)
-    data_consegna = Column(Integer)
+    qta = Column(Text)
+    prezzo = Column(Text)
+    data_consegna = Column(Text)
 
 
 # NOTA: Le tabelle nuove (articoli, venditori, compratori, etc. senza prefisso t_)

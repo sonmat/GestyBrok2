@@ -129,10 +129,11 @@ class ConfermaDialog(tk.Toplevel):
         self.fields['luogo_consegna'].grid(row=row, column=1, sticky="ew", pady=5, padx=5)
         row += 1
 
-        # Condizioni Pagamento
+        # Condizioni Pagamento (Foreign Key - AutocompleteCombobox)
         ttk.Label(scrollable_frame, text="Condizioni Pagamento:").grid(row=row, column=0, sticky="w", pady=5, padx=5)
-        self.fields['condizioni_pag'] = ttk.Entry(scrollable_frame, width=40)
+        self.fields['condizioni_pag'] = AutocompleteCombobox(scrollable_frame, width=38)
         self.fields['condizioni_pag'].grid(row=row, column=1, sticky="ew", pady=5, padx=5)
+        self.load_pagamenti()
         row += 1
 
         # Carico
@@ -204,6 +205,16 @@ class ConfermaDialog(tk.Toplevel):
         except Exception as e:
             print(f"Errore caricamento articoli: {e}")
 
+    def load_pagamenti(self):
+        """Carica pagamenti per la combobox"""
+        try:
+            response = self.api_client.get("/api/pagamenti")
+            if response:
+                items = [(p['id'], p['tipo']) for p in response]
+                self.fields['condizioni_pag'].set_completion_list(items)
+        except Exception as e:
+            print(f"Errore caricamento pagamenti: {e}")
+
     def load_data(self):
         """Carica dati esistenti"""
         try:
@@ -225,7 +236,11 @@ class ConfermaDialog(tk.Toplevel):
                 self.fields['provvigione'].insert(0, response.get('provvigione', ''))
                 self.fields['tipologia'].insert(0, response.get('tipologia', ''))
                 self.fields['luogo_consegna'].insert(0, response.get('luogo_consegna', ''))
-                self.fields['condizioni_pag'].insert(0, response.get('condizioni_pag', ''))
+
+                # Imposta pagamento con ID
+                if response.get('condizioni_pag_id'):
+                    self.fields['condizioni_pag'].set_by_id(response['condizioni_pag_id'])
+
                 self.fields['carico'].insert(0, response.get('carico', ''))
                 self.fields['arrivo'].insert(0, response.get('arrivo', ''))
                 self.fields['emailv'].insert(0, response.get('emailv', ''))
@@ -267,6 +282,8 @@ class ConfermaDialog(tk.Toplevel):
             return
 
         # Prepara dati
+        pagamento_id = self.fields['condizioni_pag'].get_selected_id()
+
         data = {
             'n_conf': self.fields['n_conf'].get().strip(),
             'data_conf': self.fields['data_conf'].get().strip(),
@@ -278,7 +295,7 @@ class ConfermaDialog(tk.Toplevel):
             'provvigione': self.fields['provvigione'].get().strip(),
             'tipologia': self.fields['tipologia'].get().strip(),
             'luogo_consegna': self.fields['luogo_consegna'].get().strip(),
-            'condizioni_pag': self.fields['condizioni_pag'].get().strip(),
+            'condizioni_pag': pagamento_id if pagamento_id else None,
             'carico': self.fields['carico'].get().strip(),
             'arrivo': self.fields['arrivo'].get().strip(),
             'emailv': self.fields['emailv'].get().strip(),

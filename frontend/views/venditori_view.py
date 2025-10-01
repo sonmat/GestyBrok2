@@ -137,6 +137,14 @@ class VenditoriView(ctk.CTkFrame):
         tree_container.grid_rowconfigure(0, weight=1)
         tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record
+        self.info_venditori_label = ctk.CTkLabel(
+            venditori_frame,
+            text="Totale venditori: 0",
+            font=("Arial", 10, "italic")
+        )
+        self.info_venditori_label.pack(pady=5)
+
         # Bind selezione
         self.tree_venditori.bind("<<TreeviewSelect>>", self.on_venditore_select)
 
@@ -217,6 +225,14 @@ class VenditoriView(ctk.CTkFrame):
         dati_tree_container.grid_rowconfigure(0, weight=1)
         dati_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record dati
+        self.info_dati_label = ctk.CTkLabel(
+            dati_frame,
+            text="Totale contatti: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_dati_label.pack(pady=2)
+
         # === TABELLA VENDITORE OFFRE (sotto dx) ===
         offre_frame = ctk.CTkFrame(bottom_container)
         offre_frame.pack(side="right", fill="both", expand=True, padx=(5, 0))
@@ -285,6 +301,14 @@ class VenditoriView(ctk.CTkFrame):
         offre_tree_container.grid_rowconfigure(0, weight=1)
         offre_tree_container.grid_columnconfigure(0, weight=1)
 
+        # Info totale record offerte
+        self.info_offre_label = ctk.CTkLabel(
+            offre_frame,
+            text="Totale offerte: 0",
+            font=("Arial", 9, "italic")
+        )
+        self.info_offre_label.pack(pady=2)
+
     def load_venditori(self):
         """Carica lista venditori"""
         try:
@@ -317,6 +341,9 @@ class VenditoriView(ctk.CTkFrame):
             )
             self.tree_venditori.insert("", "end", values=values,
                                       tags=(str(v.get("id")),))
+
+        # Aggiorna contatore
+        self.info_venditori_label.configure(text=f"Totale venditori: {len(self.venditori_data)}")
 
     def on_venditore_select(self, event):
         """Quando seleziono un venditore, carico dati e offerte"""
@@ -362,6 +389,9 @@ class VenditoriView(ctk.CTkFrame):
             self.tree_dati.insert("", "end", values=values,
                                  tags=(str(d.get("id_dati_venditore")),))
 
+        # Aggiorna contatore
+        self.info_dati_label.configure(text=f"Totale contatti: {len(self.dati_data)}")
+
     def load_offre(self):
         """Carica cosa offre il venditore selezionato"""
         if not self.selected_venditore_id:
@@ -392,6 +422,9 @@ class VenditoriView(ctk.CTkFrame):
             )
             self.tree_offre.insert("", "end", values=values,
                                   tags=(str(o.get("id")),))
+
+        # Aggiorna contatore
+        self.info_offre_label.configure(text=f"Totale offerte: {len(self.offre_data)}")
 
     # === METODI CRUD VENDITORI ===
     def nuovo_venditore(self):

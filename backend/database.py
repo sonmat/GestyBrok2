@@ -1,7 +1,7 @@
 """
 Configurazione database per db_gesty.db esistente
 """
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from pathlib import Path
@@ -22,6 +22,13 @@ engine = create_engine(
     pool_recycle=3600,   # Ricrea connessioni dopo 1 ora
     echo=False
 )
+
+# Abilita le foreign keys per SQLite
+@event.listens_for(engine, "connect")
+def set_sqlite_pragma(dbapi_conn, connection_record):
+    cursor = dbapi_conn.cursor()
+    cursor.execute("PRAGMA foreign_keys=ON")
+    cursor.close()
 
 # Session
 SessionLocal = sessionmaker(
