@@ -9,7 +9,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 import customtkinter as ctk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 import requests
 import json
 from views.conferme_dialogs import ConfermaDialog, DataConsegnaDialog
@@ -469,41 +469,131 @@ class ConfermeOrdineView(ctk.CTkFrame):
             for i, col in enumerate(conferme_cols):
                 conferma_display[col] = values[i] if i < len(values) else ""
 
-            # Carica dati aziendali
-            config_path = os.path.join(
-                os.path.dirname(__file__),
-                "..", "..", "config", "company_data.json"
+            num_conf = conferma_display.get('n_conf', str(self.selected_conferma_id))
+
+            # Dialog per scegliere la cartella di destinazione
+            default_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+            if not os.path.exists(default_folder):
+                default_folder = os.path.expanduser("~")
+
+            download_folder = filedialog.askdirectory(
+                title="Scegli dove salvare le conferme d'ordine",
+                initialdir=default_folder
             )
 
-            with open(config_path, 'r', encoding='utf-8') as f:
-                company_data = json.load(f)
+            # Se l'utente annulla, esci
+            if not download_folder:
+                return
 
-            # Carica date consegna
-            date_consegna = []
-            for item in self.tree_date.get_children():
-                date_values = self.tree_date.item(item)["values"]
-                date_consegna.append({
-                    "data": date_values[1] if len(date_values) > 1 else "",
-                    "quantita": date_values[2] if len(date_values) > 2 else ""
-                })
+            # Scarica PDF Venditore
+            try:
+                response_v = requests.get(
+                    f"{self.base_url}/api/conferme-ordine/{self.selected_conferma_id}/stampa-venditore",
+                    stream=True
+                )
 
-            date_info = "\n".join([f"  - {d['data']}: {d['quantita']}" for d in date_consegna]) if date_consegna else "  Nessuna data consegna"
+                if response_v.status_code == 200:
+                    # Estrai nome file dall'header Content-Disposition se disponibile
+                    filename_v = f"Conferma_Venditore_{num_conf}.pdf"
+                    if 'content-disposition' in response_v.headers:
+                        import re
+                        cd = response_v.headers['content-disposition']
+                        filename_match = re.findall('filename=(.+)', cd)
+                        if filename_match:
+                            filename_v = filename_match[0].strip('"')
 
-            messagebox.showinfo(
-                "Stampa Conferma",
-                f"Funzione in fase di implementazione.\n\n"
-                f"Verranno generati 2 PDF:\n"
-                f"1. Conferma per Venditore: {conferma_display.get('venditore', 'N/A')}\n"
-                f"2. Conferma per Compratore: {conferma_display.get('compratore', 'N/A')}\n\n"
-                f"Conferma N°: {conferma_display.get('n_conf', 'N/A')}\n"
-                f"Data: {conferma_display.get('data_conf', 'N/A')}\n"
-                f"Articolo: {conferma_display.get('articolo', 'N/A')}\n"
-                f"Quantità: {conferma_display.get('qta', 'N/A')}\n"
-                f"Prezzo: {conferma_display.get('prezzo', 'N/A')}\n"
-                f"Provvigione: {conferma_display.get('provvigione', 'N/A')}\n"
-                f"Luogo consegna: {conferma_display.get('luogo_consegna', 'N/A')}\n\n"
-                f"Date Consegna:\n{date_info}"
+                    filepath_v = os.path.join(download_folder, filename_v)
+                    with open(filepath_v, 'wb') as f:
+                        for chunk in response_v.iter_content(chunk_size=8192):
+                            f.write(chunk)
+
+                    print(f"✓ PDF Venditore salvato: {filepath_v}")
+                else:
+                    messagebox.showerror("Errore", f"Errore nel generare PDF Venditore: {response_v.status_code}")
+                    return
+
+            except Exception as e:
+                messagebox.showerror("Errore", f"Errore nel salvare PDF Venditore:\n{str(e)}")
+                return
+
+            # Scarica PDF Compratore
+            try:
+                response_c = requests.get(
+                    f"{self.base_url}/api/conferme-ordine/{self.selected_conferma_id}/stampa-compratore",
+                    stream=True
+                )
+
+                if response_c.status_code == 200:
+                    # Estrai nome file dall'header Content-Disposition se disponibile
+                    filename_c = f"Conferma_Compratore_{num_conf}.pdf"
+                    if 'content-disposition' in response_c.headers:
+                        import re
+                        cd = response_c.headers['content-disposition']
+                        filename_match = re.findall('filename=(.+)', cd)
+                        if filename_match:
+                            filename_c = filename_match[0].strip('"')
+
+                    filepath_c = os.path.join(download_folder, filename_c)
+                    with open(filepath_c, 'wb') as f:
+                        for chunk in response_c.iter_content(chunk_size=8192):
+                            f.write(chunk)
+
+                    print(f"✓ PDF Compratore salvato: {filepath_c}")
+                else:
+                    messagebox.showerror("Errore", f"Errore nel generare PDF Compratore: {response_c.status_code}")
+                    return
+
+            except Exception as e:
+                messagebox.showerror("Errore", f"Errore nel salvare PDF Compratore:\n{str(e)}")
+                return
+
+            # Mostra messaggio di successo con opzione per aprire la cartella
+            result = messagebox.askyesno(
+                "Stampa Completata",
+                f"Conferme d'ordine generate con successo!\n\n"
+                f"📄 PDF Venditore: {filename_v}\n"
+                f"📄 PDF Compratore: {filename_c}\n\n"
+                f"📂 Salvati in:\n{download_folder}\n\n"
+                f"Conferma N°: {num_conf}\n"
+                f"Venditore: {conferma_display.get('venditore', 'N/A')}\n"
+                f"Compratore: {conferma_display.get('compratore', 'N/A')}\n\n"
+                f"Vuoi aprire la cartella di destinazione?"
             )
+
+            # Se l'utente vuole aprire la cartella
+            if result:
+                import subprocess
+                import platform
+
+                try:
+                    if platform.system() == 'Darwin':  # macOS
+                        subprocess.run(['open', download_folder])
+                    elif platform.system() == 'Windows':  # Windows
+                        os.startfile(download_folder)
+                    else:  # Linux
+                        subprocess.run(['xdg-open', download_folder])
+                except Exception as e:
+                    messagebox.showerror("Errore", f"Impossibile aprire la cartella:\n{str(e)}")
+
+            # Opzionale: apri i PDF con il visualizzatore predefinito
+            # NOTA: Commentato per evitare warning su alcuni sistemi Linux
+            # I PDF vengono comunque salvati correttamente nella cartella Download
+            # import subprocess
+            # import platform
+
+            # try:
+            #     if platform.system() == 'Darwin':  # macOS
+            #         subprocess.run(['open', filepath_v])
+            #         subprocess.run(['open', filepath_c])
+            #     elif platform.system() == 'Windows':  # Windows
+            #         os.startfile(filepath_v)
+            #         os.startfile(filepath_c)
+            #     else:  # Linux
+            #         subprocess.run(['xdg-open', filepath_v])
+            #         subprocess.run(['xdg-open', filepath_c])
+            # except:
+            #     # Se non riesce ad aprire i file, non è un problema critico
+            #     pass
 
         except Exception as e:
             import traceback

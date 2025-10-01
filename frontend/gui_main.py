@@ -14,7 +14,6 @@ from views.articoli_view import ArticoliView
 from views.venditori_view import VenditoriView
 from views.compratori_view import CompratorView
 from views.conferme_view import ConfermeOrdineView
-from views.fatture_view import FattureView
 from views.fatture_studio_view_new import FattureStudioView
 from views.report_view import ReportView
 
@@ -154,12 +153,8 @@ class GestyBrokApp(ThemedTk):
         self.notebook.add(self.conferme_view, text="📝 Conferme Ordine")
 
         # Vista Fatture
-        self.fatture_view = FattureView(self.notebook, self.api_client)
-        self.notebook.add(self.fatture_view, text="💰 Fatture")
-
-        # Vista Fatture Studio
         self.fatture_studio_view = FattureStudioView(self.notebook, self.api_client)
-        self.notebook.add(self.fatture_studio_view, text="📄 Fatture Studio")
+        self.notebook.add(self.fatture_studio_view, text="💰 Fatture")
 
         # Vista Report
         self.report_view = ReportView(self.notebook, self.api_client)

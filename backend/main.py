@@ -1,13 +1,12 @@
 """
 Backend API per db_gesty.db esistente
 """
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from typing import List, Optional
 import uvicorn
-
-from fastapi import FastAPI, HTTPException, Depends, Query  # ← Aggiungi Query all'import
 
 from database import get_db, init_db
 from models import (
@@ -15,6 +14,7 @@ from models import (
     TFatturaStudio, TFatturaStudioDet, TDataConsegna, TFattura,
     TDatiVenditore, TDatiCompratore, TIva, TPagamento, TBanca
 )
+from pdf_generator import PDFConfermaOrdine
 
 # Connetti al database
 init_db()
@@ -578,6 +578,226 @@ def delete_conferma_ordine(conferma_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Conferma non trovata")
     db.delete(c)
     db.commit()
+
+
+@app.get("/api/conferme-ordine/{conferma_id}/stampa-venditore")
+def stampa_conferma_venditore(conferma_id: int, db: Session = Depends(get_db)):
+    """
+    Genera e scarica il PDF della conferma d'ordine per il venditore
+
+    Restituisce il PDF in italiano se il venditore è italiano, altrimenti in inglese
+    """
+    # Recupera la conferma
+    conferma = db.query(TConferma).filter(TConferma.id_conferma == conferma_id).first()
+    if not conferma:
+        raise HTTPException(status_code=404, detail="Conferma non trovata")
+
+    # Recupera il venditore
+    venditore = db.query(TVenditore).filter(TVenditore.id_venditore == conferma.venditore).first()
+    if not venditore:
+        raise HTTPException(status_code=404, detail="Venditore non trovato")
+
+    # Recupera il compratore
+    compratore = db.query(TCompratore).filter(TCompratore.id_compratore == conferma.compratore).first()
+    if not compratore:
+        raise HTTPException(status_code=404, detail="Compratore non trovato")
+
+    # Recupera l'articolo
+    articolo = db.query(TArticolo).filter(TArticolo.id_articolo == conferma.articolo).first()
+    if not articolo:
+        raise HTTPException(status_code=404, detail="Articolo non trovato")
+
+    # Recupera le date di consegna
+    date_consegna = db.query(TDataConsegna).filter(
+        TDataConsegna.id_conferma == conferma_id
+    ).order_by(TDataConsegna.data_consegna).all()
+
+    # Prepara i dati
+    conferma_data = {
+        'id_conferma': conferma.id_conferma,
+        'n_conf': conferma.n_conf,
+        'data_conf': conferma.data_conf,
+        'numero_conferma': conferma.n_conf,
+        'data_conferma': conferma.data_conf,
+        'quantita': parse_float(conferma.qta),
+        'qta': parse_float(conferma.qta),
+        'prezzo': parse_float(conferma.prezzo),
+        'provvigione': parse_float(conferma.provvigione) if conferma.provvigione else None,
+        'tipologia': conferma.tipologia,
+        'note': conferma.note
+    }
+
+    venditore_data = {
+        'id': venditore.id_venditore,
+        'azienda': venditore.azienda or '',
+        'indirizzo': venditore.indirizzo or '',
+        'cap': venditore.cap or '',
+        'citta': venditore.citta or '',
+        'piva': venditore.piva or '',
+        'partita_iva': venditore.piva or '',
+        'telefono': venditore.telefono or '',
+        'italiano': venditore.italiano or 'Si'
+    }
+
+    compratore_data = {
+        'id': compratore.id_compratore,
+        'azienda': compratore.azienda or '',
+        'indirizzo': compratore.indirizzo or '',
+        'cap': compratore.cap or '',
+        'citta': compratore.citta or '',
+        'piva': compratore.piva or '',
+        'partita_iva': compratore.piva or '',
+        'telefono': compratore.telefono or '',
+        'italiano': compratore.italiano or 'Si'
+    }
+
+    articolo_data = {
+        'id': articolo.id_articolo,
+        'nome': articolo.nome_articolo or '',
+        'nome_articolo': articolo.nome_articolo or '',
+        'unita_misura': articolo.unita_misura or ''
+    }
+
+    date_consegna_data = []
+    for dc in date_consegna:
+        date_consegna_data.append({
+            'data_consegna': dc.data_consegna,
+            'qta_consegna': dc.qta_consegna
+        })
+
+    # Genera il PDF
+    pdf_gen = PDFConfermaOrdine()
+    pdf_buffer = pdf_gen.genera_conferma_venditore(
+        conferma_data,
+        venditore_data,
+        compratore_data,
+        articolo_data,
+        date_consegna_data if date_consegna_data else None
+    )
+
+    # Nome file
+    is_estero = venditore.italiano != 'Si'
+    lang_suffix = '_EN' if is_estero else '_IT'
+    filename = f"Conferma_Venditore_{conferma.n_conf or conferma_id}{lang_suffix}.pdf"
+
+    # Restituisce il PDF
+    return StreamingResponse(
+        pdf_buffer,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}"
+        }
+    )
+
+
+@app.get("/api/conferme-ordine/{conferma_id}/stampa-compratore")
+def stampa_conferma_compratore(conferma_id: int, db: Session = Depends(get_db)):
+    """
+    Genera e scarica il PDF della conferma d'ordine per il compratore
+
+    Restituisce il PDF in italiano se il compratore è italiano, altrimenti in inglese
+    """
+    # Recupera la conferma
+    conferma = db.query(TConferma).filter(TConferma.id_conferma == conferma_id).first()
+    if not conferma:
+        raise HTTPException(status_code=404, detail="Conferma non trovata")
+
+    # Recupera il venditore
+    venditore = db.query(TVenditore).filter(TVenditore.id_venditore == conferma.venditore).first()
+    if not venditore:
+        raise HTTPException(status_code=404, detail="Venditore non trovato")
+
+    # Recupera il compratore
+    compratore = db.query(TCompratore).filter(TCompratore.id_compratore == conferma.compratore).first()
+    if not compratore:
+        raise HTTPException(status_code=404, detail="Compratore non trovato")
+
+    # Recupera l'articolo
+    articolo = db.query(TArticolo).filter(TArticolo.id_articolo == conferma.articolo).first()
+    if not articolo:
+        raise HTTPException(status_code=404, detail="Articolo non trovato")
+
+    # Recupera le date di consegna
+    date_consegna = db.query(TDataConsegna).filter(
+        TDataConsegna.id_conferma == conferma_id
+    ).order_by(TDataConsegna.data_consegna).all()
+
+    # Prepara i dati
+    conferma_data = {
+        'id_conferma': conferma.id_conferma,
+        'n_conf': conferma.n_conf,
+        'data_conf': conferma.data_conf,
+        'numero_conferma': conferma.n_conf,
+        'data_conferma': conferma.data_conf,
+        'quantita': parse_float(conferma.qta),
+        'qta': parse_float(conferma.qta),
+        'prezzo': parse_float(conferma.prezzo),
+        'provvigione': parse_float(conferma.provvigione) if conferma.provvigione else None,
+        'tipologia': conferma.tipologia,
+        'note': conferma.note
+    }
+
+    venditore_data = {
+        'id': venditore.id_venditore,
+        'azienda': venditore.azienda or '',
+        'indirizzo': venditore.indirizzo or '',
+        'cap': venditore.cap or '',
+        'citta': venditore.citta or '',
+        'piva': venditore.piva or '',
+        'partita_iva': venditore.piva or '',
+        'telefono': venditore.telefono or '',
+        'italiano': venditore.italiano or 'Si'
+    }
+
+    compratore_data = {
+        'id': compratore.id_compratore,
+        'azienda': compratore.azienda or '',
+        'indirizzo': compratore.indirizzo or '',
+        'cap': compratore.cap or '',
+        'citta': compratore.citta or '',
+        'piva': compratore.piva or '',
+        'partita_iva': compratore.piva or '',
+        'telefono': compratore.telefono or '',
+        'italiano': compratore.italiano or 'Si'
+    }
+
+    articolo_data = {
+        'id': articolo.id_articolo,
+        'nome': articolo.nome_articolo or '',
+        'nome_articolo': articolo.nome_articolo or '',
+        'unita_misura': articolo.unita_misura or ''
+    }
+
+    date_consegna_data = []
+    for dc in date_consegna:
+        date_consegna_data.append({
+            'data_consegna': dc.data_consegna,
+            'qta_consegna': dc.qta_consegna
+        })
+
+    # Genera il PDF
+    pdf_gen = PDFConfermaOrdine()
+    pdf_buffer = pdf_gen.genera_conferma_compratore(
+        conferma_data,
+        venditore_data,
+        compratore_data,
+        articolo_data,
+        date_consegna_data if date_consegna_data else None
+    )
+
+    # Nome file
+    is_estero = compratore.italiano != 'Si'
+    lang_suffix = '_EN' if is_estero else '_IT'
+    filename = f"Conferma_Compratore_{conferma.n_conf or conferma_id}{lang_suffix}.pdf"
+
+    # Restituisce il PDF
+    return StreamingResponse(
+        pdf_buffer,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}"
+        }
+    )
 
 # ==================== DATE CONSEGNA ====================
 @app.get("/api/conferme-ordine/{id_conferma}/date-consegna")
