@@ -71,6 +71,13 @@ class FattureStudioView(ctk.CTkFrame):
 
         ctk.CTkButton(
             btn_frame,
+            text="🖨️ Stampa Fattura",
+            command=self.stampa_fattura,
+            width=150
+        ).pack(side="left", padx=5)
+
+        ctk.CTkButton(
+            btn_frame,
             text="🔄 Aggiorna",
             command=self.load_fatture,
             width=100
@@ -321,6 +328,77 @@ class FattureStudioView(ctk.CTkFrame):
                     messagebox.showinfo("Successo", "Fattura eliminata")
             except Exception as e:
                 messagebox.showerror("Errore", str(e))
+
+    def stampa_fattura(self):
+        """Stampa fattura studio (genera PDF)"""
+        if not self.selected_fattura_id:
+            messagebox.showwarning("Attenzione", "Seleziona una fattura da stampare")
+            return
+
+        try:
+            # Trova la fattura selezionata per ottenere il numero fattura
+            num_fat = None
+            for fattura in self.fatture_data:
+                if fattura.get('id_fatt_studio') == self.selected_fattura_id:
+                    num_fat = fattura.get('n_fat', str(self.selected_fattura_id))
+                    break
+
+            if num_fat is None:
+                num_fat = str(self.selected_fattura_id)
+
+            # Dialog per scegliere la cartella di destinazione
+            from tkinter import filedialog
+            import os
+
+            default_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+            if not os.path.exists(default_folder):
+                default_folder = os.path.expanduser("~")
+
+            download_folder = filedialog.askdirectory(
+                title="Scegli dove salvare la fattura",
+                initialdir=default_folder
+            )
+
+            # Se l'utente annulla, esci
+            if not download_folder:
+                return
+
+            # Scarica PDF Fattura
+            try:
+                response = requests.get(
+                    f"{self.base_url}/api/fatture-studio/{self.selected_fattura_id}/stampa",
+                    stream=True
+                )
+
+                if response.status_code == 200:
+                    # Estrai nome file dall'header Content-Disposition se disponibile
+                    filename = f"Fattura_Studio_{num_fat}.pdf"
+                    if 'content-disposition' in response.headers:
+                        import re
+                        cd = response.headers['content-disposition']
+                        filename_match = re.findall('filename=(.+)', cd)
+                        if filename_match:
+                            filename = filename_match[0].strip('"')
+
+                    filepath = os.path.join(download_folder, filename)
+                    with open(filepath, 'wb') as f:
+                        for chunk in response.iter_content(chunk_size=8192):
+                            f.write(chunk)
+
+                    messagebox.showinfo("Successo", f"Fattura salvata in:\n{filepath}")
+                    print(f"✓ PDF Fattura salvato: {filepath}")
+                else:
+                    messagebox.showerror("Errore", f"Errore nel generare PDF: {response.status_code}\n{response.text}")
+
+            except Exception as e:
+                messagebox.showerror("Errore", f"Errore nel salvare PDF:\n{str(e)}")
+                import traceback
+                traceback.print_exc()
+
+        except Exception as e:
+            messagebox.showerror("Errore", f"Errore durante la stampa:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
 
     # === METODI CRUD DETTAGLI ===
     def nuovo_dettaglio(self):

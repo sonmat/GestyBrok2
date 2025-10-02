@@ -1402,6 +1402,132 @@ def get_fatture_studio(db: Session = Depends(get_db)):
     return result
 
 
+@app.get("/api/fatture-studio/{id_fattura}/stampa")
+def stampa_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
+    """
+    Genera e scarica il PDF della fattura studio
+
+    Restituisce il PDF in italiano se il cliente è italiano, altrimenti in inglese
+    """
+    # Recupera la fattura
+    fattura = db.query(TFatturaStudio).filter(TFatturaStudio.id_fatt_studio == id_fattura).first()
+    if not fattura:
+        raise HTTPException(status_code=404, detail="Fattura non trovata")
+
+    # Recupera il cliente (venditore)
+    cliente = db.query(TVenditore).filter(TVenditore.id_venditore == fattura.cliente).first()
+    if not cliente:
+        raise HTTPException(status_code=404, detail="Cliente non trovato")
+
+    # Recupera IVA
+    iva = db.query(TIva).filter(TIva.id_iva == fattura.t_iva).first()
+    if not iva:
+        raise HTTPException(status_code=404, detail="IVA non trovata")
+
+    # Recupera tipo pagamento
+    pagamento = db.query(TPagamento).filter(TPagamento.id_pagamento == fattura.t_pagamento).first()
+    if not pagamento:
+        raise HTTPException(status_code=404, detail="Tipo pagamento non trovato")
+
+    # Recupera banca (opzionale)
+    banca = None
+    if fattura.id_banca:
+        banca = db.query(TBanca).filter(TBanca.id_banca == fattura.id_banca).first()
+
+    # Recupera dettagli fattura
+    dettagli = db.query(TFatturaStudioDet).filter(
+        TFatturaStudioDet.id_fat_studio == id_fattura
+    ).all()
+
+    # Prepara i dati della fattura
+    fattura_data = {
+        'id_fatt_studio': fattura.id_fatt_studio,
+        'n_fat': fattura.n_fat,
+        'data_fat': fattura.data_fat,
+        'nota_acr': fattura.nota_acr,
+        'note': fattura.note
+    }
+
+    # Prepara i dati del cliente
+    cliente_data = {
+        'id': cliente.id_venditore,
+        'azienda': cliente.azienda or '',
+        'indirizzo': cliente.indirizzo or '',
+        'cap': cliente.cap or '',
+        'citta': cliente.citta or '',
+        'piva': cliente.piva or '',
+        'partita_iva': cliente.piva or '',
+        'telefono': cliente.telefono or '',
+        'italiano': cliente.italiano or 'Si'
+    }
+
+    # Prepara i dati IVA
+    iva_data = {
+        'id_iva': iva.id_iva,
+        'descrizione': iva.descrizione or '',
+        'iva': iva.iva or '0'
+    }
+
+    # Prepara i dati pagamento
+    pagamento_data = {
+        'id_pagamento': pagamento.id_pagamento,
+        'tipo_pagamento': pagamento.tipo_pagamento or ''
+    }
+
+    # Prepara i dati banca (se presente)
+    banca_data = None
+    if banca:
+        banca_data = {
+            'id_banca': banca.id_banca,
+            'nome_banca': banca.nome_banca or '',
+            'iban': banca.iban or '',
+            'bic': banca.bic or ''
+        }
+
+    # Prepara i dettagli con nomi compratori
+    dettagli_data = []
+    for det in dettagli:
+        compratore = db.query(TCompratore).filter(
+            TCompratore.id_compratore == det.compratore
+        ).first()
+
+        dettagli_data.append({
+            'id_fat_studio_det': det.id_fat_studio_det,
+            'compratore': det.compratore,
+            'compratore_nome': compratore.azienda if compratore else '',
+            'qta': det.qta,
+            'prezzo': det.prezzo,
+            'provvigione': det.provvigione,
+            'tipologia': det.tipologia,
+            'data_consegna': det.data_consegna
+        })
+
+    # Genera il PDF
+    pdf_gen = PDFConfermaOrdine()
+    pdf_buffer = pdf_gen.genera_fattura_studio(
+        fattura_data,
+        cliente_data,
+        dettagli_data,
+        iva_data,
+        pagamento_data,
+        banca_data
+    )
+
+    # Nome file
+    is_estero = cliente.italiano != 'Si'
+    lang_suffix = '_EN' if is_estero else '_IT'
+    filename = f"Fattura_Studio_{fattura.n_fat or id_fattura}{lang_suffix}.pdf"
+
+    # Restituisce il PDF
+    return StreamingResponse(
+        pdf_buffer,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f"attachment; filename={filename}"
+        }
+    )
+
+
 @app.get("/api/fatture-studio/{id_fattura}")
 def get_fattura_studio(id_fattura: int, db: Session = Depends(get_db)):
     """Dettaglio fattura studio"""

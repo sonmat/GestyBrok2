@@ -3,9 +3,11 @@ Vista per gestione Fatture Studio
 Con tabella master-detail per i dettagli fattura
 """
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, filedialog
 from typing import Optional, List, Dict
 from datetime import datetime
+import os
+import requests
 from widgets import AutocompleteCombobox
 
 
@@ -27,6 +29,7 @@ class FattureStudioView(ttk.Frame):
         toolbar.pack(fill=tk.X, padx=5, pady=5)
 
         ttk.Button(toolbar, text="Nuova Fattura", command=self.nuova_fattura).pack(side=tk.LEFT, padx=2)
+        ttk.Button(toolbar, text="Stampa Fattura", command=self.stampa_fattura).pack(side=tk.LEFT, padx=2)
         ttk.Button(toolbar, text="Aggiorna", command=self.load_data).pack(side=tk.LEFT, padx=2)
 
         # PanedWindow per divisione verticale
@@ -272,6 +275,74 @@ class FattureStudioView(ttk.Frame):
                 self.load_details()
             except Exception as e:
                 messagebox.showerror("Errore", str(e))
+
+    def stampa_fattura(self):
+        """Stampa fattura studio (genera PDF)"""
+        if not self.selected_id:
+            messagebox.showwarning("Attenzione", "Seleziona una fattura da stampare")
+            return
+
+        selection = self.tree_master.selection()
+        if not selection:
+            messagebox.showwarning("Attenzione", "Seleziona una fattura da stampare")
+            return
+
+        try:
+            # Leggi valori dalla riga selezionata
+            values = self.tree_master.item(selection[0])["values"]
+            num_fat = values[1] if len(values) > 1 else str(self.selected_id)
+
+            # Dialog per scegliere la cartella di destinazione
+            default_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+            if not os.path.exists(default_folder):
+                default_folder = os.path.expanduser("~")
+
+            download_folder = filedialog.askdirectory(
+                title="Scegli dove salvare la fattura",
+                initialdir=default_folder
+            )
+
+            # Se l'utente annulla, esci
+            if not download_folder:
+                return
+
+            # Scarica PDF Fattura
+            try:
+                base_url = self.api_client.base_url
+                response = requests.get(
+                    f"{base_url}/api/fatture-studio/{self.selected_id}/stampa",
+                    stream=True
+                )
+
+                if response.status_code == 200:
+                    # Estrai nome file dall'header Content-Disposition se disponibile
+                    filename = f"Fattura_Studio_{num_fat}.pdf"
+                    if 'content-disposition' in response.headers:
+                        import re
+                        cd = response.headers['content-disposition']
+                        filename_match = re.findall('filename=(.+)', cd)
+                        if filename_match:
+                            filename = filename_match[0].strip('"')
+
+                    filepath = os.path.join(download_folder, filename)
+                    with open(filepath, 'wb') as f:
+                        for chunk in response.iter_content(chunk_size=8192):
+                            f.write(chunk)
+
+                    messagebox.showinfo("Successo", f"Fattura salvata in:\n{filepath}")
+                    print(f"✓ PDF Fattura salvato: {filepath}")
+                else:
+                    messagebox.showerror("Errore", f"Errore nel generare PDF: {response.status_code}")
+
+            except Exception as e:
+                messagebox.showerror("Errore", f"Errore nel salvare PDF:\n{str(e)}")
+                import traceback
+                traceback.print_exc()
+
+        except Exception as e:
+            messagebox.showerror("Errore", f"Errore durante la stampa:\n{str(e)}")
+            import traceback
+            traceback.print_exc()
 
 
 class FatturaStudioDialog(tk.Toplevel):

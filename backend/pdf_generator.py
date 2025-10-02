@@ -807,3 +807,331 @@ class PDFConfermaOrdine:
             elements.append(riepilogo_title)
 
         return elements
+
+    def genera_fattura_studio(self, fattura_data, cliente_data, dettagli_data, iva_data,
+                               pagamento_data, banca_data=None):
+        """
+        Genera la fattura studio in PDF
+
+        Args:
+            fattura_data: dict con dati della fattura (da TFatturaStudio)
+            cliente_data: dict con dati del cliente/venditore (da TVenditore)
+            dettagli_data: list di dict con i dettagli della fattura (da TFatturaStudioDet)
+            iva_data: dict con dati IVA (da TIva)
+            pagamento_data: dict con dati tipo pagamento (da TPagamento)
+            banca_data: dict con dati banca (da TBanca), opzionale
+
+        Returns:
+            BytesIO: buffer contenente il PDF generato
+        """
+        is_estero = cliente_data.get('italiano', 'Si') != 'Si'
+        lang = 'en' if is_estero else 'it'
+
+        buffer = BytesIO()
+        doc = SimpleDocTemplate(buffer, pagesize=A4,
+                               rightMargin=2*cm, leftMargin=2*cm,
+                               topMargin=2*cm, bottomMargin=2*cm)
+
+        elements = []
+        styles = getSampleStyleSheet()
+
+        title_style = ParagraphStyle(
+            'CustomTitle',
+            parent=styles['Heading1'],
+            fontSize=16,
+            textColor=colors.HexColor('#1a5490'),
+            spaceAfter=30,
+            alignment=TA_CENTER,
+            fontName='Helvetica-Bold'
+        )
+
+        # Header
+        elements.extend(self._crea_header(lang))
+
+        # Titolo
+        if lang == 'it':
+            title_text = "FATTURA STUDIO"
+        else:
+            title_text = "STUDIO INVOICE"
+
+        elements.append(Paragraph(title_text, title_style))
+        elements.append(Spacer(1, 0.5*cm))
+
+        # Informazioni fattura
+        elements.extend(self._crea_info_fattura_studio(fattura_data, lang))
+        elements.append(Spacer(1, 0.5*cm))
+
+        # Dati cliente
+        elements.extend(self._crea_dati_cliente_fattura(cliente_data, lang))
+        elements.append(Spacer(1, 0.5*cm))
+
+        # Dettagli fattura
+        elements.extend(self._crea_dettagli_fattura_studio(
+            dettagli_data, iva_data, lang
+        ))
+        elements.append(Spacer(1, 0.5*cm))
+
+        # Informazioni pagamento
+        elements.extend(self._crea_info_pagamento(
+            pagamento_data, banca_data, lang
+        ))
+        elements.append(Spacer(1, 0.5*cm))
+
+        # Note
+        if fattura_data.get('note'):
+            elements.extend(self._crea_note(fattura_data.get('note'), lang))
+            elements.append(Spacer(1, 0.5*cm))
+
+        # Footer
+        elements.append(Spacer(1, 1*cm))
+        elements.extend(self._crea_footer(lang))
+
+        doc.build(elements)
+        buffer.seek(0)
+        return buffer
+
+    def _crea_info_fattura_studio(self, fattura_data, lang='it'):
+        """Crea la sezione con le informazioni della fattura studio"""
+        elements = []
+
+        info_data = []
+
+        if lang == 'it':
+            if fattura_data.get('n_fat'):
+                info_data.append(['N° Fattura:', str(fattura_data.get('n_fat'))])
+
+            if fattura_data.get('data_fat'):
+                info_data.append(['Data:', self._format_date(fattura_data.get('data_fat'))])
+
+            if fattura_data.get('nota_acr'):
+                info_data.append(['Nota Accredito:', str(fattura_data.get('nota_acr'))])
+        else:
+            if fattura_data.get('n_fat'):
+                info_data.append(['Invoice No.:', str(fattura_data.get('n_fat'))])
+
+            if fattura_data.get('data_fat'):
+                info_data.append(['Date:', self._format_date(fattura_data.get('data_fat'))])
+
+            if fattura_data.get('nota_acr'):
+                info_data.append(['Credit Note:', str(fattura_data.get('nota_acr'))])
+
+        if info_data:
+            t = Table(info_data, colWidths=[4*cm, 13*cm])
+            t.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (0, -1), colors.HexColor('#e8f0f8')),
+                ('TEXTCOLOR', (0, 0), (-1, -1), colors.black),
+                ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+                ('ALIGN', (1, 0), (1, -1), 'LEFT'),
+                ('FONTNAME', (0, 0), (0, -1), 'Helvetica-Bold'),
+                ('FONTSIZE', (0, 0), (-1, -1), 10),
+                ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+                ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                ('LEFTPADDING', (0, 0), (-1, -1), 10),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+                ('TOPPADDING', (0, 0), (-1, -1), 8),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+            ]))
+            elements.append(t)
+
+        return elements
+
+    def _crea_dati_cliente_fattura(self, cliente_data, lang='it'):
+        """Crea la sezione con i dati del cliente"""
+        elements = []
+        styles = getSampleStyleSheet()
+
+        if lang == 'it':
+            cliente_label = 'CLIENTE'
+        else:
+            cliente_label = 'CUSTOMER'
+
+        cliente_info = [
+            Paragraph(f"<b>{cliente_label}</b>", styles['Heading3']),
+            Paragraph(f"<b>{cliente_data.get('azienda', '')}</b>", styles['Normal'])
+        ]
+
+        if cliente_data.get('indirizzo'):
+            cliente_info.append(Paragraph(cliente_data.get('indirizzo'), styles['Normal']))
+
+        city_line = []
+        if cliente_data.get('cap'):
+            city_line.append(cliente_data.get('cap'))
+        if cliente_data.get('citta'):
+            city_line.append(cliente_data.get('citta'))
+        if city_line:
+            cliente_info.append(Paragraph(' '.join(city_line), styles['Normal']))
+
+        if cliente_data.get('partita_iva') or cliente_data.get('piva'):
+            piva_label = 'P.IVA:' if lang == 'it' else 'VAT:'
+            piva = cliente_data.get('partita_iva') or cliente_data.get('piva')
+            cliente_info.append(Paragraph(f"{piva_label} {piva}", styles['Normal']))
+
+        if cliente_data.get('telefono'):
+            tel_label = 'Tel:' if lang == 'it' else 'Phone:'
+            cliente_info.append(Paragraph(f"{tel_label} {cliente_data.get('telefono')}", styles['Normal']))
+
+        # Box per i dati cliente
+        for info in cliente_info:
+            elements.append(info)
+
+        return elements
+
+    def _crea_dettagli_fattura_studio(self, dettagli_data, iva_data, lang='it'):
+        """Crea la tabella con i dettagli della fattura studio"""
+        elements = []
+
+        if lang == 'it':
+            headers = ['Descrizione', 'Quantità', 'Prezzo Unit.', 'Totale', 'Provvigione']
+        else:
+            headers = ['Description', 'Quantity', 'Unit Price', 'Total', 'Commission']
+
+        data_rows = [headers]
+
+        subtotale = 0
+
+        for det in dettagli_data:
+            # Costruisci descrizione con compratore e tipologia
+            descrizione_parts = []
+            if det.get('compratore_nome'):
+                descrizione_parts.append(det.get('compratore_nome'))
+            if det.get('tipologia'):
+                descrizione_parts.append(f"({det.get('tipologia')})")
+            if det.get('data_consegna'):
+                data_cons_label = 'Consegna:' if lang == 'it' else 'Delivery:'
+                descrizione_parts.append(f"{data_cons_label} {det.get('data_consegna')}")
+
+            descrizione = ' - '.join(descrizione_parts) if descrizione_parts else ''
+
+            try:
+                qta = float(det.get('qta', 0))
+                prezzo = float(det.get('prezzo', 0))
+                provvigione = float(det.get('provvigione', 0)) if det.get('provvigione') else 0
+                totale_riga = qta * prezzo
+                subtotale += totale_riga
+            except:
+                qta = 0
+                prezzo = 0
+                provvigione = 0
+                totale_riga = 0
+
+            data_rows.append([
+                descrizione,
+                f"{qta:.2f}",
+                self._format_currency(prezzo, lang),
+                self._format_currency(totale_riga, lang),
+                self._format_currency(provvigione, lang) if provvigione else '-'
+            ])
+
+        # Riga subtotale
+        if lang == 'it':
+            data_rows.append(['', '', 'Subtotale:', self._format_currency(subtotale, lang), ''])
+        else:
+            data_rows.append(['', '', 'Subtotal:', self._format_currency(subtotale, lang), ''])
+
+        # Calcola IVA
+        try:
+            iva_perc = float(iva_data.get('iva', 0))
+            importo_iva = subtotale * (iva_perc / 100)
+        except:
+            iva_perc = 0
+            importo_iva = 0
+
+        # Riga IVA
+        iva_label = f"IVA {iva_data.get('descrizione', '')} ({iva_perc}%)"
+        if lang == 'en':
+            iva_label = f"VAT {iva_data.get('descrizione', '')} ({iva_perc}%)"
+
+        data_rows.append(['', '', iva_label, self._format_currency(importo_iva, lang), ''])
+
+        # Totale generale
+        totale_generale = subtotale + importo_iva
+        if lang == 'it':
+            data_rows.append(['', '', 'TOTALE:', self._format_currency(totale_generale, lang), ''])
+        else:
+            data_rows.append(['', '', 'TOTAL:', self._format_currency(totale_generale, lang), ''])
+
+        t = Table(data_rows, colWidths=[6*cm, 2.5*cm, 3.5*cm, 2.5*cm, 2.5*cm])
+
+        # Stile tabella
+        table_style = [
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1a5490')),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -4), colors.beige),
+            ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+            ('ALIGN', (1, 1), (-1, -1), 'RIGHT'),
+            ('ALIGN', (0, 1), (0, -1), 'LEFT'),
+            ('FONTNAME', (0, 1), (-1, -4), 'Helvetica'),
+            ('FONTSIZE', (0, 1), (-1, -1), 10),
+            ('GRID', (0, 0), (-1, -4), 1, colors.grey),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 10),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+            ('TOPPADDING', (0, 0), (-1, -1), 8),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+            ('BACKGROUND', (0, -3), (-1, -1), colors.HexColor('#f0f0f0')),
+            ('FONTNAME', (0, -3), (-1, -1), 'Helvetica-Bold'),
+            ('LINEABOVE', (0, -3), (-1, -3), 1.5, colors.black),
+            ('LINEABOVE', (0, -1), (-1, -1), 2, colors.black),
+        ]
+
+        t.setStyle(TableStyle(table_style))
+        elements.append(t)
+
+        return elements
+
+    def _crea_info_pagamento(self, pagamento_data, banca_data, lang='it'):
+        """Crea la sezione con le informazioni di pagamento"""
+        elements = []
+        styles = getSampleStyleSheet()
+
+        if lang == 'it':
+            title = Paragraph("<b>Modalità di Pagamento:</b>", styles['Heading3'])
+        else:
+            title = Paragraph("<b>Payment Terms:</b>", styles['Heading3'])
+
+        elements.append(title)
+        elements.append(Spacer(1, 0.2*cm))
+
+        # Tipo pagamento
+        tipo_pag = pagamento_data.get('tipo_pagamento', '')
+        if tipo_pag:
+            elements.append(Paragraph(tipo_pag, styles['Normal']))
+
+        # Dati bancari se presenti
+        if banca_data:
+            elements.append(Spacer(1, 0.3*cm))
+
+            if lang == 'it':
+                banca_title = Paragraph("<b>Coordinate Bancarie:</b>", styles['Heading3'])
+            else:
+                banca_title = Paragraph("<b>Bank Details:</b>", styles['Heading3'])
+
+            elements.append(banca_title)
+            elements.append(Spacer(1, 0.2*cm))
+
+            banca_info = []
+            if banca_data.get('nome_banca'):
+                banca_info.append(['Banca:' if lang == 'it' else 'Bank:', banca_data.get('nome_banca')])
+            if banca_data.get('iban'):
+                banca_info.append(['IBAN:', banca_data.get('iban')])
+            if banca_data.get('bic'):
+                banca_info.append(['BIC/SWIFT:', banca_data.get('bic')])
+
+            if banca_info:
+                t = Table(banca_info, colWidths=[4*cm, 13*cm])
+                t.setStyle(TableStyle([
+                    ('FONTNAME', (0, 0), (0, -1), 'Helvetica-Bold'),
+                    ('FONTSIZE', (0, 0), (-1, -1), 10),
+                    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+                    ('LEFTPADDING', (0, 0), (-1, -1), 0),
+                    ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+                    ('TOPPADDING', (0, 0), (-1, -1), 3),
+                    ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+                ]))
+                elements.append(t)
+
+        return elements
